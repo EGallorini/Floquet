@@ -1,0 +1,107 @@
+\begin{tikzpicture}
+
+
+
+\begin{axis}[%
+%width=4.3cm,
+%height=3.5cm,
+width=0.8\textwidth,
+height=0.35\textwidth,
+scale only axis,
+%grid=both,
+%axis lines=middle,
+xmin=2,
+xmax=11,
+ymin=0.38,
+ymax=1.66,
+%xtick={2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
+%ytick={0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8},
+%xlabel style={font=\color{white!15!black}},
+xlabel={\AR},
+ylabel={$St$},
+%ymin=0,
+%ymax=200,
+axis background/.style={fill=white},
+legend style={at={(0.01,0.73)}, anchor=west, legend cell align=left, align=left, fill=none, draw=none}
+]
+
+\addplot [color=black,only marks,mark=*,mark options={scale=2.2,black,fill=red!80!black}]
+  table[row sep=crcr]{%
+2       0.396741726829078\\
+2.25    0.432248406188668\\
+2.5     0.462793383468913\\
+2.75    0.504214143890634\\
+3       0.536994008053543\\
+};
+\addlegendentry{$n=1,TE$}
+
+\addplot [color=black,only marks,mark=*,mark options={scale=2.2,black,fill=blue!80!black}]
+  table[row sep=crcr]{%
+3       0.536994008053543\\
+4       0.543439544221324\\
+4.5     0.535298051494477\\
+4.75    0.530324957725253\\
+};
+\addlegendentry{$n=1,LE$}
+
+
+\addplot [color=black,only marks,mark=square*,mark options={scale=2,black,fill=red!80!black}]
+  table[row sep=crcr]{%
+4.85    0.930407996044941\\
+5       0.947349623285183\\
+5.25    0.971304878725648\\
+5.5     1.000378564453700\\
+5.75    1.041747167637721\\
+6       1.062464533558995\\
+};
+\addlegendentry{$n=2,TE$}
+
+\addplot [color=black,only marks,mark=square*,mark options={scale=2,black,fill=blue!80!black}]
+  table[row sep=crcr]{%
+6       1.062464533558995\\
+7       1.073230579537877\\
+8       1.067458930414985\\
+8.25    1.070000000000000\\
+};
+\addlegendentry{$n=2,LE$}
+
+
+\addplot [color=black,only marks,mark=diamond*,mark options={scale=2.8,black,fill=red!80!black}]
+  table[row sep=crcr]{%
+8.5     1.477258532919061\\
+8.75    1.503123920971757\\
+9       1.561211928154617\\
+9.25    1.593577708455838\\    
+};
+\addlegendentry{$n=3,TE$}
+
+\addplot [color=black,only marks,mark=diamond*,mark options={scale=2.8,black,fill=blue!80!black}]
+  table[row sep=crcr]{%
+9.25    1.593577708455838\\    
+9.5     1.604355188881951\\
+10      1.627228310690177\\
+11      1.617135083478177\\
+};
+\addlegendentry{$n=3,LE$}
+
+
+
+%\addplot [color=black,solid,mark=square*,mark options={scale=0.9,black,fill=red!80!black}]
+%  table[row sep=crcr]{%
+%3       0.609743754434522\\
+%4       0.774727821194389\\
+%5       0.942866305443131\\
+%6       1.100079139112736\\
+%7       1.245663824885169\\
+%8       1.400191666484032\\
+%9       1.546133959599630\\
+%10      1.685632118301302\\
+%11      1.822225132985195\\
+%};
+
+
+
+\end{axis}
+
+
+\end{tikzpicture}%

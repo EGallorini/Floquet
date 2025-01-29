@@ -1,0 +1,76 @@
+\begin{tikzpicture}
+
+
+
+\begin{axis}[%
+%width=4.3cm,
+%height=3.5cm,
+width=0.4\textwidth,
+height=0.3\textwidth,
+%width=0.2\textwidth,
+%height=0.2\textwidth,
+scale only axis,
+grid=both,
+%axis lines=middle,
+xmin=0.8,
+xmax=3.7,
+ymin=0.6,
+ymax=1.6,
+%xtick={2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
+%ytick={2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7},
+%xlabel style={font=\color{white!15!black}},
+xlabel={$k$},
+ylabel={$|\mu|$},
+ylabel style={at={(0.1,0.5)}},
+%ymin=0,
+%ymax=200,
+axis background/.style={fill=white},
+legend style={at={(0.99,0.85)}, anchor=east, legend cell align=left, align=left, fill=none, draw=none}
+]
+
+
+\addplot [color=black,solid,mark=diamond*,mark options={scale=1.4,black,fill=red!80!black}]
+  table[row sep=crcr]{%
+1.5 0.681085 \\
+1.7 0.970309 \\
+1.8 1.05105 \\
+1.9 1.09126 \\
+2.0 1.09996 \\
+2.1 1.08437 \\
+2.2 1.05019 \\
+2.3 1.0029 \\
+2.4 0.94761 \\
+2.5 0.888573 \\
+2.6 0.719461 \\
+};
+\addlegendentry{$Re=480$}
+
+\addplot [color=black,solid,mark=diamond*,mark options={scale=1.4,black,fill=blue!80!black}]
+  table[row sep=crcr]{%
+1.7 0.853493 \\
+1.9 0.973202 \\
+2.1 0.947343 \\
+2.3 0.833523 \\
+};
+\addlegendentry{$Re=460$}
+
+%\addplot [color=black,solid,mark=diamond*,mark options={scale=1.4,black,fill=green!80!black}]
+%  table[row sep=crcr]{%
+%2.1 0.895004 \\
+%2.3 0.877314 \\
+%};
+%\addlegendentry{$Re=450$}
+
+\addplot [color=black,solid,mark=,mark options={scale=1.4,black,fill=green!80!black}]
+  table[row sep=crcr]{%
+  0 1 \\
+  5 1 \\
+};
+
+
+
+
+
+\end{axis}
+
+\end{tikzpicture}%
