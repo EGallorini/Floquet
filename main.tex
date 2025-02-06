@@ -396,13 +396,25 @@ Therefore the equation for the energy reads
 \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial t} + 2 \sigma \hat{u}_i \hat{u}_i^* = 
 - \left( \hat{u}_j \hat{u}_i^* + \hat{u}_i \hat{u}_j^* \right) \frac{\partial U_i}{\partial x_j} -
 \frac{\partial}{\partial x_j} \left( U_j \hat{u}_i \hat{u}_i^*\right)  + \\
-- \frac{1}{\rho} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + p^* \hat{u}_i \right) -
+- \frac{1}{\rho} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + p^* \hat{u}_i \right) +
 \frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{ \partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \right) 
 - \frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + 2 \beta^2 \hat{u}_i^* \hat{u}_i \right) 
 \end{gathered} 
 \end{equation}
 
-XX ADD NEI RISULTATI. HA SENSO POI TENERLO? SE LO INTEGRIAMO NEL PERIODO IL TERMINE DI DERIVATA TEMPORALE CHE NON CRESCE DOVREBBE SPARIRE XX
+%
+We now average over one period to remove the dependence on $\partial \hat{u}_i \hat{u}_i^*/\partial t$. We thus obtain:
+%
+\begin{equation}
+  \begin{gathered}
+  \frac{\sigma}{T} \int_{t_0}^{t_0+T} \hat{u}_i \hat{u}_i^* \text{d}t = 
+ -\frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{u}_j \hat{u}_i^* + \hat{u}_j^* \hat{u}_i \right) \frac{\partial U_i}{\partial x_j} \text{d} t +\\
+ -\frac{1}{T} \int_{t_0}^{t_0+T} U_j \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \text{d} t + 
+ -\frac{1}{T} \int_{t_0}^{t_0+T} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + \hat{p}^* \hat{u}_i \right) \text{d}t + \\
+ +\frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left[ \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{u}_i^* \hat{u}_i }{\partial x_j} \right) \right] \text{d}t 
+ -\frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + 2 \beta^2 \hat{u}_i^* \hat{u}_i \right) \text{d} t
+ \end{gathered}
+\end{equation}
 
 \section{Results}
 
