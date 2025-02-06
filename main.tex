@@ -307,6 +307,103 @@ We can represent the base flow by looking at the vorticity and at $\kappa = 2S/|
 
 Maybe it would be interesting also to show how the spatial distribution of the eigenvectors change with $\beta$.
 
+\subsection{Energy budget for the modes}
+
+To provide further insight on the physical mechanism that leads to the exponential amplification of the modes (when the linear approximation holds), we can look at the energy budget of the mode itself. This would provide us with information regarding the region where the base flow energises the mode itself, where the transport term dominates, and where the viscous dissipation dominates. The idea is to write the linearised Navier--Stokes equations, i.e.
+%
+\begin{equation}
+  \frac{\partial u_i}{\partial t}  = - U_j \frac{\partial u_i}{\partial x_j} - u_j \frac{\partial U_i}{\partial x_j} - \frac{1}{\rho}\frac{\partial p}{\partial x_i} + \frac{1}{Re} \frac{\partial^2 u_i}{\partial x_j^2}; \ \frac{\partial u_j}{\partial x_j} = 0.
+\end{equation}
+We recall that since we use the Floquet theory we can write
+%
+\begin{equation}
+  u_i = \tilde{u}_i(x,y,z,t) e^{\sigma t}.
+\end{equation}
+%
+To obtain the energy equation we thus take the LNSE and multiply for $\tilde{u}_i^*$, where the $\cdot^*$ superscript refers to the complex conjugate. Then we take the conjugate of the LNSE and mulitpliy it for $\tilde{u}_i$. Eventually we sum the two equations to obtain the equation for the energy.
+It is worth recalling that we use a Fourier expansion in the $z$ direction, such that
+%
+\begin{equation}
+  \tilde{u}_i(x,y,z,t) = \sum \hat{u}_{\beta,i}(x,y,t) e^{i\beta z}:
+\end{equation}
+%
+For simiplicity, hereafter we drop the $\cdot_\beta$ subscript.
+Now, we look at the energy equation for each single Fourier mode.
+
+The first equation reads:
+%
+\begin{equation}
+\left( \frac{\partial \tilde{u}_i}{\partial t} + \sigma \tilde{u}_i \right) \tilde{u}^*_i =
+- \tilde{u}_j \tilde{u}_i^* \frac{\partial U_i}{\partial x_j} - U_j \frac{\partial \tilde{u}_i}{\partial x_j} \tilde{u}_i^*
+- \frac{1}{\rho} \frac{\partial \tilde{p}}{\partial x_i} \tilde{u}_i^* 
++ \frac{1}{Re} \frac{\partial^2 \tilde{u}_i}{\partial x_j^2} \tilde{u}_i^*,
+\end{equation}
+whle the second equations reads (recall that in our case $U_3=0$:
+\begin{equation}
+\left( \frac{\partial \tilde{u}_i^*}{\partial t} + \sigma \tilde{u}_i^* \right) \tilde{u}_i = 
+- \tilde{u}_j^* \tilde{u}_i \frac{\partial U_i}{\partial x_j} - U_j \frac{\partial \tilde{u}_i^*}{\partial x_j} \tilde{u}_i
+- \left( \frac{1}{\rho} \frac{\partial \tilde{p}}{\partial x_i} \right)^* \tilde{u}_i + 
+\frac{1}{Re} \left( \frac{\partial \tilde{u}_i}{\partial x_j^2} \right)^* \tilde{u}_i
+\end{equation}
+%
+We now sum the two equations and look separately at the different terms. Recall that $\tilde{u}_i^* = \hat{u}_i^* e^{-i\beta z}$.
+\begin{itemize}
+  \item
+  \begin{equation}
+    \left( \frac{\partial \tilde{u}_i}{\partial t} + \sigma \tilde{u}_i \right) \tilde{u}_i^* +
+    \left( \frac{\partial \tilde{u}_i^*}{\partial t} + \sigma \tilde{u}^*_i \right) \tilde{u}_i = 
+    \frac{\partial \hat{u}_i \hat{u}^*_i}{\partial t} + 2 \sigma \hat{u}_i \hat{u}_i^*
+  \end{equation}
+  \item
+  \begin{equation}
+    - \tilde{u}_j \tilde{u}_i^* \frac{\partial U_i}{\partial x_j} - 
+      \tilde{u}_i \tilde{u}_j^* \frac{\partial U_i}{\partial x_j} = - ( \hat{u}_j \hat{u}_i^* + \hat{u}_i \hat{u}_j^* ) \frac{\partial U_i}{\partial x_j}
+  \end{equation}
+  \item
+  \begin{equation}
+    - U_j \frac{\partial \tilde{u}_i}{\partial x_j} \tilde{u}_i^* - U_j \frac{\partial \tilde{u}_i^*}{\partial x_j} \tilde{u}_i = 
+    - U_j \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial x_j}
+  \end{equation}
+  \item
+  \begin{equation}
+  \begin{gathered}
+    - \frac{1}{\rho} \frac{\partial \tilde{p}}{\partial x_i} \tilde{u}_i^* - 
+      \frac{1}{\rho} \left( \frac{\partial \tilde{p}}{\partial x_i} \right)^* \tilde{u}_i = 
+    - \frac{1}{\rho} \frac{\partial \hat{p} \hat{u}_i^*}{\partial x_i} + \frac{\hat{p}}{\rho} \frac{\partial \hat{u}_i^*}{\partial x_i} - 
+    \frac{1}{\rho} \left( \frac{\partial \hat{p}^*}{\partial x_i} \hat{u}_i + i \beta \hat{p}^* \hat{u} \right) = \\
+    - \frac{1}{\rho} \frac{\partial \hat{p} \hat{u}_i^*}{\partial x_i} -
+      \frac{1}{\rho} \frac{\partial \hat{p}^* \hat{u}_i}{\partial x_i} = 
+      - \frac{1}{\rho} \frac{\partial}{\partial x_i} \left(  \hat{p} \hat{u}_i^* + \hat{p}^* \hat{u}_i \right)
+  \end{gathered}
+  \end{equation}
+  \item 
+  \begin{equation}
+  \begin{gathered}
+    \frac{1}{Re} \frac{\partial^2 \tilde{u}_i}{\partial x_j^2} \tilde{u}_i^* +
+    \frac{1}{Re} \left( \frac{\partial^2 \tilde{u}_i}{\partial x_j^2} \right)^* \tilde{u}_i = \\
+    \frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{\partial \tilde{u}_i}{\partial x_j} \right) \tilde{u}_i^* +
+    \frac{1}{Re} \left[ \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{u}_i^*}{\partial x_j} \hat{u}_i - \beta^2 \hat{u}_i^* \hat{u}_i \right) \right] = \\
+    \frac{1}{Re} \left[ \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \right) \right]
+   -\frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + \beta^2 \hat{u}_i^* \hat{u}_i \right)
+  \end{gathered}
+  \end{equation}
+\end{itemize}
+
+Therefore the equation for the energy reads
+%
+\begin{equation}
+\begin{gathered}
+\frac{\partial \hat{u}_i \hat{u}_i^*}{\partial t} + 2 \sigma \hat{u}_i \hat{u}_i^* = 
+- \left( \hat{u}_j \hat{u}_i^* + \hat{u}_i \hat{u}_j^* \right) \frac{\partial U_i}{\partial x_j} -
+\frac{\partial}{\partial x_j} \left( U_j \hat{u}_i \hat{u}_i^*\right)  + \\
+- \frac{1}{\rho} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + p^* \hat{u}_i \right) -
+\frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{ \partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \right) 
+- \frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + 2 \beta^2 \hat{u}_i^* \hat{u}_i \right) 
+\end{gathered} 
+\end{equation}
+
+XX ADD NEI RISULTATI. HA SENSO POI TENERLO? SE LO INTEGRIAMO NEL PERIODO IL TERMINE DI DERIVATA TEMPORALE CHE NON CRESCE DOVREBBE SPARIRE XX
+
 \section{Results}
 
 \subsection{Short bodies with $1 \le \AR \le 3$}
