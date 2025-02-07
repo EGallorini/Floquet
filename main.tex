@@ -369,7 +369,7 @@ We now sum the two equations and look separately at the different terms. Recall 
     - \frac{1}{\rho} \frac{\partial \tilde{p}}{\partial x_i} \tilde{u}_i^* - 
       \frac{1}{\rho} \left( \frac{\partial \tilde{p}}{\partial x_i} \right)^* \tilde{u}_i = 
     - \frac{1}{\rho} \frac{\partial \hat{p} \hat{u}_i^*}{\partial x_i} + \frac{\hat{p}}{\rho} \frac{\partial \hat{u}_i^*}{\partial x_i} - 
-    \frac{1}{\rho} \left( \frac{\partial \hat{p}^*}{\partial x_i} \hat{u}_i + i \beta \hat{p}^* \hat{u} \right) = \\
+    \frac{1}{\rho} \left( \frac{\partial \hat{p}^*}{\partial x_i} \hat{u}_i - i \beta \hat{p}^* \hat{u} \right) = \\
     - \frac{1}{\rho} \frac{\partial \hat{p} \hat{u}_i^*}{\partial x_i} -
       \frac{1}{\rho} \frac{\partial \hat{p}^* \hat{u}_i}{\partial x_i} = 
       - \frac{1}{\rho} \frac{\partial}{\partial x_i} \left(  \hat{p} \hat{u}_i^* + \hat{p}^* \hat{u}_i \right)
@@ -414,6 +414,42 @@ We now average over one period to remove the dependence on $\partial \hat{u}_i \
  -\frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + 2 \beta^2 \hat{u}_i^* \hat{u}_i \right) \text{d} t
  \end{gathered}
 \end{equation}
+
+To provide further insights on the physical mechanism of the modes we can also look at the budget equation for the enstrophy, which is defined as $\hat{\omega}_i \hat{\omega}_i^*$. We follow a similar approach like for the energy budget. However, in this case we start from the linearised equation for the vorticity, which reads:
+%
+\begin{equation}
+  \frac{\partial \omega_i}{\partial t} + U_j \frac{\partial \omega_i}{\partial x_j} + u_j \frac{\partial \Omega}{\partial x_j} = \Omega_j \frac{\partial u_i}{\partial x_j} + \omega_j \frac{\partial U_i}{\partial x_j} + \frac{1}{Re} \frac{\partial^2 \omega_i}{\partial x_j^2}.
+\end{equation}
+%
+We then follow the same approach as before and eventually obtain (here we use the fact that $\bm{\Omega} = \Omega \hat{\bm{e}}_3$)
+%
+\begin{equation}
+  \begin{gathered}
+  \frac{\partial \hat{\omega}_i \hat{\omega}^*_i}{\partial t} + 
+  2 \Re(\sigma) \hat{\omega}_i \hat{\omega}_i^* = 
+  - \left( \hat{\omega}_i^* \hat{u}_j + \hat{\omega}_i u_j^* \right) \frac{\partial \Omega_i}{\partial x_j} 
+  - U_j \frac{\partial \hat{\omega}_i \hat{\omega}_i^* }{\partial x_j}  +
+   i \beta \Omega_3 \left( \hat{u}_i \hat{\omega}_{i}^* - \hat{u}_i^* \hat{\omega}_i \right)  + \\
+   + \left( \hat{\omega}_i^* \hat{\omega}_j + \hat{\omega}_i \hat{\omega}_j^* \right) \frac{\partial U_i}{\partial x_j} +
+   \frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{\omega}_i \hat{\omega}_i^*}{\partial x_j} \right) -
+   \frac{1}{Re} \left( 2 \frac{\partial \hat{\omega}_i}{\partial x_j} \frac{\partial \hat{\omega}^*}{\partial x_j} + 2 \beta^2 \hat{\omega}_i \hat{\omega}^* \right)
+  \end{gathered}
+\end{equation}
+%
+As above, we now integrate over one period, i.e. between $t_0$ and $t_0+T$ and obtain
+%
+\begin{equation}
+  \begin{gathered}
+  \frac{2 \Re{\sigma}}{T} \int_{t_0}^{t_0+T} \hat{\omega}_i \hat{\omega}_i^* \text{d}t = 
+  - \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{\omega}_i^* \hat{u}_j + \hat{\omega}_i u_j^* \right) \frac{\partial \Omega_i}{\partial x_j} \text{d}t
+  - \frac{1}{T} \int_{t_0}^{t_0+T} U_j \frac{\partial \hat{\omega}_i \hat{\omega}_i^* }{\partial x_j} \text{d} t + \\
+  + \frac{1}{T} \int_{t_0}^{t_0+T}    i \beta \Omega_3 \left( \hat{u}_i \hat{\omega}_{i}^* - \hat{u}_i^* \hat{\omega}_i \right)  \text{d} t
+  + \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{\omega}_i^* \hat{\omega}_j + \hat{\omega}_i \hat{\omega}_j^* \right) \frac{\partial U_i}{\partial x_j} \text{d} t + \\
+  + \frac{1}{T} \int_{t_0}^{t_0+T}    \frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{\omega}_i \hat{\omega}_i^*}{\partial x_j} \right) \text{d} t -
+  \frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left( 2 \frac{\partial \hat{\omega}_i}{\partial x_j} \frac{\partial \hat{\omega}^*}{\partial x_j} + 2 \beta^2 \hat{\omega}_i \hat{\omega}^* \right) \text{d} t
+  \end{gathered}
+\end{equation}
+
 
 \section{Results}
 
