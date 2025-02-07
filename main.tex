@@ -1,18 +1,16 @@
 \documentclass{jfm}
 
-\usepackage{graphicx}
-\usepackage{natbib}
-\usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{ar}
-\usepackage{tikz}
-\usepackage{pgfplots}
-\usepackage{tikz-3dplot}
+\usepackage{natbib} 
+\usepackage[breaklinks,colorlinks = true,linkcolor = blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{newtxtext,newtxmath}
 \usepackage{bm}
-\usepackage{multirow}
-\usepackage{subfig}
-\usepackage{overpic}
-\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots,tikz-3dplot}
+\usepackage{ar}
+\usepackage[]{lineno}
+
+\linenumbers
 
 \newcommand{\aver}[1]{ \! \left\langle {#1} \right \rangle \!}
 
@@ -340,7 +338,7 @@ The first equation reads:
 \end{equation}
 whle the second equations reads (recall that in our case $U_3=0$:
 \begin{equation}
-\left( \frac{\partial \tilde{u}_i^*}{\partial t} + \sigma \tilde{u}_i^* \right) \tilde{u}_i = 
+\left( \frac{\partial \tilde{u}_i^*}{\partial t} + \sigma^* \tilde{u}_i^* \right) \tilde{u}_i = 
 - \tilde{u}_j^* \tilde{u}_i \frac{\partial U_i}{\partial x_j} - U_j \frac{\partial \tilde{u}_i^*}{\partial x_j} \tilde{u}_i
 - \left( \frac{1}{\rho} \frac{\partial \tilde{p}}{\partial x_i} \right)^* \tilde{u}_i + 
 \frac{1}{Re} \left( \frac{\partial \tilde{u}_i}{\partial x_j^2} \right)^* \tilde{u}_i
@@ -351,8 +349,9 @@ We now sum the two equations and look separately at the different terms. Recall 
   \item
   \begin{equation}
     \left( \frac{\partial \tilde{u}_i}{\partial t} + \sigma \tilde{u}_i \right) \tilde{u}_i^* +
-    \left( \frac{\partial \tilde{u}_i^*}{\partial t} + \sigma \tilde{u}^*_i \right) \tilde{u}_i = 
-    \frac{\partial \hat{u}_i \hat{u}^*_i}{\partial t} + 2 \sigma \hat{u}_i \hat{u}_i^*
+    \left( \frac{\partial \tilde{u}_i^*}{\partial t} + \sigma^* \tilde{u}^*_i \right) \tilde{u}_i = 
+    \frac{\partial \hat{u}_i \hat{u}^*_i}{\partial t} + ( \sigma^* + \sigma ) \hat{u}_i \hat{u}_i^* = 
+    \frac{\partial \hat{u}_i \hat{u}^*_i}{\partial t} + 2 \Re(\sigma) \hat{u}_i \hat{u}_i^* 
   \end{equation}
   \item
   \begin{equation}
@@ -393,7 +392,7 @@ Therefore the equation for the energy reads
 %
 \begin{equation}
 \begin{gathered}
-\frac{\partial \hat{u}_i \hat{u}_i^*}{\partial t} + 2 \sigma \hat{u}_i \hat{u}_i^* = 
+\frac{\partial \hat{u}_i \hat{u}_i^*}{\partial t} + 2 \Re(\sigma) \hat{u}_i \hat{u}_i^* = 
 - \left( \hat{u}_j \hat{u}_i^* + \hat{u}_i \hat{u}_j^* \right) \frac{\partial U_i}{\partial x_j} -
 \frac{\partial}{\partial x_j} \left( U_j \hat{u}_i \hat{u}_i^*\right)  + \\
 - \frac{1}{\rho} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + p^* \hat{u}_i \right) +
@@ -407,7 +406,7 @@ We now average over one period to remove the dependence on $\partial \hat{u}_i \
 %
 \begin{equation}
   \begin{gathered}
-  \frac{\sigma}{T} \int_{t_0}^{t_0+T} \hat{u}_i \hat{u}_i^* \text{d}t = 
+  \frac{2 \Re(\sigma)}{T} \int_{t_0}^{t_0+T} \hat{u}_i \hat{u}_i^* \text{d}t = 
  -\frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{u}_j \hat{u}_i^* + \hat{u}_j^* \hat{u}_i \right) \frac{\partial U_i}{\partial x_j} \text{d} t +\\
  -\frac{1}{T} \int_{t_0}^{t_0+T} U_j \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \text{d} t + 
  -\frac{1}{T} \int_{t_0}^{t_0+T} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + \hat{p}^* \hat{u}_i \right) \text{d}t + \\
