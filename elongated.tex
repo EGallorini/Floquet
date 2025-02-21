@@ -1,0 +1,67 @@
+\section{Elongated bodies}
+
+\begin{itemize}
+  \item Here we look at the second oblique branch of the $St_L-\AR$ plane. Here we have already found that for $\AR=5$ the first mode to become unstable is mode QS, i.e. the quasi-subharmonic mode.
+  \item We now investigate what happens when increasing $\AR$. We recall that this is the range where the vortex shedding is dominated by the TE. This means that the dynamics of the TE vortex shedding dominates and is not directly influenced by the vortex shedding from the LE as in the oblique branches. As shown in figure \ref{fig:mult_AR5s}, for $\AR=5$ the only unstable mode is of subharmonic nature and is the so-called mode $QS$. As $\AR$ is increased, instead, a new mode of synchronous nature appears (in this case the multipliers are real and positive). For $\AR=5.25$ this mode is stable. For $\AR=5.35$ this mode approaches the unit circle. For $\AR=5.5$ this mode is unstable, and its growth rate is larger than the corresponding one associated with mode $QS$. The second mode here detected resembles mode $A$ for the wake past short cylinders. 
+  \item Mode QS is an unstable mode of the recirculating region along the lateral sides of the cylinder. This is visualised in figure \ref{fig:mult_AR5s} (note that the mote is maximum there and not in the wake). For additional details see \citep{chiarini-etal-2022}. The synchronous mode, instead, is an unsteady mode of the wake and share several properties with the classical mode $A$ of the circular cylinder.
+  \item For the arise of the new mode $A$ in the $5.25 \le \AR \le 5.75$ regime look at the works by Aleksyuk \& Heil (2023) and Aleksyuk \& Heil (2024). To answer the question "Why this mode is not detected for $\AR=5$? Why it becomes unstable only at larger $\AR$?" We can start looking whether also in this case the mechanism proposed by Aleksyuk \& Heil (2023,2024) works. If this is the case, we can see if for $\AR=5$ we actually have something different. 
+  \item \textcolor{blue}{For $\AR=5.5$ we have that mode $A'$ and $QS$ become unstable is short succession. We can use DNS to see how do they appear. We start from $Re=450$ and then increase progressively $Re$. Look for an indicator to characterise how the flow moves from one regime to the other.}
+\end{itemize}
+
+%For the arise of the new mode $A$ in the $5.25 \le \AR \le 5.75$ regime look at the works by Aleksyuk \& Heil (2023) and Aleksyuk \& Heil (2024)
+
+
+\begin{figure}
+  \centering
+%  \input{./fig/AR5s/muk_AR5.tex}
+%  \input{./fig/AR5s/muk_AR5.25.tex}
+%  \input{./fig/AR5s/muk_AR5.35.tex}  
+%  \input{./fig/AR5s/muk_AR5.5.tex}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/multipliers_AR5.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/multipliers_AR5p25.eps}  
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/multipliers_AR5p5.eps}  
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/multipliers_AR5p75.eps}      
+  \vspace{0.1cm}
+  \begin{tikzpicture}
+  \draw (-10,2) -- (8,2);
+  \end{tikzpicture}
+  \vspace{0.1cm}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5s/Floqetmode_beta_2_Re550_AR5p5_A.png}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5s/Floqetmode_beta_2_Re550_AR5p5_QS.png} 
+  \includegraphics[width=0.32\textwidth]{./fig/AR5s/Floqetmode_beta_4p75_Re550_AR5p5_Ap.png}
+  \vspace{0.1cm}
+  \begin{tikzpicture}
+  \draw (-10,2) -- (8,2);
+  \end{tikzpicture}
+  \vspace{0.1cm}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/lambda2-AR55-Re450-3D.png}   
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/lambda2-AR55-Re500-3D.png}     
+  \caption{Top: Floquet multipliers for $\AR=5$ (top left), $\AR=5.25$ (top right), $\AR=5.5$ (bottom left) and $\AR=5.75$ (bottom right). The red symbols refer to mode $QS$. The blue symbols refer to mode $A$. The green symbols refer to mode $B$. Different symbols refer to different $Re$. Centre: Floquet modes associated with mode A (left), mode QS (centre) and mode $A'$ for $\AR=5.5$ and $Re=550$. Bottom: Results from the 3D DNS for $\AR=5.5$. Left: $Re=450$, right: $Re=500$. It is thus clear that mode A dominates at smaller $Re$, while once mode $QS$ becomes unstable it dominates. Mode $A'$ has the same symmetries of mode $A$ and is a synchronous mode. The difference is that its characteristic wavelength is much smaller, with $\beta_c \approx 4.5$. XX CHECK MODE GREEN FOR $AR=5.5$ and $Re=600$. POTREBBE ESSERE CHE SONO DUE MODI SEPARATI? XX}
+  \label{fig:mult_AR5s}
+\end{figure} 
+
+%\section{Bodies with $6 \le \AR \le 8$}
+
+\begin{itemize}
+  \item For these $\AR$, the secondary flow instability is due to mode $QS$ that leads to a three-dimensional state. Interestingly, for these $\AR$ mode $A$ is not detected. This is consistent with the fact that for this range of $\AR$, at the intermediate $Re$, the flow is driven by the LE vortex shedding, that modifies the flow dynamics in the near-wake region where the triggering mechanism of mode $A$ takes place. 
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR7s/multipliers_AR6.eps}  
+  \includegraphics[width=0.49\textwidth]{./fig/AR7s/multipliers_AR7.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR7s/multipliers_AR7_b.eps}
+  \includegraphics[width=0.7\textwidth]{./fig/AR7s/Floqetmode_beta_2p2_Re500_AR7.png}
+  \caption{Floquet stability analysis for $\AR=6$ and $\AR=7$. Top: Floquet multipliers associated with the unstable branch. for $\AR=6$ (left) and $\AR=7$ (right). Centre: dependence of the real and imaginary parts of $\mu$ on $\beta$ for $\AR=7$. Bottom: three-dimensional reconstruction of the unstable Floquet mode for $\AR=7$. For these $\AR$s the secondary instability of the flow is due mode $QS$.}
+  \label{fig:mult_AR7s}
+\end{figure}
+
+%\section{$\AR=9$}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR9s/Floquet_AR9_Re400_beta1p2_modeA.png}  
+  \includegraphics[width=0.49\textwidth]{./fig/AR9s/Floquet_AR9_Re450_beta2_modeQS.png}
+  \caption{Reconstruction of the Floquet modes for $\AR=9$. Left: mode $A$, $Re=400$, $\beta=1.2$. Right: mode $QS$, $Re=450$, $\beta=2$.}
+  \label{fig:mult_AR9s}
+\end{figure}

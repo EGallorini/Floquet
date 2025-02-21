@@ -1,0 +1,325 @@
+\section{What we can do}
+
+\subsection{Strouhal-Reynolds-AR}
+
+It would be interesting to parametrise the $St-Re$ dependence using $\AR$ as a parameter. This would provide a clear visualisation of the successive bifurcations the flow experiences.
+
+\subsection{Neutral curves}
+
+For the 3D bifurcations it would be more effective to draw the neutral curves in the $\beta-Re$ parameter space.
+
+
+\subsection{Supercritical versus Subcritical bifurcations}
+
+We can assess which is the nature of the bifurcations the flow experiences. For example, we can follow the approach described by Henderson \& Barkley (1996) for the pitchfork bifurcations; see also Henderson (1997).
+
+To assess whether the bifurcation is subcritical or supercritical, we have to look at the influence of the nonlinearity for $Re \rightarrow Re_c$. We now focus on the pitchfork bifurcations. The normal form for a pitchfork bifurcation of a discrete-time dynamical system is
+%
+\begin{equation}
+  A_{n+1} = \mu A_n + \alpha_1 A_n^3 + O(A_n^5)
+\end{equation}
+%
+where $A_n$ corresponds to the real amplitude of the bifurcating flow at period $n$ and $\alpha_1$ is the Landau constant. When $\alpha_1<0$ the instability is a supercritical bifurcation. When $\alpha_1>0$, the instability is a subcritical bifurcation. In this case the transition is discontinuous and hysteretic.
+
+We have to perform direct numerical simulations at $Re \approx Re_c$ using the full $2D$ nonlinear Navier--Stokes equations. Indeed, the most precise and direct way to analyse the nonlinear growth of the critical mode is to follow the evolution of initial conditions of the form $\bm{U}_b + \bm{u}_c$, where $\bm{u}_c$ is the Floquet mode at criticality. Moreover, since the initial conditions is characterised by a single wavenumber $\beta_c$, it is clear that due to the properties of the Navier--Stokes equations it is sufficient to retain in the NS equations only those modes with $\beta = m \beta_c$, where $m$ is an integer. This allows to not perform an actual 3D simulation.
+The amplitude $A_n$ at this point may be simply considered as
+%
+\begin{equation}
+  A_n \equiv =  \left( \frac{1}{\Omega U_\infty^2} \int_{\Omega} |\bm{u}^n_c|^2 \text{d} \Omega \right)^{1/2}
+\end{equation}
+%
+where $\Omega$ is the area of the computational domain, and $\bm{u}^n_c$ is the Fourier coefficient of the velocity field at period $n$ and wavenumber $\beta_c$. In doing this, we can then plot $A_n$ as a function of the iteration and then evaluate the value of $\alpha_1$ as
+%
+\begin{equation}
+  \alpha_1 \approx \frac{ A_{n+1} - \mu A_n}{A_n^3}.
+\end{equation}
+%
+
+Clearly, in the case where the bifurcation is two-dimensional the approach is rather easy. In this case, indeed, $\beta_c = 0$. For three-dimensional bifurcations, instead, the situation is more complex and we should choose in somehow the number of mode to include in the 3D non linear simulations such that $m\le M$.
+
+In the case the bifurcations are subcritical we should study the bi-stability interval.
+
+
+For the specific case of the circular cylinder mode A is subcritcal, while mode B is supercritical.
+
+
+Another possible approach to study the non linear effect is to carry out DNS close to the onset of the bifurcation.
+
+\subsubsection{3D pitchfork}
+
+After the flow bifurcation we can write
+%
+\begin{equation}
+  \bm{U}(\bm{x},t) = U(t) \bm{\phi}_0(\bm{x},t) + A(t) \bm{\phi}_1(\bm{x},t).
+\end{equation}
+%
+The idea is to study how non linearity influences the values of $U$ and $A$ in time. This would allow us to understand whether the bifurcations is subcritical or supercritical.
+
+The idea is to decompose the velocity and pressure field using a Fourier decomposition, i.e.
+%
+\begin{equation}
+  \bm{U}(\bm{x},t) = \sum_{j=0}^M \hat{\bm{u}}_j e^{i j \beta_c z} = \hat{\bm{u}}_0(\bm{x},t) + \hat{\bm{u}}_1(\bm{x},t) e^{i \beta_c z}+
+                     \sum_{j=2}^M \hat{\bm{u}}_j e^{i j \beta_c z} 
+\end{equation}
+%
+where $\beta_c$ is the critical wavenumber (result of the Floquet analysis). $\hat{\bm{u}}_0(\bm{x},t)$ denotes the spatial average and describes the evolution of the two-dimensional base flow. $\hat{\bm{u}}_1(\bm{x},t)$ denotes the coefficient associated with the Fourier mode having $\beta = \beta_c$.
+
+At this point, we use as initial condition 
+%
+\begin{equation}
+  \hat{\bm{u}}_0(\bm{x},t_n) = \bm{U}_b(\bm{x},0)
+\end{equation}
+%
+where $\bm{U}_b$ denotes the saturated base flow evaluated with the non linear 2D Navier--Stokes equations, and
+%
+\begin{equation}
+  \hat{\bm{u}}_1(\bm{x},t_n) = \bm{u}_{Fl}(\bm{x},0)
+\end{equation}
+%
+where $\bm{u}_{Fl}$ denotes the most unstable Floquet mode.
+We then integrate this initial condition using the complete, 3D and non linear Navier--Stokes equations to detect the effect of the non linearity on the bifurcation. In particular, we track the values of $U_n$ and $A_n$ as
+%
+\begin{equation}
+  |U_n|^2 = \frac{1}{\Omega U_\infty^2} \int_{\Omega} | \hat{\bm{u}}_0(\bm{x},t_n |^1 \text{d}\Omega
+\end{equation}
+%
+and
+\begin{equation}
+  |A_n|^2 = \frac{1}{\Omega U_\infty^2} \int_{\Omega} | \hat{\bm{u}}_1(\bm{x},t_n |^1 \text{d}\Omega
+\end{equation}
+%
+where $A_n=A(t_n)$ and $t_n$ is such that $C_\ell(t_n) = 0$. Note that in doing this it is possible that the period of the oscillation actually changes due to the influence of the nonlinearity.
+
+This allows as to evaluate whether the bifurcation is supercritical or subcritical. In fact, the normal form for a picthfork bifurcation is
+%
+\begin{equation}
+  A_{n+1} = \left( \mu_1 + \sum_j \alpha_{ij}A_n^{2j} \right) A_n
+\end{equation}
+%
+and the value of $\alpha_{11}$ determines whether the bifurcation is supercritical ($\alpha_{11}<0$) or subcritical ($\alpha_{11}>0$). Note that $\mu_1 = 1 + \mu'\epsilon$ where $\mu' = \text{d}\mu/\text{d}\epsilon$ and $\epsilon = (Re - Re_c)/Re_c$ is the small parameter.
+
+At this point, by comparing the found value of $A_{n}$ with the normal form truncated at $j=1$ one may determine the value of $\alpha_{11}$. For a supercritical bifurcation then it is easy to evaluate the saturated state. Indeed in the saturated case $A_{n+1}=A_n$ and $\mu_1 + \alpha_{11}A_n^2 = 1$. This means that $\mu' \epsilon + \alpha_{11}A_n^2=0$ from which
+%
+\begin{equation}
+  A_n^2 = - \frac{ \mu' \epsilon}{\alpha_{11}}
+\end{equation}
+%
+where the values of $\mu'$ and $\alpha_{11}$ can be estimated from the DNS data.
+
+In the case of a supercritical bifurcation the situation is more convoluted. Indeed, to assess the saturated state we need an additional term if our expansion. Thus we stop at $j=2$. This means that in this case
+%
+\begin{equation}
+  A_{n+1} = \left( \mu_1 + \alpha_{11}A_n^2 + \alpha_{12} A_n^4 \right) A_n,
+\end{equation}
+%
+where again $\alpha_{12}$ may be estimated from the data.
+As such the saturated state reads $\mu_1 + \alpha_{11} A_n^2 + \alpha_{12} A_n^4 = 1$, meaning that $\mu' \epsilon + \alpha_{11} A_n^2 + \alpha_{12} A_n^4 = 0$ that leads to
+%
+\begin{equation}
+  |A|^2 = \frac{\alpha_{11}}{2 \alpha_{12}} \pm \left( \frac{\alpha_{11}^2}{4 \alpha_{12}^2} - \frac{\mu_1' \epsilon}{\alpha_{12}} \right)^{1/2}.
+\end{equation}
+
+\subsubsection{2D Pitchfork}
+
+For the two-dimensional case the situation is rather different. In this case we do not use a Fourier series. Instead, we write the velocity field as
+%
+\begin{equation}
+\bm{U}(\bm{x},t) = \bm{U}_b(\bm{x},t) + \bm{u}'(\bm{x},t)
+\end{equation}
+%
+where $\bm{U}_b$ is the symmetric base flow obtained after stabilising the flow with the BoostConv algorithm, and $\bm{u}'(\bm{x,t})$ is instead the nonlinear perturbation that drives the flow towards the slanted configuration.
+
+The idea, therefore, is to carry out a 2D simulation using the non linear Navier--Stokes equations using
+%
+\begin{equation}
+  \bm{u}'(\bm{x},t_n) = A_0 \bm{u}_{Fl}(\bm{x},0)
+\end{equation}
+%
+as initial condition. At this point, we track in time $A_n=A(t_n)$ (in this case the period does not change), and assess whether the bifurcation is either supercritical or subcritical by looking at $\alpha_{11}$ that appears in the normal form
+%
+\begin{equation}
+ A_{n+1} = \left( \mu + \alpha_{11} A_n^2 \right) A_n.
+\end{equation}
+%
+In this case we can also do other considerations regarding the shape of the saturated stated etc; see Jallas et al (2017).
+
+
+\subsection{Wavemaker}
+
+It is worth localising the wavemaker for the different instabilities that we detect. Indeed, this is useful for control purposes, as it localises the flow region where we should modify things to interact with the flow instability. We can use two different approaches. On the one side, we can look at the structural sensitivity (Giannetti et al, 2010). 
+
+A different apprach would be to perform Floquet stability analyses on small portions of the complete domain, similar to what done by Barkley (2005), in the context of the circular cylinder. The idea is the following. We first compute the base flow in the complete domain, by imposing the usual boundary conditions. Then, we extract portions of the base flow in some subdomains, directly from that computed on the full domain. At this point we perform Floquet analysis on these subdomains. The base flow is "exact" whatever the subdomain we consider. The mode will change as we will impose boundary conditions in different points, depending on the size of the considered subdomain: for each subdomain we impose $\bm{u}=0$ at all the boundaries, but at the outlet where we impose homoegeneous Neumann conditions. The idea is to use this approach to further show that the triggering mechanism of the QS mode is embedded in over the side of the cylinder. More in detail, the idea is to show that for $\AR=5.5$ modes $QS$ and $A$ coexist, as one is a unstable mode of the LE vortices, while the other is an unstable mode of the wake. In this way, by selecting properly the subdomains we can clearly show this effect.
+
+
+\subsection{$5 \le \AR \le 6$}
+
+In this range of $Re$ the flow first becomes three-dimensional due to the so-called mode A. Then, also mode $QS$ appears. This is perfectly predicted by the linear stability analysis. However, can we say something more on this? For example, are these bifurcations subcritical or supercritical? How the flow moves to mode $QS$? In a gradual way? Can we use POD on 3D DNS to assess which is the amount of energy contained in the two modes? Centre manifold?
+
+Also, it would be nice to derive the amplitude equations for the two modes to see how they interact. See Barkley et al (2000) for the amplitude equations of modes A and B in the case of the circular cylinder. For this it would be necessary to study the book by Golubitsky, volume II.
+
+
+\subsection{Dependence on the domain size}
+
+It is of great interest also to determine which is the influence of the spanwise size of the computational domain, i.e. the largest wavelength of the perturbation that is allowed in the flow, especially at $Re>Re_{c2}$. We may use $\AR=5.5$ to investigate this effect for $Re>550$, by keeping the grid dsciretisation constant and progressively increasing the number of points in the spanwise direction together with $L_z$.
+
+\subsection{POD, SPOD}
+
+To further characterise the modes at larger $Re$ in the different case we can resort to the POD and SPOD modes. This may be useful to assess how energetic are the different modes as $Re$ increases, and whether the relevance of a certain mode compared to the others becomes more or less relevant.
+
+\subsection{Modes A and B}
+
+Can we use the $\AR$ parameter to discuss the triggering mechanisms of these two modes? Indeed, by simply changing the $\AR$ we find that these modes appear and disappear. This is clearly due to the fact that the way the LE and TE vortices interact changes. Let's try.
+
+\subsection{How to present the results}
+
+We can represent the base flow by looking at the vorticity and at $\kappa = 2S/|\Omega|$ where $S$ is the positive eigenvalue of the strain of rate tensor and $\Omega$ is the vorticity. $\kappa>1$ denotes hyperbolic regions, while $\kappa<1$ regions where the rotation dominates (elliptic regions).
+
+Maybe it would be interesting also to show how the spatial distribution of the eigenvectors change with $\beta$.
+
+\subsection{Energy budget for the modes}
+
+To provide further insight on the physical mechanism that leads to the exponential amplification of the modes (when the linear approximation holds), we can look at the energy budget of the mode itself. This would provide us with information regarding the region where the base flow energises the mode itself, where the transport term dominates, and where the viscous dissipation dominates. The idea is to write the linearised Navier--Stokes equations, i.e.
+%
+\begin{equation}
+  \frac{\partial u_i}{\partial t}  = - U_j \frac{\partial u_i}{\partial x_j} - u_j \frac{\partial U_i}{\partial x_j} - \frac{1}{\rho}\frac{\partial p}{\partial x_i} + \frac{1}{Re} \frac{\partial^2 u_i}{\partial x_j^2}; \ \frac{\partial u_j}{\partial x_j} = 0.
+\end{equation}
+We recall that since we use the Floquet theory we can write
+%
+\begin{equation}
+  u_i = \tilde{u}_i(x,y,z,t) e^{\sigma t}.
+\end{equation}
+%
+To obtain the energy equation we thus take the LNSE and multiply for $\tilde{u}_i^*$, where the $\cdot^*$ superscript refers to the complex conjugate. Then we take the conjugate of the LNSE and mulitpliy it for $\tilde{u}_i$. Eventually we sum the two equations to obtain the equation for the energy.
+It is worth recalling that we use a Fourier expansion in the $z$ direction, such that
+%
+\begin{equation}
+  \tilde{u}_i(x,y,z,t) = \sum \hat{u}_{\beta,i}(x,y,t) e^{i\beta z}:
+\end{equation}
+%
+For simiplicity, hereafter we drop the $\cdot_\beta$ subscript.
+Now, we look at the energy equation for each single Fourier mode.
+
+The first equation reads:
+%
+\begin{equation}
+\left( \frac{\partial \tilde{u}_i}{\partial t} + \sigma \tilde{u}_i \right) \tilde{u}^*_i =
+- \tilde{u}_j \tilde{u}_i^* \frac{\partial U_i}{\partial x_j} - U_j \frac{\partial \tilde{u}_i}{\partial x_j} \tilde{u}_i^*
+- \frac{1}{\rho} \frac{\partial \tilde{p}}{\partial x_i} \tilde{u}_i^* 
++ \frac{1}{Re} \frac{\partial^2 \tilde{u}_i}{\partial x_j^2} \tilde{u}_i^*,
+\end{equation}
+whle the second equations reads (recall that in our case $U_3=0$:
+\begin{equation}
+\left( \frac{\partial \tilde{u}_i^*}{\partial t} + \sigma^* \tilde{u}_i^* \right) \tilde{u}_i = 
+- \tilde{u}_j^* \tilde{u}_i \frac{\partial U_i}{\partial x_j} - U_j \frac{\partial \tilde{u}_i^*}{\partial x_j} \tilde{u}_i
+- \left( \frac{1}{\rho} \frac{\partial \tilde{p}}{\partial x_i} \right)^* \tilde{u}_i + 
+\frac{1}{Re} \left( \frac{\partial \tilde{u}_i}{\partial x_j^2} \right)^* \tilde{u}_i
+\end{equation}
+%
+We now sum the two equations and look separately at the different terms. Recall that $\tilde{u}_i^* = \hat{u}_i^* e^{-i\beta z}$.
+\begin{itemize}
+  \item
+  \begin{equation}
+    \left( \frac{\partial \tilde{u}_i}{\partial t} + \sigma \tilde{u}_i \right) \tilde{u}_i^* +
+    \left( \frac{\partial \tilde{u}_i^*}{\partial t} + \sigma^* \tilde{u}^*_i \right) \tilde{u}_i = 
+    \frac{\partial \hat{u}_i \hat{u}^*_i}{\partial t} + ( \sigma^* + \sigma ) \hat{u}_i \hat{u}_i^* = 
+    \frac{\partial \hat{u}_i \hat{u}^*_i}{\partial t} + 2 \Re(\sigma) \hat{u}_i \hat{u}_i^* 
+  \end{equation}
+  \item
+  \begin{equation}
+    - \tilde{u}_j \tilde{u}_i^* \frac{\partial U_i}{\partial x_j} - 
+      \tilde{u}_i \tilde{u}_j^* \frac{\partial U_i}{\partial x_j} = - ( \hat{u}_j \hat{u}_i^* + \hat{u}_i \hat{u}_j^* ) \frac{\partial U_i}{\partial x_j}
+  \end{equation}
+  \item
+  \begin{equation}
+    - U_j \frac{\partial \tilde{u}_i}{\partial x_j} \tilde{u}_i^* - U_j \frac{\partial \tilde{u}_i^*}{\partial x_j} \tilde{u}_i = 
+    - U_j \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial x_j}
+  \end{equation}
+  \item
+  \begin{equation}
+  \begin{gathered}
+    - \frac{1}{\rho} \frac{\partial \tilde{p}}{\partial x_i} \tilde{u}_i^* - 
+      \frac{1}{\rho} \left( \frac{\partial \tilde{p}}{\partial x_i} \right)^* \tilde{u}_i = 
+    - \frac{1}{\rho} \frac{\partial \hat{p} \hat{u}_i^*}{\partial x_i} + \frac{\hat{p}}{\rho} \frac{\partial \hat{u}_i^*}{\partial x_i} - 
+    \frac{1}{\rho} \left( \frac{\partial \hat{p}^*}{\partial x_i} \hat{u}_i - i \beta \hat{p}^* \hat{u} \right) = \\
+    - \frac{1}{\rho} \frac{\partial \hat{p} \hat{u}_i^*}{\partial x_i} -
+      \frac{1}{\rho} \frac{\partial \hat{p}^* \hat{u}_i}{\partial x_i} = 
+      - \frac{1}{\rho} \frac{\partial}{\partial x_i} \left(  \hat{p} \hat{u}_i^* + \hat{p}^* \hat{u}_i \right)
+  \end{gathered}
+  \end{equation}
+  \item 
+  \begin{equation}
+  \begin{gathered}
+    \frac{1}{Re} \frac{\partial^2 \tilde{u}_i}{\partial x_j^2} \tilde{u}_i^* +
+    \frac{1}{Re} \left( \frac{\partial^2 \tilde{u}_i}{\partial x_j^2} \right)^* \tilde{u}_i = \\
+    \frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{\partial \tilde{u}_i}{\partial x_j} \right) \tilde{u}_i^* +
+    \frac{1}{Re} \left[ \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{u}_i^*}{\partial x_j} \hat{u}_i - \beta^2 \hat{u}_i^* \hat{u}_i \right) \right] = \\
+    \frac{1}{Re} \left[ \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \right) \right]
+   -\frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + \beta^2 \hat{u}_i^* \hat{u}_i \right)
+  \end{gathered}
+  \end{equation}
+\end{itemize}
+
+Therefore the equation for the energy reads
+%
+\begin{equation}
+\begin{gathered}
+\frac{\partial \hat{u}_i \hat{u}_i^*}{\partial t} + 2 \Re(\sigma) \hat{u}_i \hat{u}_i^* = 
+- \left( \hat{u}_j \hat{u}_i^* + \hat{u}_i \hat{u}_j^* \right) \frac{\partial U_i}{\partial x_j} -
+\frac{\partial}{\partial x_j} \left( U_j \hat{u}_i \hat{u}_i^*\right)  + \\
+- \frac{1}{\rho} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + p^* \hat{u}_i \right) +
+\frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{ \partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \right) 
+- \frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + 2 \beta^2 \hat{u}_i^* \hat{u}_i \right) 
+\end{gathered} 
+\end{equation}
+
+%
+We now average over one period to remove the dependence on $\partial \hat{u}_i \hat{u}_i^*/\partial t$. We thus obtain:
+%
+\begin{equation}
+  \begin{gathered}
+  \frac{2 \Re(\sigma)}{T} \int_{t_0}^{t_0+T} \hat{u}_i \hat{u}_i^* \text{d}t = 
+ -\frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{u}_j \hat{u}_i^* + \hat{u}_j^* \hat{u}_i \right) \frac{\partial U_i}{\partial x_j} \text{d} t +\\
+ -\frac{1}{T} \int_{t_0}^{t_0+T} U_j \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \text{d} t + 
+ -\frac{1}{T} \int_{t_0}^{t_0+T} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + \hat{p}^* \hat{u}_i \right) \text{d}t + \\
+ +\frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left[ \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{u}_i^* \hat{u}_i }{\partial x_j} \right) \right] \text{d}t 
+ -\frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + 2 \beta^2 \hat{u}_i^* \hat{u}_i \right) \text{d} t
+ \end{gathered}
+\end{equation}
+
+To provide further insights on the physical mechanism of the modes we can also look at the budget equation for the enstrophy, which is defined as $\hat{\omega}_i \hat{\omega}_i^*$. We follow a similar approach like for the energy budget. However, in this case we start from the linearised equation for the vorticity, which reads:
+%
+\begin{equation}
+  \frac{\partial \omega_i}{\partial t} + U_j \frac{\partial \omega_i}{\partial x_j} + u_j \frac{\partial \Omega}{\partial x_j} = \Omega_j \frac{\partial u_i}{\partial x_j} + \omega_j \frac{\partial U_i}{\partial x_j} + \frac{1}{Re} \frac{\partial^2 \omega_i}{\partial x_j^2}.
+\end{equation}
+%
+We then follow the same approach as before and eventually obtain (here we use the fact that $\bm{\Omega} = \Omega \hat{\bm{e}}_3$)
+%
+\begin{equation}
+  \begin{gathered}
+  \frac{\partial \hat{\omega}_i \hat{\omega}^*_i}{\partial t} + 
+  2 \Re(\sigma) \hat{\omega}_i \hat{\omega}_i^* = 
+  - \left( \hat{\omega}_i^* \hat{u}_j + \hat{\omega}_i u_j^* \right) \frac{\partial \Omega_i}{\partial x_j} 
+  - U_j \frac{\partial \hat{\omega}_i \hat{\omega}_i^* }{\partial x_j}  +
+   i \beta \Omega_3 \left( \hat{u}_i \hat{\omega}_{i}^* - \hat{u}_i^* \hat{\omega}_i \right)  + \\
+   + \left( \hat{\omega}_i^* \hat{\omega}_j + \hat{\omega}_i \hat{\omega}_j^* \right) \frac{\partial U_i}{\partial x_j} + 
+   \frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{\omega}_i \hat{\omega}_i^*}{\partial x_j} \right) -
+   \frac{1}{Re} \left( 2 \frac{\partial \hat{\omega}_i}{\partial x_j} \frac{\partial \hat{\omega}^*}{\partial x_j} + 2 \beta^2 \hat{\omega}_i \hat{\omega}^* \right)
+  \end{gathered}
+\end{equation}
+%
+As above, we now integrate over one period, i.e. between $t_0$ and $t_0+T$ and obtain
+%
+\begin{equation}
+  \begin{gathered}
+  \frac{2 \Re{\sigma}}{T} \int_{t_0}^{t_0+T} \hat{\omega}_i \hat{\omega}_i^* \text{d}t = 
+  - \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{\omega}_i^* \hat{u}_j + \hat{\omega}_i u_j^* \right) \frac{\partial \Omega_i}{\partial x_j} \text{d}t
+  - \frac{1}{T} \int_{t_0}^{t_0+T} U_j \frac{\partial \hat{\omega}_i \hat{\omega}_i^* }{\partial x_j} \text{d} t + \\
+  + \frac{1}{T} \int_{t_0}^{t_0+T}    i \beta \Omega_3 \left( \hat{u}_i \hat{\omega}_{i}^* - \hat{u}_i^* \hat{\omega}_i \right)  \text{d} t
+  + \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{\omega}_i^* \hat{\omega}_j + \hat{\omega}_i \hat{\omega}_j^* \right) \frac{\partial U_i}{\partial x_j} \text{d} t + \\
+  + \frac{1}{T} \int_{t_0}^{t_0+T}    \frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{\omega}_i \hat{\omega}_i^*}{\partial x_j} \right) \text{d} t -
+  \frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left( 2 \frac{\partial \hat{\omega}_i}{\partial x_j} \frac{\partial \hat{\omega}_i^*}{\partial x_j} + 2 \beta^2 \hat{\omega}_i \hat{\omega}_i^* \right) \text{d} t
+  \end{gathered}
+\end{equation}
+XXX nelle derivate della dissipazione il pedice j indica anche le derivate in z? non sono già contate da beta*beta?XXX
+
+%\section{Results}
