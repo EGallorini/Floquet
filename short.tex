@@ -1,12 +1,51 @@
 \section{Short bodies}
 \label{sec:short}
 
+We begin by considering short bodies with $1 \le AR \le 2$, to investigate how a modest increase in $\AR$ --- which does not qualitatively alter the base-flow topology --- modifies the bifurcations scenario and the sequence in which the various modes become unstable compared to the well-known $\AR=1$ case. For these aspect ratios, vortices do not separate from the LE and the base flow remains dominated by the TE vortex shedding. This section complements the analysis by \cite{choi-yang-2014}, which examined the secondary instability of the flow past bodies ranging from a normal flat plate ($\AR \rightarrow 0$) to a square cylinder ($\AR=1$).
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1p25.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1p5.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1p75.eps} \\
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/Floqetmode_beta_1p2_Re200_AR1_A.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/Floqetmode_beta_5p5_Re200_AR1p25_B.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/Floqetmode_beta_3p75_Re200_AR1p5_C.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/Floqetmode_beta_1p8_Re200_AR1p5_Bp.png}  
+  \caption{Top: multipliers for $\AR=1$, $\AR=1.25$ and $\AR=1.5$ at $Re=200$; the red line refers to mode $A$, the grey line to mode $C$, the green line to mode $B$ and the light blue line refers to mode $B'$. Mode $B'$ has the same spatio-temporal symmetry of mode $B$, but its characteristic wavelength is much smaller, being similar to that of mode $A$. This mode resembles that found for elongated bodies with elliptic leading edge by \cite{ryan-etal-2005}. XX ADD $Re=175$ XX. Bottom: Three-dimensional reconstructions of the Floquet modes for $1 \le \AR \le 1.75$. $(a)$ mode A for $\AR=1$ at $Re=200$ and $\beta=1.2$. $(b)$ mode B for $\AR=1.25$ at $Re=200$ and $\beta=5.5$. $(c)$ mode QP for $\AR=1.5$ at $Re=200$ and $\beta=1.5$. $(d)$ mode B' for $\AR=1.5$ and $\beta=1.8$.}
+  \label{fig:mult_AR1_AR1p75}
+\end{figure}
+%
+As mentioned in \S\ref{sec:intro}, for $\AR=1$ three distinct modes become unstable in rapid succession. Mode A first becomes unstable at $Re \approx 175$ with a characteristic wavelength of $\lambda_A \approx 5$ ($\beta_A \approx 1.2$) and the following spatio-temporal symmetry 
+%
+\begin{equation}
+  \hat{\omega}_x(x,y,\beta,t) = - \hat{\omega}_x(x,-y,\beta,t+/2)
+\end{equation}
+%
+Mode B becomes unstable at $Re \approx 200$, has a characteristic wavelength $\lambda_B \approx 1$ ($\beta_B \approx 5.8$) and satisfies the symmetry:
+%
+\begin{equation}
+  \hat{\omega}_x(x,y,\beta,t) = + \hat{\omega}_x(x,-y,\beta,t+T/2).
+\end{equation}
+%
+Finally, mode QP becomes unstable at the higher $Re \approx 230$ with a characteristic wavelength of $\lambda_{QP} \approx 2.7$ ($\beta_{QP} \approx 2.3$). These results are in excellent agreement with our findings shown in figure~\ref{fig:mult_AR1_AR1p75}$(a)$, providing a validation of our numerical approach.
+
+Figure~\ref{fig:mult_AR1_AR1p75} illustrates the effect of increasing the aspect ratio. As $\AR$ increases, the onset of secondary instabilities is progressively delayes: fixing $Re$ our results show a consistent decrease inthe modulus of the Floquet multipliers associated with the three known modes, indicating a more stable base flow for longer bodies. Quantitativley, the critical Reynolds number increases from $Re_{c2} \approx 175$ for $\AR=1$ to approximately $Re_{c2} =200-225$ for $\AR=1.75$. This trend aligns with the delyed onset of the primary instability reported by \cite{chiarini-quadrio-auteri-2021}. Despite the stabilising effect, the sequence of bifurcations remains essentially unchanged for $1 \le \AR \le 1.75$, with mode A becoming unstable first, followed by mode B. The characteristic wavelengths of these modes exhibit only martinal variations with $\AR$, consistent with the findings of \cite{choi-yang-2014} for $\AR<1$.
+
+In addition to the three established modes, a new mode, denoted B', emergest for $\AR>1$. Mode B' shares the same spatio-temporal symmetry as mode B, but is characterised by a significantly longer wavelength, comparable to that of mode A; see figure \ref{fig:modes_AR1_AR1p75}. A mode with similar features --- both in wavelength and symmetry --- was previously reported by \cite{ryan-etal-2006} in the wake of elongated bodies with streamlined LE and blunt TE. However, within the parameter range considered here, mode B' remains stable.
+
 \begin{figure}
   \centering
   \includegraphics[width=0.49\textwidth]{./fig/AR1s/T_Re.eps}
-  \caption{Period of the limit cycle for $1 \le \AR \le 1.75$ as a function of the Reynolds number}
+  \caption{Period of the limit cycle for $1 \le \AR \le 1.75$ as a function of the Reynolds number. XX ADD (i) PANEL WITH DEPENDENCE OF $T$ ON $\AR$ FOR A SELECTED $Re$. (ii) PANEL WITH DEPENDENCE OF THE AERODYNAMIC FORCES on $\AR$ and $Re$. (iii) PANEL WITH DEPENDENCE OF MEAN-FLOW QUANTITIES ON $\AR$ and $Re$. XX}
   \label{fig:T_Re_small}
 \end{figure}
+%
+For $Re>Re_{c2}$ the stability scenario becomes more complex, as the influence of $Re$ on the base-flow topology varies with $\AR$. This trend is clearly illustrated in figure \ref{fig:T_Re_small}, which shows the dependence of the base-flow shedding period $T$ on both $Re$ and $\AR$. For the shortest and logest bodies, $T$ exhibits only minor variations with increase $Re$: it increases by approximately $xx\%$ for $\AR =1$ and decreases by about $xx\%$ for $\AR=1.75$. In contrast, intermediated aspect ratios ($\AR=1.25$) show a mouch stornger dependence on $Re$. Here, $T$ increases significantly with $Re$ rising from $T \approx 6.5$ at $Re \le 210$ to $T \approx 9$ at $Re \ge 250$. This shift reflects changes in the base-flow topology and coincides wit the emergence of new instability modes. The differing sensitivity of the base-flow to $Re$ is further quantified in figure~\ref{fig:T_Re_small}(c-d) which shows the aerodynamics forces and characterstic mean-flow length scales.
+
+XX GUARDARE IL CAMPO MEDIO. FACCIAMO STABILITA DEL CAMPO MEDIO PER VEDERE SE CAPIAMO QUALCOSA RIGUARDO AL DIVERSO SHEDDING? XX
+
 
 \begin{figure}
   \centering
