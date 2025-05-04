@@ -3,41 +3,7 @@
 
 We begin by considering short bodies with $1 \le AR \le 2$, to investigate how a modest increase in $\AR$ --- which does not qualitatively alter the base-flow topology --- modifies the bifurcations scenario and the sequence in which the various modes become unstable compared to the well-known $\AR=1$ case. For these aspect ratios, vortices do not separate from the LE and the base flow remains dominated by the TE vortex shedding. This section complements the analysis by \cite{choi-yang-2014}, which examined the secondary instability of the flow past bodies ranging from a normal flat plate ($\AR \rightarrow 0$) to a square cylinder ($\AR=1$).
 
-\subsection{The first bifurcation}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1p25.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1p5.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1p75.eps} \\
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/Floqetmode_beta_1p2_Re200_AR1_A.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/Floqetmode_beta_5p5_Re200_AR1p25_B.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/Floqetmode_beta_3p75_Re200_AR1p5_C.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/Floqetmode_beta_1p8_Re200_AR1p5_Bp.png}  
-  \caption{Top: multipliers for $\AR=1$, $\AR=1.25$ and $\AR=1.5$ at $Re=200$; the red line refers to mode $A$, the grey line to mode $C$, the green line to mode $B$ and the light blue line refers to mode $B'$. Mode $B'$ has the same spatio-temporal symmetry of mode $B$, but its characteristic wavelength is much smaller, being similar to that of mode $A$. This mode resembles that found for elongated bodies with elliptic leading edge by \cite{ryan-etal-2005}. XX ADD $Re=175$ XX. Bottom: Three-dimensional reconstructions of the Floquet modes for $1 \le \AR \le 1.75$. $(a)$ mode A for $\AR=1$ at $Re=200$ and $\beta=1.2$. $(b)$ mode B for $\AR=1.25$ at $Re=200$ and $\beta=5.5$. $(c)$ mode QP for $\AR=1.5$ at $Re=200$ and $\beta=1.5$. $(d)$ mode B' for $\AR=1.5$ and $\beta=1.8$.}
-  \label{fig:mult_AR1_AR1p75}
-\end{figure}
-%
-As mentioned in \S\ref{sec:intro}, for $\AR=1$ three distinct modes become unstable in rapid succession. Mode A first becomes unstable at $Re \approx 175$ with a characteristic wavelength of $\lambda_A \approx 5$ ($\beta_A \approx 1.2$) and the following spatio-temporal symmetry 
-%
-\begin{equation}
-  \hat{\omega}_x(x,y,\beta,t) = - \hat{\omega}_x(x,-y,\beta,t+/2)
-\end{equation}
-%
-Mode B becomes unstable at $Re \approx 200$, has a characteristic wavelength $\lambda_B \approx 1$ ($\beta_B \approx 5.8$) and satisfies the symmetry:
-%
-\begin{equation}
-  \hat{\omega}_x(x,y,\beta,t) = + \hat{\omega}_x(x,-y,\beta,t+T/2).
-\end{equation}
-%
-Finally, mode QP becomes unstable at the higher $Re \approx 230$ with a characteristic wavelength of $\lambda_{QP} \approx 2.7$ ($\beta_{QP} \approx 2.3$). These results are in excellent agreement with our findings shown in figure~\ref{fig:mult_AR1_AR1p75}$(a)$, providing a validation of our numerical approach.
-
-Figure~\ref{fig:mult_AR1_AR1p75} illustrates the effect of increasing the aspect ratio. As $\AR$ increases, the onset of secondary instabilities is progressively delayes: fixing $Re$ our results show a consistent decrease inthe modulus of the Floquet multipliers associated with the three known modes, indicating a more stable base flow for longer bodies. Quantitativley, the critical Reynolds number increases from $Re_{c2} \approx 175$ for $\AR=1$ to approximately $Re_{c2} =200-225$ for $\AR=1.75$. This trend aligns with the delyed onset of the primary instability reported by \cite{chiarini-quadrio-auteri-2021}. Despite the stabilising effect, the sequence of bifurcations remains essentially unchanged for $1 \le \AR \le 1.75$, with mode A becoming unstable first, followed by mode B. The characteristic wavelengths of these modes exhibit only martinal variations with $\AR$, consistent with the findings of \cite{choi-yang-2014} for $\AR<1$.
-
-In addition to the three established modes, a new mode, denoted B', emergest for $\AR>1$. Mode B' shares the same spatio-temporal symmetry as mode B, but is characterised by a significantly longer wavelength, comparable to that of mode A; see figure \ref{fig:modes_AR1_AR1p75}. A mode with similar features --- both in wavelength and symmetry --- was previously reported by \cite{ryan-etal-2006} in the wake of elongated bodies with streamlined LE and blunt TE. However, within the parameter range considered here, mode B' remains stable.
-
-\subsection{Secondary instabilities}
+\subsection{The base flow}
 
 XX ATTENZIONE. PER $\AR=1.25$ E $Re=250$ IN FLUSSO BASE HA PERSO LE SIMMETRIE SPAZIO TEMPORALI. C'E' UN ALTRA BIFORCAZIONE 2D. PER QUESTO ABBIAMO MODI SUBARMONICI. CHE ALTRIMENTI NON SAREBBERO POSSIBILI PRIMA DI PROSEGUIRE CONTROLLARE QUESTO. IN REALTA' VEDIAMO UNA BIF CHE E' SINCRONA, ANCHE SE QUELLA PRIMARIA E' QUASI PERIODICA. QUINDI NON VA BENE. \textcolor{red}{Quello che farei è guardare come cambia la stabilità secondaria fino a $Re=240$ e scrivere nel testo che per $Re \ge 250$ il flusso base diventa anche instabile a perturbazioni 2D (sia sincrone che quasi-periodiche), che però non facciamo vedere per brevità. In questo modo ce la dovremmo cavare} XX
 
@@ -68,8 +34,6 @@ To further highlight the change of the flow topology with $\AR$ and $Re$, we loo
 
  This different base-flow topology influences the size of the wake recirculating region (see figure \ref{}) and explains the different dependence of $T$ on $Re$ for shorter and longer bodies. For shorter bodies $\AR \le 1.25$ an increase of $\AR$ and $Re$ leads to an increase of the angle with which the flow separates at the LE corner resulting thus into a longer mean wake recirculating region $\ell_w$ (which is where the global intability that gives origin to the vortex shedding takes place; see the following), and thus to a lower flow frequency $f \sim \mathcal{U}/\ell_w$ with $\mathcal{U}$ denoting a given time scale. For longer bodies $\AR \ge 1.25$, instead, an increase of $Re$ or $\AR$ results into a shorter wake recirculating region, and thus to a higher flow frequency. Owing to viscous diffusion, indeed, the two shear LE shear layers become thicker in the region downstream the TE as $\AR$ increases as its distance from the LE increases, inducing a quicker close of the mean-flow streamlines. 
   
-%At the smaller $Re \le 210$, the flow topology for the $\AR=1.25$ case resembles that for more elongated cylinders, see figure \ref{}. The flow separates at the LE, reattaches along the lateral sides of the body and then separates. In this case the vortex shedding is dominated by the wake vortex which is delimited by the TE shear layers; the streamline separating from the LE corner reattaches to the lateral sides of the body at almost all times. By contrast, for larger $Re$, the flow topology resembles that for shorter cylinders, see figure \ref{}. In this case the LE shear layer only intermittently reattaches along the lateral sides of the cylinder, being instead active in the formation of the wake vortex and its shedding in the wake (see panel xx). This change of topology is consistent with the fact that an increase of $Re$ leads to an increase of the angle with which the LE shear layer separates and to a progressive increase of the length of the side recirculating region. Note that as long as the LE shear layer plays a role in the shedding of vortices in the wake the size of the wake recirculating region increases with $\AR$. This is due to the fact that, owing to the viscous diffusion, the LE shear layers that delimit the wake recirculating region behind the TE become thicker and weaker as $\AR$ increases, since the position where the wake vortex are formed moves downstream; see figure \ref{}. The decrease of the flow frequency as $Re$ increases (or $\AR$ increase) in this case is consistent with a longer wake recirculating region ($f \sim \mathcal{U}/\ell_w$ where $\mathcal{U}$ is a velocity scale), see figure \ref{}. Also, the different flow topology observed for $1 \le \AR \le 1.25$ and $1.25 \le \AR \le 1.75$ explains the different dependence of $T$ on $Re$ shown in figure \ref{}. For longer bodies, indeed, the wake dynamics is associated with the shear layers separating from the TE, as the LE shear layer reattaches along the lateral sides of the body at all phases. In this case, an increase of $\AR$ (or $Re$) results into a shorter wake recirculating region and therefore to a larger flow frequency. The shorter wake recirculating region can be explained with the progressive thicker LE shear layers \citep{chiarini-quadrio-auteri-2021}.  
-
 XX FIGURE CON EIGENMODE E SENSITIVITA. FAI VEDERE $Re=200$ e $Re=250$ per $\AR=1$ e $\AR=1.5$ e $Re=200$ e $Re=230$ per $\AR=1.25$. \textcolor{red}{DOBBIAMO FARE $Re=230$ per $\AR=1$ e $\AR=1.5$?} XX
 
 To further highlight the change of the flow topology with $\AR$ and $Re$, we perform a global stability analysis of the mean flow averaged over one shedding period. The focus in on the leading eigenmode, which is representative of the unsteady phenomena of the flow. For a similar approach see for example \cite{pier-2002,barkley-2006} for the circular cylinder and \cite{chiarini-quadrio-auteri-2022} for rectangular cylinders. 
@@ -127,125 +91,35 @@ product of the adjoint and direct modes is small in the remaining part of the do
   \label{fig:MF_stab}
 \end{figure}
 
-XX GUARDARE IL CAMPO MEDIO. FACCIAMO STABILITA DEL CAMPO MEDIO PER VEDERE SE CAPIAMO QUALCOSA RIGUARDO AL DIVERSO SHEDDING? XX
-
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0000.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0005.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0010.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0015.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0020.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0025.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0030.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0035.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0040.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1/snap/snap.0045.png}  
-  \caption{$\AR=1$. Top: $Re=200$. Bottom: $Re=250$. Eight instantaneous snaphots takes equispaced in half of the period.}
-\end{figure}      
-
+\subsection{The bifurcations}
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0000.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0005.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0010.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0015.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0020.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0025.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0030.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0035.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0040.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/snap/snap.0045.png}  
-  \caption{$\AR=1.25$. Top: $Re=200$. Bottom: $Re=250$. Eight instantaneous snaphots takes equispaced in half of the period.}
-\end{figure}      
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0000.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0005.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0010.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0015.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0020.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0025.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0030.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0035.png}
-  \begin{tikzpicture}
-  \draw (-10,2) -- (8,2);
-  \end{tikzpicture}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0040.png}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/snap/snap.0045.png}  
-  \caption{$\AR=1.5$. Top: $Re=200$. Bottom: $Re=250$. Eight instantaneous snaphots takes equispaced in half of the period.}
-\end{figure}  
-      
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/mu_Re_Ar1p25_2D.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/mu_Ar1p25_2D.eps}  
-  \caption{Floquet multilpiers of the 2D bifurcation for $\AR=1.25$}
-  \label{fig:bif2D_AR1p25}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1/neutralb.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/neutralb.eps}  
+  \includegraphics[width=0.49\textwidth]{./fig/AR1p5/neutralb.eps}    
+  \includegraphics[width=0.49\textwidth]{./fig/AR1p75/neutralb.eps}       
+  \caption{Top: multipliers for $\AR=1$, $\AR=1.25$ and $\AR=1.5$ at $Re=200$; the red line refers to mode $A$, the grey line to mode $C$, the green line to mode $B$ and the light blue line refers to mode $B'$. Mode $B'$ has the same spatio-temporal symmetry of mode $B$, but its characteristic wavelength is much smaller, being similar to that of mode $A$. This mode resembles that found for elongated bodies with elliptic leading edge by \cite{ryan-etal-2005}. XX ADD FIGURE CON I MODI XX}
+  \label{fig:mult_AR1_AR1p75}
 \end{figure}
+%
+As mentioned in \S\ref{sec:intro}, for $\AR=1$ three distinct modes become unstable in rapid succession. Mode A first becomes unstable at $Re \approx 175$ with a characteristic wavelength of $\lambda_A \approx 5$ ($\beta_A \approx 1.2$) and the following spatio-temporal symmetry 
+%
+\begin{equation}
+  \hat{\omega}_x(x,y,\beta,t) = - \hat{\omega}_x(x,-y,\beta,t+/2)
+\end{equation}
+%
+Mode B becomes unstable at $Re \approx 200$, has a characteristic wavelength $\lambda_B \approx 1$ ($\beta_B \approx 5.8$) and satisfies the symmetry:
+%
+\begin{equation}
+  \hat{\omega}_x(x,y,\beta,t) = + \hat{\omega}_x(x,-y,\beta,t+T/2).
+\end{equation}
+%
+Finally, mode QP becomes unstable at the higher $Re \approx 230$ with a characteristic wavelength of $\lambda_{QP} \approx 2.7$ ($\beta_{QP} \approx 2.3$). These results are in excellent agreement with our findings shown in figure~\ref{fig:mult_AR1_AR1p75}$(a)$, providing a validation of our numerical approach.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.7\textwidth]{./fig/AR1p25/Mode_omegar_2D_Re250.png}
-  \caption{Floquet mode associated with the 2D Floquet multipliers for $Re=250$ and $\AR=1.25$. From top to bottom $|\mu|$ decreases. Referring to figure \ref{fig:bif2D_AR1p25}, the top panel refer to the red symbols, the central one to the green symbols, while the bottom panel to the blue symbols.}
-  \label{fig:mod2DAR1p25}
-\end{figure}
+Figure~\ref{fig:mult_AR1_AR1p75} illustrates the effect of increasing the aspect ratio. As $\AR$ increases, the onset of secondary instabilities is progressively delayes: fixing $Re$ our results show a consistent decrease inthe modulus of the Floquet multipliers associated with the three known modes, indicating a more stable base flow for longer bodies. Quantitativley, the critical Reynolds number increases from $Re_{c2} \approx 175$ for $\AR=1$ to approximately $Re_{c2} =200-225$ for $\AR=1.75$. This trend aligns with the delyed onset of the primary instability reported by \cite{chiarini-quadrio-auteri-2021}. Despite the stabilising effect, the sequence of bifurcations remains essentially unchanged for $1 \le \AR \le 1.75$, with mode A becoming unstable first, followed by mode B. The characteristic wavelengths of these modes exhibit only martinal variations with $\AR$, consistent with the findings of \cite{choi-yang-2014} for $\AR<1$.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1p25.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1p5.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1s/multipliers_AR1p75.eps} \\
-  \includegraphics[width=0.32\textwidth]{./fig/AR1s/Floqetmode_beta_1p2_Re200_AR1_A.png}
-  \includegraphics[width=0.32\textwidth]{./fig/AR1s/Floqetmode_beta_3p75_Re200_AR1_C.png}      
-  \includegraphics[width=0.32\textwidth]{./fig/AR1s/Floqetmode_beta_5p5_Re200_AR1_B.png}
-  \includegraphics[width=0.32\textwidth]{./fig/AR1s/Floqetmode_beta_1p25_Re200_AR1p25_A.png}
-  \includegraphics[width=0.32\textwidth]{./fig/AR1s/Floqetmode_beta_1p25_Re200_AR1p25_Bp.png}
-  \includegraphics[width=0.32\textwidth]{./fig/AR1s/Floqetmode_beta_5p5_Re200_AR1p25_B.png}
-  \includegraphics[width=0.32\textwidth]{./fig/AR1s/Floqetmode_beta_1p8_Re200_AR1p5_A.png}
-  \includegraphics[width=0.32\textwidth]{./fig/AR1s/Floqetmode_beta_1p8_Re200_AR1p5_Bp.png}
-  \includegraphics[width=0.32\textwidth]{./fig/AR1s/Floqetmode_beta_3p75_Re200_AR1p5_C.png}
-  \caption{Top: multipliers for $\AR=1$, $\AR=1.25$ and $\AR=1.5$ at $Re=200$; the red line refers to mode $A$, the grey line to mode $C$, the green line to mode $B$ and the light blue line refers to mode $B'$. Mode $B'$ has the same spatio-temporal symmetry of mode $B$, but its characteristic wavelength is much smaller, being similar to that of mode $A$. This mode resembles that found for elongated bodies with elliptic leading edge by \cite{ryan-etal-2005}. The bottom panels show the Floquet modes associated with the different branches for the three $\AR$s. Top: Floquet modes for $\AR=1$ and $Re=200$, associated with mode A (left, $\beta=1.2$), mode C (centre, $\beta=3.75$) and mode $B$ (right, $\beta=5.5$). Centre: Floquet modes for $\AR=1.25$ and $Re=200$ associated with mode A (left, $\beta=1.25$), mode $B'$ (centre, $\beta = 1.25$) and mode $B$ (right, $\beta=5.5$). Bottom: Floquet modes for $\AR=1.5$ and $Re=200$ associated with mode A (left, $\beta=1.8$), mode $B'$ (centre, $\beta=1.8$) and mode $C$ (right, $\beta=3.75$). These are 3D reconstructions of the Floquet modes and the red/blue isosurfaces denote positive/negative streamwise vorticity. XX ADD $Re=175$ FOR ALL CASES XX}
-  \label{fig:xx}
-\end{figure}
+In addition to the three established modes, a new mode, denoted B', emergest for $\AR>1$. Mode B' shares the same spatio-temporal symmetry as mode B, but is characterised by a significantly longer wavelength, comparable to that of mode A; see figure \ref{fig:modes_AR1_AR1p75}. A mode with similar features --- both in wavelength and symmetry --- was previously reported by \cite{ryan-etal-2006} in the wake of elongated bodies with streamlined LE and blunt TE. However, within the parameter range considered here, mode B' remains stable.
 
 
 \begin{figure}
@@ -254,21 +128,10 @@ XX GUARDARE IL CAMPO MEDIO. FACCIAMO STABILITA DEL CAMPO MEDIO PER VEDERE SE CAP
   \includegraphics[width=0.49\textwidth]{./fig/AR1p25/mu_beta_Re220.eps}
   \includegraphics[width=0.49\textwidth]{./fig/AR1p25/mu_beta_Re230.eps}
   \includegraphics[width=0.49\textwidth]{./fig/AR1p25/mu_beta_Re240.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/mu_beta_Re250.eps}
+  %\includegraphics[width=0.49\textwidth]{./fig/AR1p25/mu_beta_Re250.eps}
   \caption{Modulus of the Floquet multipliers for $\AR=1.25$ at different $Re$. In order, the panels are for $Re=210$, $Re=220$, $Re=230$, $Re=240$ and $Re=250$. Red colour is for real and positive multipliers. Blue colour is for complex multipliers. Green colour is for real and negative multipliers. Note that for $Re=250$ at small $\beta$ we have to real, positive multipliers, associated to modes $A$ and $A'$. Then they interact and the brances collapse to a new one that has non null imaginary part. Also, in this case two new mode of subharmonic nature arise they are distinct modes, but for $\beta \approx 3$ they interact and the two branches collapse to a unique one. Then they separate again. XX ADD THE MODES XX}
 \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/omegax_Re230_beta_2p25_modeC.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/omegax_Re230_beta_2p25_modeD.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/omegax_Re240_beta_0p5_modeBpp.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/omegax_Re250_beta_1_modeAp.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/omegax_Re250_beta_3_modeS.eps}
-  \includegraphics[width=0.49\textwidth]{./fig/AR1p25/omegax_Re250_beta_3_modeSp.eps}
-  \caption{Imaginary part of the streamwise vorticity of the Floquet modes for $\AR=1.25$. Top left: mode $C$ for $Re=230$, $\beta=2.25$. Top right: mode $D$ for $Re=230$, $\beta=2.25$. Centre left: mode $B'$ for $Re=240$ and $beta=0.5$. Centre right: mode $A'$ for $Re=250$ and $\beta=3$. Bottom left: mode $S$ for $Re=250$ and $\beta=3$. Bottom right: mode $S'$ for $Re=250$ and $\beta=3$.}
-  \label{fig:modes_AR1p25}
-\end{figure}
 
 
 \begin{itemize}
