@@ -1,5 +1,92 @@
 \section{Intermediate $\AR$s with $3 < \AR < 4.75$}
 
+\begin{figure}
+  \centering
+  \includegraphics[trim={0 100 0 100},clip,width=0.49\textwidth]{./fig/vort_Re425_25.png}
+  \includegraphics[trim={0 100 0 100},clip,width=0.49\textwidth]{./fig/vort_Re450_25.png}  
+  \includegraphics[trim={0 100 0 100},clip,width=0.49\textwidth]{./fig/AR4p5/vort_Re430_25.png}
+  \includegraphics[trim={0 100 0 100},clip,width=0.49\textwidth]{./fig/AR4p5/vort_Re450_25.png}
+  \caption{Instantaneous snapshots for $\AR=4$ at $Re=425$ (top left) and $Re=450$ (top right), and $\AR=4.5$ at $Re=430$ (bottom left) at $Re=450$ (bottom right).}
+  \label{fig:snap_ar4_ar4p5}
+\end{figure}
+%
+We now move to the horizontal $n=1$ branch dominates by the LE vortex shedding (see figure \ref{}), i.e. to $3 \le \AR \le 4.75$, and use $\AR=4$ and $\AR=4.5$ as representative cases.
+
+\subsection{A $2D$ bifurcation}
+
+\subsubsection{Non linear simulations}
+
+ The non linear simulations show that as $Re$ increases ($Re = Re_{c2}$) the 2D periodic base flow becomes unstable to two-dimensional perturbations and undergoes a synchronous bifurcation which leads to a flow having the same periodicity, but with a slanted wake. This is visualised in figure \ref{fig:snap_ar4_ar4p5} that show the vorticity field of instantaneous snapshots at different $Re$. For $Re< Re_{c2}$ (left panels) the wake is aligned with the $x$ axis, and characterised by the usual alternating shedding of vortices with positive/negative vorticity along the $y=0$ line. This flow regime is detailed in \cite{chiarini-quadrio-auteri-2022}, and here it is only briefly characterised for completeness. At these parameters flow dynamics is dominated by the LE vortex shedding, and a single vortex is placed at each time over the lateral sides of the cylinder. The LE vortices are advected downstream and, when they cross the TE, an hyperbolic stagnation point arises and a new TE vortex with vorticity of opposite sign is shed from the opposite side \citep{chiarini-quadrio-auteri-2022}. Here the passage of the LE vortex over the TE corner is in phase with the generation of a new TE vortex from the oppsite side of the cylinder. The relative phase at which positive (negative) LE vortices cross the TE and negative (positive) TE vortices are shed in the wake changes slightly changes with $\AR$, explaining the differences in the wake between the $\AR=4$ and the $\AR=4.5$ cases. For $\AR=4$ the LE vortices in the wake are weaker. When the Reynolds number is increased beyond $Re_{c2}$ and the flow bifurcates, the flow looses its (average) symmetry with respect to an inversion of the $y$ axis and exhibits a slanted wake. In this case, indeed, the vortex monopoled are not placed along the $y=0$ line, but they deviate apart. For $\AR=4$ this is observed for $Re \gtrapprox 435$, while for $\AR=4.5$ for $Re \gtrapprox 417.5$. Clearly, the top/bottom direction of the slanted wake changes with the initial conditions and depends on the spatial structure of the initial perturbation.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR4_Cl_Re.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR4_Cd_Re.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR4_T_Re.eps}
+  \caption{Dependence of $C_\ell$, $C_d$ and $T$ on the Reynolds number $Re$. XX REPLACE WITH $\AR=4.5$XX}
+  \label{fig:Cl-Cd-AR4}
+\end{figure}
+%
+Figure \ref{fig:Cl-Cd-AR4} illustrated the dependence of the aerodynamic forces $C_\ell$ and $C_d$ and of the flow period $T$ on $Re$. Note that for $Re>Re_{c2}$ the unstable straight wake is stabilised by means of the BoostConv algorithm, As expected by the flow symmetries, $C_\ell=0$ for $Re \le Re_{c2}$ and $C_\ell \neq 0$ for $Re > Re_{c2}$. On the other sides, the aerodynamic drag $C_d$ increases with $Re$ in both regimes, but it increases faster in the slanted configuration. Figure \ref{fig:Cl-Cd-AR4}(c) shows that this bifurcation is og synchronous nature, as the value of $T$ collapse to the same line for both configurations showing a monotonous decrease as $Re$ increases.
+
+\subsubsection{Linear stability analysis}
+\begin{figure}
+\centering
+\includegraphics[width=0.49\textwidth]{./fig/AR4p5/multipliers_2D.eps}
+\includegraphics[width=0.49\textwidth]{./fig/AR4p5/multipliers_2D_b.eps}
+\includegraphics[width=0.7\textwidth]{./fig/AR4p5/omegaz_beta0_Re430_AB.png}
+\includegraphics[width=0.7\textwidth]{./fig/AR4p5/Floqetmode_beta_0_Re450_AR4p5.png}
+\caption{$2D$ bifurcation of the periodic flow past a rectangular cylinder with $\AR=4.5$. Top: Multipliers associated with the straight (solid) and slanted (dashed) wake for $\AR=4.5$. The left panel plots $|\mu|$ as a function of $\beta$. The red colour refers to real and positive multipliers, while the blue colour refer to complex mutlpliers. The right panel shows the dependence of $\Re(\mu)$ and $\Im(\mu)$ on $Re$. Note that the slanted wake is the results of the synchronous instability described by the red branch. Once the wake becomes slanted a new branch with complex conjugate multipliers arises that becomes unstable at $Re \approx 450$. Centre: Floquet modes associated with the straight wake; the colours are for the spanwise vorticity and the above and bottom panel refer to the red and blue branches respectively. Bottom: Floquet mode associated with the blue branch of the slanted wake.}
+\label{fig:AR4p5_modes_Re430_beta0}
+\end{figure}
+
+To investigate the origin of this phenomenon, we have studied the linear stability of the straight wake to 2D ($\beta=0$) perturbations, using Floquet theory. We have looked at both $\AR=4$ and $\AR=4.5$, but for brevity we report only the results for the latter aspect ratio. Figure \ref{fig:AR4p5_modes_Re430_beta0}(a-b) shows with straight lines the multipliers associated with the straight wake. The red colour refers to synchronous perturbations, i.e. real and positive multipliers. The blue colour, instead, refers to complex conjugate multipliers i.e. to quasi-periodic modes. The red branch crosses the unit circle at $Re = Re_{c2} \approx 417.5$ (for $\AR=4$ we measure $Re_{c2} \approx 425$). The fact that $\Im(\mu)=0$ confirms that the slatend wake is the result of a synchronous global instability of the wake. The blue branch associated with the quasi-periodic mode does not become unstable in the considered range of parameters. 
+
+To provide further details, figure \ref{fig:AR4p5_modes_Re430_beta0} shows the spanwise vorticity of the unstable Floquet mode together with isolines of the base-flow vorticity. In the wake, the unstable mode generates dipoles of spanwise vorticity that frow in space and time as they are advected downstream. A synchronisation between the base flow and the perturbation field is obseved, with the dipoles of the linear mode being centred with the base-flow vortices at all times. A dipolar perturbation of a monopolar vortex is often referred to as displacement mode \citep{brion-sipp-jacquin-2014} and is known to result in a displacement of the vorticity centroid similarly to what observed for $Re>Re_{c2}$ in figure \ref{fig:snap_ar4_ar4p5}. We consider a positive base-flow virticity monopole in the wake. Here the Floquet dipole has positive vorticity in the lower part and negative vorticity in the upper part. This superposition stregthens the lower part of the monopole and weaken the top part, resulting into a net displacement  of the monopole in the downwards direction. In the monopoles of negative base-flow vorticity, instead, the scenario is the opposite. The Floquet dipole has positive vorticity in the top part of the monopole and negative vorticity in the bottom part. This strengthens the bottom part of the monopole and weakens the top parti, resulting again into a downward shift of the monopole. This explains the vertical displacement of the vortex centroids shown in figures \ref{fig:snap_ar4_ar4p5}. We mention that this mechanism resembles that observed in \cite{jallas-marquet-fabre-2017} in the case of pitching airfoils.
+
+For completeness, we report that the slanted wake is then unstable to 2D perturbations of quasi-periodic nature. However, as shown in the following this is a secondary bifurcation of the slanted-wake base flow, as the flow becomes three-dimensional at lower $Re$.
+
+\subsubsection{Non linear effects}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{./fig/AR4p5/Nlgrowth_Re420.eps}
+  \includegraphics[width=0.8\textwidth]{./fig/AR4p5/LinNonLin_Re420.png}
+  \caption{Nonlinear growth of the 2D perturbation to the wake near the secondary instability threshold for $\AR=4.5$ and $Re=420$. Top: the blue circles are the amplitude of $A_n$ evaluated from simulations of the full Navier--Stokes equations at $Re=420$. The solid line shows the prediction $A_{n+1} = \mu A_n$, while the dashed line shows the prediction $A_{n+1} = ( \mu + \alpha_1 A_n + \alpha_2 A_n^3 ) A_n$, with $\alpha_1 = -0.01114$ and $\alpha_2 = 0.000359$. The inset shows the bifurcation diagram. Bottom: snapshots of the vorticity field for linear and nonlinear perturbations and of the total field.}
+\end{figure}
+
+We now characterise the influence of the non linearity on the growth of the 2D mode..
+
+XX ADD DETAILS XX
+
+\subsection{The 3D bifurcation}
+
+
+%
+Notably, this new slanted wake is strongly unstable to three-dimensional perturbations of subharmonic nature, being characterised by a small spanwise wavelenght (a large value of $\beta$); see figure \ref{fig:2Dmultipliers}. The linear stability of the slanted wake to three-dimensional perturbations has been investigated again by mean of Floquet analysis. For $Re \ge 435$ we have found a Floquet multiplier outside the unit circle, having negative imaginary part. For $Re=450$ we found $ mu \approx (-4.8,0)$ for $\beta=7$ ({\color{red} we still have to study the dependence of the results on the vertical extent of the computational domain}). The 
+structure of the mode is shown in the bottom panel of figure \ref{fig:AR4_Floquet_modes}. This is clearly an unstable mode of the wake. The mode, indeed, in almost null over the lateral sides of the cylinder where instead the flow dynamics is driven by the vortices shed by the LE.
+
+XX ADD DETAILS XX
+
+\begin{figure}
+\centering
+\includegraphics[width=0.49\textwidth]{./fig/AR4p5/multipliers_3D.eps}
+\vspace{0.1cm}
+\begin{tikzpicture}
+\draw (-10,2) -- (8,2);
+\end{tikzpicture}
+\vspace{0.1cm}
+\includegraphics[trim={0 0 0 0},clip,width=0.49\textwidth]{./fig/AR4p5/Floqetmode_beta_8_Re450_AR4p5.png}
+\includegraphics[width=0.49\textwidth]{./fig/AR4p5/lambda2_omegax-3D-Re450b.png}
+\caption{Three-dimensional instability of the flow past a rectangular cylinder with $\AR=4.5$. The flow become unstable once the wake has bifurcated to a slanted configuration. The resulting limit cycle is (strongly) unstable to three-dimnsional perturbation of subharmonic nature (here the multipliers are real and negative); see top panel. Modes from the Floquet analysis for $\AR=4.5$. Bottom: Imaginary part of the streamwise vorticity for $\AR=4.5$, $Re=450$ and $\beta=8$ associated with the unstable subharmonic multiplier. Bottom right: DNS of the flow past the rectangular cylinder with $\AR=4.5$ at $Re=450$. Red/blue isosurfaces indicate $\omega_x = \pm 0.015$. Note that the wake is slanted and three-dimensional, as predicted by the Floquet stabilty analysis. The spanwise extent of the computational domain is $L_z=2\pi$.This means that the wavenumber associated with the three-dimensionality is $\beta \approx 6$, which is consistent with the most amplified wavenumber detected with the stability analysis.}
+\label{fig:AR4p5_modes_Re430_beta0}
+\end{figure}
+
+
+
+\iffalse
+
+
 
 
 \begin{figure}
@@ -134,6 +221,8 @@ structure of the mode is shown in the bottom panel of figure \ref{fig:AR4_Floque
 \caption{Three-dimensional instability of the flow past a rectangular cylinder with $\AR=4.5$. The flow become unstable once the wake has bifurcated to a slanted configuration. The resulting limit cycle is (strongly) unstable to three-dimnsional perturbation of subharmonic nature (here the multipliers are real and negative); see top panel. Modes from the Floquet analysis for $\AR=4.5$. Bottom: Imaginary part of the streamwise vorticity for $\AR=4.5$, $Re=450$ and $\beta=8$ associated with the unstable subharmonic multiplier. Bottom right: DNS of the flow past the rectangular cylinder with $\AR=4.5$ at $Re=450$. Red/blue isosurfaces indicate $\omega_x = \pm 0.015$. Note that the wake is slanted and three-dimensional, as predicted by the Floquet stabilty analysis. The spanwise extent of the computational domain is $L_z=2\pi$.This means that the wavenumber associated with the three-dimensionality is $\beta \approx 6$, which is consistent with the most amplified wavenumber detected with the stability analysis.}
 \label{fig:AR4p5_modes_Re430_beta0}
 \end{figure}
+
+\fi
 
 
 %\begin{figure}
