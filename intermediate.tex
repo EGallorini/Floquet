@@ -48,6 +48,14 @@ For completeness, we report that the slanted wake is then unstable to 2D perturb
 
 \subsubsection{Non linear effects}
 
+
+\begin{itemize}
+  \item \textcolor{blue}{ Amplitude equation non è esattamente corretta. Quel valore di A che ottengo non è esattamente la stessa amplitude che si ottiene per $\hat{\bm{u}}_1$ quando si fa WNL con un'espansione alle scale multiple. Infatti in quel caso il campo di velocità dovrebbe essere $\bm{u} = \bm{u}_0 + \epsilon A(T) \bm{u}_1 ..$ dove nei termini successivi (per esempio $\bm{u}_2$) ci sono anche correzioni al flusso base. Quindi, fai attenzione non è esattamente la stessa cosa. }
+  \item \textcolor{blue}{ Possiamo fare un'espansione alle scale multiple per trovare che forma ha questa amplitude equation? Possiamo fare veramente and una WNL su questa biforcazione o non è possibile? }
+  \item \textcolor{blue}{ Leggi bene anche gli articoli di Barkley \& Hendersson }
+\end{itemize}
+
+
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{./fig/AR4p5/Nlgrowth_Re420.eps}
@@ -104,6 +112,8 @@ Figure \ref{fig:pert-nl} shows snapshots of the linear and non linear perturbati
 
 \subsection{The 3D bifurcation}
 
+\subsubsection{Linear stability analysis}
+
 \begin{figure}
   \centering
   \includegraphics[width=0.49\textwidth]{./fig/AR4p5/multipliers_3D.eps}
@@ -115,6 +125,18 @@ Figure \ref{fig:pert-nl} shows snapshots of the linear and non linear perturbati
 For $Re \ge Re_{c2}$ the flow approaches a new limit cycle characterised by a deflected wake (see the previous section), which is strongly unstable to three-dimensional perturbations. We have investigated the linear stability of this new state using Floquet analysis. Here we focus again on $\AR=4.5$, but similar results are obtained also for $\AR=4$. Figure \ref{fig:mul-3d-ar4p5} shows the dominant Floquet multipliers for different values of $Re$ in the range $417.5 \le Re \le 450$ and for $3.5 \le \beta \le 10$. A first multiplier with $|\mu|>1$ appears for $Re = Re_{c3} \approx 420$ and $\beta=7$. The two-dimensional deflected wake remains thus stable for a very small range of $Re$. For $Re > Re_{c3}$, a band of unstable wavenumbers appears, with $\beta_{max}$ only marginally varying with $Re$. Interestingly, the growth rate shows a strong increase with $Re$ with $|\mu| \approx 2$ for $Re=425$ and $\mu\approx 9$ for $Re=450$. The unstable multipliers is real with negative real part, indicating that the periodic deflected wake is linearly unstable to 3D subharmonic perturbations. Note that such an unstable Floquet multiplier with negative real part and zero imaginary part could not exist for base flows that obey the spatio-temporal symmetry (like at lower $Re$), as demonstrated by \cite{marques-lopez-blackburn-2004,blackburn-etal-2005}. However, modes of subharmonic nature are often observed once the symmetries of the base flow are brokes, for example by introducing a non negligible incidence angle in the flow past a square cylinder \citep{blackburn-sheard-2010}.
 %
 Figure \ref{fig:3dmode-ar4p5}(a) shows the spatial structure of the real part of the streamwise vorticity of the subharmonic mode for $Re=450$ and $\beta=8$. The perturbation field is maximum near the vortex cores of the base flow, as for the flow past other bluff bodies, see for example \cite{thompson-leweke-williamson-2001,chaurasia-thompson-2011}. Interestingly, the perturbation field in completely localised in the wake, being almost null over the cylinder sides. Unlike the QS mode \citep{chiarini-quadrio-auteri-2022d}, this is an unstable mode of the wake and the LE vortices placed over the lateral sides of the cylinder do not play any role in the triggering mechanism. The symmetry of the much is such that the sign of the streamwise vorticity changes sign from one period to the next, in agreement with the subharmonic nature of the mode.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR4p5/sens3D_25.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR4p5/sens3D_50.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR4p5/sens3D_75.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR4p5/sens3D_100.png}
+  \caption{Structural sensitivity for $\AR=4.5$ and $\beta=8$ and $Re=450$ related to the 3D unstable mode. The four panels refer to four distinct time instants taken equispaced within the shedding period.}
+  \label{fig:ss3d}
+\end{figure}
+
+\subsubsection{Non linear simulations}
 
 \begin{figure}
   \centering

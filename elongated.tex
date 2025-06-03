@@ -1,5 +1,7 @@
 \section{Elongated bodies}
 
+XX PER $\AR=5.5$ per $Re \in (450,400)$ sembra che ci sia di nuovo effetto della scia secondaria. E' presente a Re bassi e poi sparisce a Re piu alti. Bisogna caratterizzare questo aspetto in generale. Quindi per evitare problemi, per Re intermedi rifaccio Floquet per una dimensionel del dominio più piccola che mi garantisce la periodicità XX
+
 \begin{itemize}
   \item Here we look at the second oblique branch of the $St_L-\AR$ plane. Here we have already found that for $\AR=5$ the first mode to become unstable is mode QS, i.e. the quasi-subharmonic mode.
   \item We now investigate what happens when increasing $\AR$. We recall that this is the range where the vortex shedding is dominated by the TE. This means that the dynamics of the TE vortex shedding dominates and is not directly influenced by the vortex shedding from the LE as in the oblique branches. As shown in figure \ref{fig:mult_AR5s}, for $\AR=5$ the only unstable mode is of subharmonic nature and is the so-called mode $QS$. As $\AR$ is increased, instead, a new mode of synchronous nature appears (in this case the multipliers are real and positive). For $\AR=5.25$ this mode is stable. For $\AR=5.35$ this mode approaches the unit circle. For $\AR=5.5$ this mode is unstable, and its growth rate is larger than the corresponding one associated with mode $QS$. The second mode here detected resembles mode $A$ for the wake past short cylinders. 
@@ -65,3 +67,11 @@
   \caption{Reconstruction of the Floquet modes for $\AR=9$. Left: mode $A$, $Re=400$, $\beta=1.2$. Right: mode $QS$, $Re=450$, $\beta=2$.}
   \label{fig:mult_AR9s}
 \end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/sens_1-200-1p25_5p5-500-2_modeA_75.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/sens_1-200-1p25_5p5-500-2_modeA_100.png}
+  \caption{Structural sensitivity for mode A at two different instants within the shedding period. Comparison between $\AR=5.5$ at $Re=500$ and $\beta=2$ and $\AR=1$ at $Re=200$ and $\beta=1.25$. For $\AR=5.5$ the base flow is governed by the TE vortex shedding. Though, the characteristic lengths of the wake vortex are rather different the topology of the structural sensitivity resembles in both cases at the two phases. This further suggests that in both cases the two unstable modes coincide.}
+  \label{fig:sens_modeA}
+\end{figure}  
