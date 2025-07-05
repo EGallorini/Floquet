@@ -22,6 +22,17 @@
 
 XX POSSIAMO FARE ENDOGENEITY PER STUDIARE LA SCIA STORTA CHE VEDIAMO PER $\AR=4.5$ QUANDO SI STABILIZZA? POSSIAMO VEDERE CHI NE DETERMINA LA FREQUENZA XX
 
+\begin{equation}
+  \begin{gathered}
+  \frac{2 \Re(\sigma)}{T} \int_{t_0}^{t_0+T} \hat{u}_i \hat{u}_i^* \text{d}t = 
+ -\frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{u}_j \hat{u}_i^* + \hat{u}_j^* \hat{u}_i \right) \frac{\partial U_i}{\partial x_j} \text{d} t +\\
+ -\frac{1}{T} \int_{t_0}^{t_0+T} U_j \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \text{d} t + 
+ -\frac{1}{T} \int_{t_0}^{t_0+T} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + \hat{p}^* \hat{u}_i \right) \text{d}t + \\
+ +\frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left[ \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{u}_i^* \hat{u}_i }{\partial x_j} \right) \right] \text{d}t 
+ -\frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + 2 \beta^2 \hat{u}_i^* \hat{u}_i \right) \text{d} t
+ \end{gathered}
+\end{equation}
+
 \begin{figure}
   \centering
   \includegraphics[width=0.49\textwidth]{./fig/AR5s/Ener_AR5p5_Re450_Re550_beta2.png}
@@ -31,6 +42,18 @@ XX POSSIAMO FARE ENDOGENEITY PER STUDIARE LA SCIA STORTA CHE VEDIAMO PER $\AR=4.
   \caption{Budget of energy for mode $A'$ (top) and mode $QS$ (bottom). $\AR=5.5$ and $Re=450$ (for mode $A'$) and $Re=550$ (for mode $QS$). Top left: $u_i u_i^*$. Top right: Production. Bottom left: Transport. Bottom right: Dissipation. XX DIVIDERE I COMPONENTI DEL TRASPORTO XX XX GUARDARE NELLE DIVERSE ZONE DA COSA VIENE LA CRESCITA. CI SONO DEI TERMINI CHE POSSONO AMPLIFICARE IL MODO (PROD) E ALTRI CHE LO POSSONO LOCALMENTE INVECE DAMPARE, TIPO LA CONVEZIONE. PUò PROBABILMENTE AVERE SENSO ANCHE GUARDARE I CONTRIBUTI DEI TERMINI IN MODO SEPARATO. SIA PER LE COMPONENTI CHE PER QUANTO RIGUARDA INVECE I DIVERSI TEMRINI DI TRASPORTO. GUARDA MARQUET LEFSHATS PER ENDOGENEITY. NON E' LA STESSA COSA, MA SI POSSONO FARE DEI COMMENTI ANALOGHI. POSSIAMO CALCOLARE ENDOGENEITY PER IL CICLO LIMITE? GUARDARE DOVE LA CRESCITà E' LEGATA PIU AD UN FENOMENO DI PRODUZIONE LOCALE O DI ROBA CNVETTIVA XX. PLOTTA SOPRA IL FLUSSO BASE. POSSIAMO ANCHE VEDERE EFFETTO DEL RE. FARE STESSA FIGURA AL VARIARE DEL RE IN MODO QUANTITATIVO. VEDI FIG 8 DI MAEQUT}
   \label{fig:budget_ener}
 \end{figure}
+
+\begin{equation}
+  \begin{gathered}
+  \frac{2 \Re{\sigma}}{T} \int_{t_0}^{t_0+T} \hat{\omega}_i \hat{\omega}_i^* \text{d}t = 
+  - \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{\omega}_i^* \hat{u}_j + \hat{\omega}_i u_j^* \right) \frac{\partial \Omega_i}{\partial x_j} \text{d}t
+  - \frac{1}{T} \int_{t_0}^{t_0+T} U_j \frac{\partial \hat{\omega}_i \hat{\omega}_i^* }{\partial x_j} \text{d} t + \\
+  + \frac{1}{T} \int_{t_0}^{t_0+T}    i \beta \Omega_3 \left( \hat{u}_i \hat{\omega}_{i}^* - \hat{u}_i^* \hat{\omega}_i \right)  \text{d} t
+  + \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{\omega}_i^* \hat{\omega}_j + \hat{\omega}_i \hat{\omega}_j^* \right) \frac{\partial U_i}{\partial x_j} \text{d} t + \\
+  + \frac{1}{T} \int_{t_0}^{t_0+T}    \frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{\omega}_i \hat{\omega}_i^*}{\partial x_j} \right) \text{d} t -
+  \frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left( 2 \frac{\partial \hat{\omega}_i}{\partial x_j} \frac{\partial \hat{\omega}_i^*}{\partial x_j} + 2 \beta^2 \hat{\omega}_i \hat{\omega}_i^* \right) \text{d} t
+  \end{gathered}
+\end{equation}
 
 
 \begin{figure}
