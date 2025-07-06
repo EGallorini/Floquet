@@ -83,13 +83,13 @@ The linear stability analysis presented in the previous section captures the ons
 Near a critical point, the wake dynamics can be approximated by a reduced-order discrete-time dynamical system, as proposed by \cite{henderson-barkley-1996} and \cite{henderson-1997}. To this end, we represent the full velocity field as
 %
 \begin{equation}
-\bm{u}(\bm{x}, t) = U \bm{u}_0(\bm{x}, t) + A(t), \bm{u}_1(\bm{x}, t),
+\bm{u}(\bm{x}, t) = U \bm{u}_0(\bm{x}, t) + A(t) \bm{u}_1(\bm{x}, t),
 \end{equation}
 %
 where $||\bm{u}_0||=1$ and $||\bm{u}_1||=1$, $\bm{u}_0$ denotes the base flow, and $\bm{u}_1$ is the leading unstable Floquet mode with time-dependent amplitude $A(t)$. To reduce the problem to a discrete map, we sample the system at discrete times $t_n = t_0 + nT$, corresponding to successive vortex-shedding periods. The flow field at each time step becomes
 %
 \begin{equation}
-\bm{u}(\bm{x}, t_n) = U \bm{u}_0(\bm{x}, t_n) + A_n, \bm{u}_1(\bm{x}, t_n),
+\bm{u}(\bm{x}, t_n) = U \bm{u}_0(\bm{x}, t_n) + A_n \bm{u}_1(\bm{x}, t_n),
 \end{equation}
 %
 where $A_n \equiv A(t_n)$. Thus, the evolution of the flow is governed by the discrete-time dynamics of the amplitude $A_n$, while the evolution of $\bm{u}_1$ characterises the nonlinear distortion of the perturbation.
@@ -111,7 +111,7 @@ It is worth emphasising that, owing to the two-dimensional and synchronous natur
 To determine the nonlinear character of the secondary instability, we perform direct numerical simulations at $Re\approx Re_{c2}$, tracking the evolution of the perturbation field written as $\bm{u}_1 + \bm{u}_{nl}$, where $\bm{u}_{nl}$ represents the nonlinear correction. Simulations are initialised with $\bm{u}_{nl}(t_0) = \bm{u}^1(t_0)$, and the amplitude at each period is computed as
 %
 \begin{equation}
-|A_n|^2 = \frac{1}{\Omega U_\infty^2} \int_\Omega |\bm{u}_{nl,n}|^2, \mathrm{d} \Omega.
+|A_n|^2 = \frac{1}{\Omega U_\infty^2} \int_\Omega |\bm{u}_{nl}(\bm{x},t_n)|^2 \mathrm{d} \Omega.
 \end{equation}
 %
 The nonlinear coefficients $\alpha_j$ are then estimated from the evolution of $A_n$ over time.
