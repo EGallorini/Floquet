@@ -11,7 +11,7 @@ We begin by considering short bodies with $1 \le AR \le 2$, to investigate how a
   \centering
   \includegraphics[width=0.49\textwidth]{./fig/AR1s/T_AR.eps}
   \includegraphics[width=0.49\textwidth]{./fig/AR1s/T_Re.eps}
-  \caption{Base-flow period as a function of $\AR$ and $Re$. Left: dependence of $T$ on $Re$ for $1 \le \AR \le 1.75$. Right: dependence of $T$ on $\AR$ for $Re=200$ and $Re=230$. XX MODIFICARE FIGURA USANDO PALLINI PIENI QUANDO RIATTACCA IN MEDIA E VUOTI QUANDO NON RIATTACCA IN MEDIA XX}
+  \caption{Base-flow period as a function of $\AR$ and $Re$. Left: dependence of $T$ on $Re$ for $1 \le \AR \le 1.75$. Right: dependence of $T$ on $\AR$ for $Re=200$ and $Re=230$. XX MODIFICARE FIGURA USANDO PALLINI PIENI QUANDO RIATTACCA IN MEDIA E VUOTI QUANDO NON RIATTACCA IN MEDIA; AGGIUNGERE CON UN INSET DIPENDENZA DELLA BOLLA DI RICIRCOLO MEDIA CON RE PER ALCUNI CASI PARTICOLARI. XX}
   \label{fig:T_Re_small}
 \end{figure}
 %
@@ -25,7 +25,50 @@ We begin by considering short bodies with $1 \le AR \le 2$, to investigate how a
   \label{fig:snap_Re140_Re230}
 \end{figure}    
 
-XX ADD SENS MEAN FLOW PER AR=0.75, 1.25, 1.5, 2. STO CALCOLANDO XX
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/AR0p75_Re140_Re230_omegaz_Av.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/AR1p25_Re140_Re230_omegaz_Av.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/AR1p5_Re140_Re230_omegaz_Av.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/AR2_Re140_Re230_omegaz_Av.png}
+  \caption{Visualisation of the mean flow for $Re=140$ (top) and $Re=230$ (bottom). Top left: $\AR=0.625$. Top right: $\AR=1.125$. Bottom left: $\AR=1.5$. Bottom right: $\AR=2$. The colour map denotes the spanwise vorticity in the $-10 \le \omega_z \le 10$ range. The black lines indicate the flow streamlines determined as isolines of $\psi$ spaces with $\pm 0.2$. XX IL CAMBIO DI ANDAMENTO DI $T$ SI VEDE QUANDO LA CORRENTE NON RIATTACCA PIU IN QUEL CASO COMINCIA DI NUOVO A CRESERE T. E' POSSIBILE VEDERLO, P.E. GUARDANDO IL CAMPO MEDIO XX}
+  \label{fig:Av_Re140_Re230}
+\end{figure} 
+
+
+\begin{table}
+  \begin{center}
+  \begin{tabular}{ccccccccc}
+    $\AR$  & & $Re$  & & $\Re(\sigma)$ & & $St_{lin}$ & & $St_{nl}$ \\
+    $0.75$ & & $140$ & & $-0.0065$  & & $0.1612$   & & $0.1616$  \\
+    $0.75$ & & $230$ & & $-0.0159$  & & $0.1660$   & & $0.1653$  \\
+    $1.25$ & & $140$ & & $-0.0134$  & & $0.1517$   & & $0.1519$  \\
+    $1.25$ & & $230$ & & $-0.0393$  & & $0.1360$   & & $0.1350$  \\
+    $1.50$ & & $140$ & & $-0.0126$  & & $0.1502$   & & $0.1512$  \\
+    $1.50$ & & $230$ & & $-0.0394$  & & $0.1647$   & & $0.1625$  \\
+    $2.00$ & & $140$ & & $-0.0037$  & & $0.1465$   & & $0.1483$  \\
+    $2.00$ & & $230$ & & $-0.0124$  & & $0.1744$   & & $0.1695$  \\
+  \end{tabular} 
+  \caption{XX}
+  \label{tab:eigs}
+  \end{center}  
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/sens_AR0p75_Re140.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/sens_AR0p75_Re230.eps} 
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/sens_AR1p25_Re140.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/sens_AR1p25_Re230.eps}   
+%  \includegraphics[width=0.49\textwidth]{./fig/AR1s/sens_AR1p5_Re140.eps}
+%  \includegraphics[width=0.49\textwidth]{./fig/AR1s/sens_AR1p5_Re230.eps} 
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/sens_AR2_Re140.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR1s/sens_AR2_Re230.eps}  
+  \caption{XX SI VEDE LA DIFFERENZA. PER $\AR$ PICCOLI LO SHEDDING È DOMINATO DALLO SHEAR LAYER CHE SEPARA DAL LE. PER $\AR$ INTERMEDI, LO SHEDDING A RE BASSI È DOMINATO DAL TE SHEAR LAYER, MENTRE A RE ALTI ANCHE DAL LE SHEAR LAYER. PER $\AR$ ALTI, LO SHEDDING È DOMINATO DAL TE SHEAR LAYER PER TUTTI I RE. XX}
+  \label{fig:sens-short}
+\end{figure}    
+
 
 %
 
