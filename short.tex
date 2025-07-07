@@ -82,15 +82,15 @@ This transition is reflected in the behaviour of the shedding period $T$ in figu
   \label{fig:sens-short}
 \end{figure}    
 %
-To further investigate how flow dyanmics varies with aspect ratio $\AR$ and Reynolds number ReRe, we perform a global stability analysis of the mean flow, averaged over one shedding period. We focus on the leading eigenmode, which captures the dominant unsteady features of the flow. Similar approaches have been applied to the circular cylinder \citep{pier-2002, barkley-2006} and to elongated rectangular cylinders \citep{chiarini-quadrio-auteri-2022}.
+To further investigate how flow dyanamics varies with aspect ratio $\AR$ and Reynolds number $Re$, we perform a global stability analysis of the mean flow, averaged over one shedding period. We focus on the leading eigenmode, which captures the dominant unsteady features of the flow. Similar approaches have been applied to the circular cylinder \citep{pier-2002, barkley-2006} and to elongated rectangular cylinders \citep{chiarini-quadrio-auteri-2022}.
 %
 The frequency of the leading eigenmode provides a good estimate of the Strouhal number observed in the nonlinear simulations across all cases, see table~\ref{tab:eigs}. Unlike the marginally stable mean flow observed for the circular cylinder \citep{barkley-2006}, our analysis yields slightly negative growth rates, suggesting a weakly damped but still dynamically relevant mean flow instability.
 
-Figure~\ref{fig:sens-short} shows the structural sensitivity of the leading eigenmode. This quantity, introduced by \cite{giannetti-luchini-2007}, provides an upper bound on the variation of the eigenvalue resulting from a localised perturbation of the linearised Navier--Stokes operator. It corresponds to a ``force–velocity'' coupling: the feedback from a localised velocity sensor to a colocated force actuator. As such, structural sensitivity serves as an indicator of the eigenvalue's sensitivity to flow modifications and identifies the so-called wavemaker region \citep{monkewitz-etal-1993}---the core region responsible for the instability.
+Figure~\ref{fig:sens-short} shows the structural sensitivity of the leading eigenmode. This quantity, introduced by \cite{giannetti-luchini-2007}, provides an upper bound on the variation of the eigenvalue resulting from a localised perturbation of the linearised Navier--Stokes operator. It corresponds to a ``force-velocity'' coupling: the feedback from a localised velocity sensor to a colocated force actuator. As such, structural sensitivity serves as an indicator of the eigenvalue's sensitivity to flow modifications and identifies the so-called wavemaker region \citep{monkewitz-etal-1993}---the core region responsible for the instability.
 %
 The structural sensitivity field reveals that the wavemaker is generally concentrated near the body, where the overlap of the direct and adjoint modes is largest. For longer bodies and lower $Re$, non-zero sensitivity is confined to the wake downstream of the TE, especially along the streamline bounding the mean recirculation zone. This confirms that, in these cases, the instability is driven primarily by the TE shear layers.
 %
-In contrast, for shorter bodies and/or higher ReRe, significant sensitivity also appears along the LE shear layers over the lateral sides. This indicates that the wavemaker extends upstream, confirming that the LE shear layers actively contribute to the vortex shedding mechanism. Overall, these results are consistent with the earlier discussion on the transition in flow topology and the corresponding changes in the shedding dynamics.
+In contrast, for shorter bodies and/or higher $Re$, significant sensitivity also appears along the LE shear layers over the lateral sides. This indicates that the wavemaker extends upstream, confirming that the LE shear layers actively contribute to the vortex shedding mechanism. Overall, these results are consistent with the earlier discussion on the transition in flow topology and the corresponding changes in the shedding dynamics.
 
 
 \iffalse
@@ -140,9 +140,6 @@ To further highlight the change of the flow topology with $\AR$ and $Re$, we per
 The frequency of the leading eigenmode predicts fairly well the Strouhal number observed in the nonlinear simulations for all cases, with a maximum difference of $xx\%$. Unlike the case of the circular cylinder, which is marignally stably \citep{barkley-2006}, the present mean flow stability analysis leads to a slightly negative growth rate. Figure \ref{fig:mf_sens}, shows the structural sensitivity of the leading mode. The structural sensitivity was introduced by \cite{giannetti-luchini-2007} as an upper bound for the eigenvalue variation induced by a specific perturbation of the linearised Navier--Stokes operator, namely a `force-velocity coupling' representing feedback from a localised velocity sensor to a localised force actuator at the same location. In this sense, the structural sensitivity in as indicator of the eigenvalue sensitivity and identifies the wavemaker \citep{monkewitz-etal-1993}. The structural sensitivity identifies the flow region where structural modifications of the stability problem produce the strongest drift of the leading eigenvalue and indentifies the so-called wavemaker. The largest values of the sensitivity occur near the cylinders, as the product of the adjoint and direct modes is small in the remaining part of the domain. For longer bodies and smaller $Re$ non null values are observed only in the wake behind the TE along the streamline delimiting the mean recirculating region. The core of the instability responsible for the TE vortex shedding is located downstream the TE. For shorter bodies and/or larger $Re$ the structural sensitivity is non negligible also along the LE shear layers over the lateral sides of the cylinder. Accordingly, in these cases the wavemaker extends to the LE shear layers, as they play a role inthe wave vortex shedding dyanmics.
 \fi
 
-
-XX FIN QUI XX
-
 \subsection{The bifurcations}
 
 \begin{figure}
@@ -151,7 +148,7 @@ XX FIN QUI XX
   \includegraphics[width=0.49\textwidth]{./fig/AR1p25/neutralb.eps}  
   \includegraphics[width=0.49\textwidth]{./fig/AR1p5/neutralb.eps}    
   \includegraphics[width=0.49\textwidth]{./fig/AR1p75/neutralb.eps}       
-  \caption{Top: multipliers for $\AR=1$, $\AR=1.25$ and $\AR=1.5$ at $Re=200$; the red line refers to mode $A$, the grey line to mode $C$, the green line to mode $B$ and the light blue line refers to mode $B'$. Mode $B'$ has the same spatio-temporal symmetry of mode $B$, but its characteristic wavelength is much smaller, being similar to that of mode $A$. This mode resembles that found for elongated bodies with elliptic leading edge by \cite{ryan-etal-2005}.}
+  \caption{Top: multipliers for $\AR=1$, $\AR=1.25$ and $\AR=1.5$ at $Re=200$; the red line refers to mode $A$, the grey line to mode $C$, the green line to mode $B$ and the light blue line refers to mode $B'$. Mode $B'$ has the same spatio-temporal symmetry of mode $B$, but its characteristic wavelength is much smaller, being similar to that of mode $A$. This mode resembles that found for elongated bodies with elliptic leading edge by \cite{ryan-etal-2005}. XX ADD $\AR=2$ e $\AR=2.5$ XX}
   \label{fig:mult_AR1_AR1p75}
 \end{figure}
 %
@@ -167,23 +164,47 @@ XX FIN QUI XX
   \label{fig:modes}
 \end{figure}
 %
-As mentioned in \S\ref{sec:intro}, for $\AR=1$ three distinct modes become unstable in rapid succession. Mode A first becomes unstable at $Re \approx 175$ with a characteristic wavelength of $\lambda_A \approx 5$ ($\beta_A \approx 1.2$) and the following spatio-temporal symmetry 
+As discussed in \S\ref{sec:intro}, for $\AR=1$, three distinct modes become unstable in rapid succession as the Reynolds number increases. Mode $A$ is the first to become unstable, at $Re \approx 175$, with a characteristic wavelength $\lambda_A \approx 5$ (corresponding to $\beta_A \approx 1.2$). This mode exhibits the following spatio-temporal symmetry:
 %
 \begin{equation}
-  \hat{\omega}_x(x,y,\beta,t) = - \hat{\omega}_x(x,-y,\beta,t+/2)
+\begin{aligned}
+\hat{u}(x,y,\beta,t) = &+ \hat{u}(x,-y,\beta,t+T/2) \nonumber \\
+\hat{v}(x,y,\beta,t) = &-\hat{v}(x,-y,\beta,t+T/2) \nonumber \\
+\hat{w}(x,y,\beta,t) = &+ \hat{w}(x,-y,\beta,t+T/2),
+\end{aligned}
 \end{equation}
 %
-Mode B becomes unstable at $Re \approx 200$, has a characteristic wavelength $\lambda_B \approx 1$ ($\beta_B \approx 5.8$) and satisfies the symmetry:
+which leads to an antisymmetric streamwise vorticity:
 %
 \begin{equation}
-  \hat{\omega}_x(x,y,\beta,t) = + \hat{\omega}_x(x,-y,\beta,t+T/2).
+\hat{\omega}_x(x,y,\beta,t) = -\hat{\omega}_x(x,-y,\beta,t+T/2).
+\end{equation}
+
+Mode B becomes unstable at $Re \approx 200$, with a much shorter characteristic wavelength $\lambda_B \approx 1$ (corresponding to $\beta_B \approx 5.8$). It satisfies a similar symmetry in the streamwise and cross-stream components, but differs in the spanwise component:
+%
+\begin{equation}
+\begin{aligned}
+\hat{u}(x,y,\beta,t) = &+\hat{u}(x,-y,\beta,t+T/2), \nonumber \\
+\hat{v}(x,y,\beta,t) = &-\hat{v}(x,-y,\beta,t+T/2), \nonumber \\
+\hat{w}(x,y,\beta,t) = &-\hat{w}(x,-y,\beta,t+T/2),
+\end{aligned}
 \end{equation}
 %
-Finally, mode QP becomes unstable at the higher $Re \approx 230$ with a characteristic wavelength of $\lambda_{QP} \approx 2.7$ ($\beta_{QP} \approx 2.3$). These results are in excellent agreement with our findings shown in figure~\ref{fig:mult_AR1_AR1p75}$(a)$ and \ref{fig:modes}, providing a validation of our numerical approach.
+resulting in a symmetric streamwise vorticity:
+%
+\begin{equation}
+\hat{\omega}_x(x,y,\beta,t) = +\hat{\omega}_x(x,-y,\beta,t+T/2).
+\end{equation}
 
-Figure~\ref{fig:mult_AR1_AR1p75}(b-d) illustrates the effect of increasing the aspect ratio. As $\AR$ increases, the onset of secondary instabilities is progressively delayes: fixing $Re$ our results show a consistent decrease inthe modulus of the Floquet multipliers associated with the three known modes, indicating a more stable base flow for longer bodies. Quantitativley, the critical Reynolds number increases from $Re_{c2} \approx 175$ for $\AR=1$ to approximately $Re_{c2} =200-225$ for $\AR=1.75$. This trend aligns with the delayed onset of the primary instability as $\AR$ increases reported by \cite{chiarini-quadrio-auteri-2021}. Despite the stabilising effect, the sequence of bifurcations remains essentially unchanged for $1 \le \AR \le 1.75$, with mode A becoming unstable first, followed by mode B. Nevertheless, for the investigated values of $Re$ mode $QP$ is not dected for $\AR>1.5$. The characteristic wavelengths of modes A and B exhibit only marginal variations with $\AR$, consistent with the findings of \cite{choi-yang-2014} for $\AR<1$. 
+Finally, Mode QP becomes unstable at the higher Reynolds number $Re \approx 230$, with an intermediate characteristic wavelength of $\lambda_{QP} \approx 2.7$ (corresponding to $\beta_{QP} \approx 2.3$).
+%
+These results are in excellent agreement with our numerical predictions shown in figures~\ref{fig:mult_AR1_AR1p75}$(a)$ and~\ref{fig:modes}, providing a validation of the computational methodology.
 
-In addition to the three established modes, a new mode, denoted B', emerges for $\AR>1$. Mode B' shares the same spatio-temporal symmetry as mode B, but is characterised by a significantly longer wavelength, comparable to that of mode A; see figure \ref{fig:modes_AR1_AR1p75}. A mode with similar features --- both in wavelength and symmetry --- was previously reported by \cite{ryan-etal-2006} in the wake of elongated bodies with streamlined LE and blunt TE. Within the parameter range considered here, mode B' remains stable for all cases.
+Figure~\ref{fig:mult_AR1_AR1p75}(b-d) illustrates the effect of increasing aspect ratio. As $\AR$ increases, the onset of secondary instabilities is progressively delayed. At fixed $Re$, we observe a consistent reduction in the modulus of the Floquet multipliers associated with the three modes, indicating that the base flow becomes more stable for longer bodies. Quantitatively, the critical Reynolds number increases from $Re_{c2} \approx 175$ for $\AR=1$ to approximately $Re_{c2} = 200-225$ for $\AR=1.75$. This trend is consistent with the delayed onset of the primary instability reported by \citet{chiarini-quadrio-auteri-2021} for increasing $\AR$.
+
+Despite the stabilising effect of elongation, the sequence of bifurcations remains unchanged for $1 \le \AR \le 1.5$, with mode $A$ becoming unstable first, followed by mode $B$. However, mode $QP$ is not detected for $\AR>1.5$ within the range of Reynolds numbers investigated. The characteristic wavelengths of modes $A$ and $B$ exhibit only minor variations with aspect ratio, consistent with the findings of \cite{choi-yang-2014} for $\AR<1$.
+
+In addition to the three established modes, a new mode---denoted $B'$---emerges for $\AR>1$. Mode $B'$ shares the same spatio-temporal symmetry as mode $B$, but has a significantly longer wavelength, comparable to that of mode $A$, see figure~\ref{fig:modes_AR1_AR1p75}. A mode with similar features---both in wavelength and symmetry---was previously reported by \cite{ryan-etal-2006} in the wake of elongated bodies with streamlined leading edges and blunt trailing edges. Within the parameter range considered here, mode $B'$ remains stable for all configurations.
 
 \begin{figure}
   \centering
@@ -196,8 +217,9 @@ In addition to the three established modes, a new mode, denoted B', emerges for 
   \label{fig:mult-AR1p25}
 \end{figure}
 %
-Figure \ref{fig:mult-AR1p25} details the dependence of the multipliers on $Re$ for the intermediate $\AR=1.25$ case. We observe that $\mu_A$ and $\mu_B$ have a non monotonic dependence on $Re$, meaning that modes A and B are destabilised when $Re$ increases up to $Re = 200$ and then stabilise again when further increasing it. For $Re=240$ mode B is stable. For this intermediate $\AR$ additional multipliers cross the unit circunference for $Re \ge 230$. At $Re \approx 230$ a pair of complex conjugate multipliers an additional quasi-periodic mode becomes unstable (hereafter referred as mode QP'). At $Re \approx 240$ a multiplier with positive real part crosses the unit circumference, being associated to a synchronous mode having the same symmetries as mode $B$ and $B'$, but a much shorter characteristic wavelength, i.e. $\beta \approx 0.5$. This mode is hereafter referred as mode $B'$. Figure \ref{fig:modes}(e-f) shows the spatial structure of these modes.
+Figure \ref{fig:mult-AR1p25} shows the dependence of the Floquet multipliers on Reynolds number for the intermediate aspect ratio $\AR=1.25$, which corresponds to the case where the base flow exhibits the strongest sensitivity to $Re$. The multipliers $\mu_A$ and $\mu_B$ display a non-monotonic dependence on $Re$: both modes $A$ and $B$ are destabilised as $Re$ increases up to approximately $200$, but subsequently restabilise at higher Reynolds numbers. In particular, mode $B$ is stable at $Re \gtrapprox 240$.
 
+For this intermediate $\AR$, additional multipliers cross the unit circle as the Reynolds number increases beyond $Re \gtrapprox 230$. At $Re \approx 230$, a pair of complex-conjugate multipliers with negative real parts and non-zero imaginary parts cross the unit circle, indicating the onset of a new quasi-periodic instability---labelled as mode $QP'$ in figure \ref{fig:modes}(e). Further increasing the Reynolds number to $Re \approx 240$, we observe the emergence of another instability: a real Floquet multiplier with positive real part crosses the unit circle. This mode is synchronous and shares the same symmetry as modes $B$ and $B'$, but has a significantly shorter wavelength, corresponding to $\beta \approx 0.5$, see mode $B''$ in figure \ref{fig:modes}(f). Since these represent higher-order bifurcations of the base flow, their detailed characterisation lies beyond the scope of the present work.
 
 
 

@@ -52,7 +52,19 @@ To investigate the origin of the slanted-wake phenomenon, we perform a linear st
 
 The red branch crosses the unit circle at $Re=Re_{c2} \approx 417.5$; for $\AR=4$, a similar crossing is observed at $Re_{c2} \approx 425$. The fact that $\Im(\mu) = 0$ at onset confirms that the bifurcation is synchronous in nature, and that the slanted wake arises from a global instability of the straight-wake base flow. The blue branch associated with the quasi-periodic mode remains stable over the parameter range considered.
 
-Further insight is provided in figure~\ref{fig:AR4p5_modes_Re430_beta0}(c), which shows the spanwise vorticity field of the unstable Floquet mode superimposed on isolines of the base-flow vorticity. In the wake region, the mode generates dipolar perturbations that grow as they are advected downstream. A clear synchronisation is observed between the base flow and the perturbation field: the dipolar structures of the Floquet mode remain phase-locked with the base-flow vortices at all times.
+Further insight is provided in figure~\ref{fig:AR4p5_modes_Re430_beta0}(c), which shows the spanwise vorticity field of the unstable Floquet mode superimposed on isolines of the base-flow vorticity. The unstable mode does not obey the same spatio-temporal symmetry of the periodic base-flow. According to the time-average symmetry breaking, indeed, this mode satisfies
+%
+\begin{equation}
+  \hat{u}(x,y,t) = - \hat{u}(x,-y,t+T/2) \qquad \text{and} \qquad \hat{v}(x,y,t) = \hat{v}(x,-y,t+T/2)
+\end{equation}
+%
+which leads to
+%
+\begin{equation}
+  \hat{\omega}_z(x,y,t) = \hat{\omega}_z(x,-y,t+T/2).
+\end{equation}
+%
+In the wake region, the mode generates dipolar perturbations that grow as they are advected downstream. A clear synchronisation is observed between the base flow and the perturbation field: the dipolar structures of the Floquet mode remain phase-locked with the base-flow vortices at all times.
 
 Such a dipolar perturbation of a monopolar base-flow vortex is often referred to as a displacement mode \citep{brion-sipp-jacquin-2014}, as it effectively shifts the centroid of vorticity. This mechanism is consistent with the displacement of vortex cores observed for $Re>Re_{c2}$ in figure~\ref{fig:snap_ar4_ar4p5}. Considering a positive base-flow vortex in the wake, the associated Floquet dipole exhibits positive vorticity in its lower part and negative vorticity in the upper part. The superposition of the two fields therefore strengthens the lower half of the monopole and weakens the upper half, resulting in a net downward displacement. For negative base-flow vortices, the opposite dipole orientation yields a similar downward shift. This coherent mechanism accounts for the systematic vertical displacement of the vortex centroids in the slanted-wake configuration.
 %

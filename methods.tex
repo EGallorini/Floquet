@@ -6,10 +6,10 @@ The incompressible flow past rectangular cylinders with aspect ratio $\AR=L/D$, 
 %
 
 \begin{equation}
-\begin{cases}
-\frac{\partial U}{\partial t} + \bm{U} \cdot \bm{\nabla}\bm{U} = - \bm{\nabla} P + \frac{1}{Re} \nabla^2 \bm{U} \\
-\bm{\nabla} \cdot \bm{U} = 0
-\end{cases}
+\begin{aligned}
+\frac{\partial U}{\partial t} + \bm{U} \cdot \bm{\nabla}\bm{U} + \bm{\nabla} P - \frac{1}{Re} \nabla^2 \bm{U} & = \bm{0} \\
+\bm{\nabla} \cdot \bm{U} & = 0
+\end{aligned}
 \label{eq:NSequations}
 \end{equation}
 %
@@ -32,10 +32,10 @@ here $i$ is the imaginary unit, $\bm{u}$ and $p$ indicate the Fourier transform 
 Introducing this decomposition in \ref{eq:NSequations} the governing equations for the base flow are obtained at order $\epsilon^0$, that are the two-dimensional incompressible Navier--Stokes equations, while the eigenproblem describing the evolution equation for the perturbations are obtained at order $\epsilon^1$. They are the linearised Navier--Stokes equations (LNSEs) that for each $\beta$ read:
 %
 \begin{equation}
-\begin{cases}
-\frac{\partial \bm{u}}{\partial t} + \mathcal{L}_\beta\{\bm{U}_b,Re\}\bm{u} + \bm{\nabla}_\beta p = 0 \\
-\bm{\nabla}_\beta \cdot \bm{u} = 0
-\end{cases}
+\begin{aligned}
+\frac{\partial \bm{u}}{\partial t} + \mathcal{L}_\beta\{\bm{U}_b,Re\}\bm{u} + \bm{\nabla}_\beta p & = \bm{0} \\
+\bm{\nabla}_\beta \cdot \bm{u} & = 0
+\end{aligned}
 \label{eq:LNSEs}
 \end{equation}
 %
