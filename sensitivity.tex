@@ -1,0 +1,164 @@
+\section{Sensitivities}
+
+\subsection{Sensitivity to base-flow modifications}
+
+To do
+
+\subsection{Sensitivity to a variation of $Re$}
+
+We may investigate, the sensitivity map of the eigenvalue to a variation of the Reynolds number, i.e. $\partial \sigma/\partial Re$.
+
+To do this, we put our self at $Re = Re_c$ and consider only a small depatrture from criticality. We can define a small $\epsilon$ such that
+%
+\begin{equation}
+  \frac{1}{Re_c} - \frac{1}{Re} = \epsilon.
+\end{equation}
+%
+This small departure leads to a small variation of the base flow and of the eigenvector. This means that
+%
+\begin{equation}
+  \{ \bm{u}_0, p_0 \} \rightarrow \{ \bm{u}_0, p_0 \} + \{\delta \bm{u}_0,\delta p_0\}, \ \{ \bm{u}_1, p_1 \} \rightarrow \{ \bm{u}_1, p_1 \}  + \{\delta \bm{u}_1,\delta p_1\}\ \text{and} \ \sigma \rightarrow \sigma + \delta \sigma.
+\end{equation}
+%
+In addition to this, the way the flow moves in the limit cycles may change. We can this introduce a phase coordinate $\tau$ along the limit cycle and expand $\text{d}\tau/\text{d}t$ in $\epsilon$ as
+%
+\begin{equation}
+  \frac{\text{d} \tau}{\text{d} t} = 1 + \epsilon \dot{\tau}_1 +  \text{h.o.t}.
+\end{equation}
+%
+This means that now we write $\bm{u}_i(\tau)$ and that when deriving in time we have to use the chain rule, i.e.
+%
+\begin{equation}
+  \frac{\partial}{\partial t} = \frac{\partial}{\partial \tau} \frac{\text{d} \tau}{\text{d} t} = ( 1 + \epsilon \dot{\tau}_1 + \text{h.o.t.} ) \frac{\text{d} \tau}{\text{d} t}.
+\end{equation} 
+%
+At this point we introduce these modification the the non linear equations for the base flow $\{\bm{u}_0,p_0\}$ and to the linearised equations for the perturbation $\{\bm{u}_1,p_1\}$.
+
+We start from the equation for the base flow. We replace $\{\bm{u}_0,p_0\}$ with $\{\bm{u}_0,p_0\} + \{\delta \bm{u}_0,\delta p_0\}$ and consider a small departure from $Re_c$. By recalling that equation for $\{\bm{u}_0,p_0\}$ at $Re=Re_c$ holds, and considering only first order terms we obtain:
+%
+\begin{equation}
+  \begin{aligned}
+    \frac{\partial \delta \bm{u}_0}{\partial \tau} + \epsilon \dot{\tau}_1 \bm{u}_0 + ( \bm{u}_0 \cdot \bm{\nabla} ) \delta \bm{u}_0 +
+                                                                                     ( \delta \bm{u}_0 \cdot \bm{\nabla} ) \bm{u}_0 = & - \bm{\nabla} \delta p_0 +
+                                                                                     \frac{1}{Re_c} \bm{\nabla}^2 \delta \bm{u}_0 - 
+                                                                                     \epsilon       \bm{\nabla}^2 \delta \bm{u}_0 \\
+                                                \bm{\nabla} \cdot \delta \bm{u}_0 = & 0
+  \end{aligned}
+\end{equation} 
+%
+that in compact form can be written as
+%
+\begin{equation}
+  \begin{aligned}
+  \begin{pmatrix} I & 0 \\ 0^T & 0 \end{pmatrix} \frac{\partial}{\partial \tau} \begin{pmatrix} \delta \bm{u}_0 \\ \delta p_0 \end{pmatrix} +
+  \begin{pmatrix} \mathcal{C}( \bm{u}_0, \cdot ) + \mathcal{C}(\cdot,\bm{u}_0)-\frac{1}{Re_c} \bm{\nabla}^2(\cdot) & \bm{\nabla}(\cdot) \\
+                     \bm{\nabla} \cdot ( \cdot )                                                                   &  0   \end{pmatrix}
+                     \begin{pmatrix} \delta \bm{u}_0 \\ \delta p_0 \end{pmatrix} = \\
+                     - \epsilon \begin{pmatrix} \bm{\nabla}^2 \bm{u}_0 \\ \bm{0} \end{pmatrix} - 
+                       \epsilon \dot{\tau}_1 \frac{\partial}{\partial \tau}  \begin{pmatrix} I & 0 \\ 0^T & 0 \end{pmatrix}\begin{pmatrix} \bm{u}_0 \\  p_0 \end{pmatrix} 
+  \end{aligned}
+\end{equation}
+%
+that in compact form becomes
+%
+\begin{equation}
+  B \frac{\partial \delta \bm{q}_0}{\partial \tau} - \mathcal{L}(\bm{u}_0,Re_c) \delta \bm{q}_0 = - \epsilon \mathcal{F}_2^0 - \epsilon \dot{\tau}_1 B \frac{\partial \bm{q}_0}{\partial \tau}.
+\end{equation}
+%
+At this point, we notice that the operator at the left-hand side is singular, because of the eigenvalues $\sigma=(0,0)$ associated with the ``trivial'' Floquet multipliers $\mu = (1,0)$. There is always a Floquet multilpiers $\mu=(1,0)$ associated to an eigenvector $\hat{\bm{q}}_0 = \frac{\partial \bm{q}_0}{\partial \tau}$. Therefore, to solve this problem we have to impose the solvabilty condition which requires that the component for the forcing at the right-hand side along the kernel of the operator is null. We enforce this, by using the $\dot{\tau}_1$ degree of freedom. Note that in case we are looking at a synchronous (pitchfork) instability, this is not a problem, as for symmetry reasons the right-hand side does not have a component along the corresponding eigenvector.
+We thus require that
+%
+\begin{equation}
+  \langle \bm{\bm{q}}_0^\dagger, - \mathcal{F}_2^0 - \dot{\tau}1 B \hat{\bm{q}}_0 \rangle = 0,
+\end{equation} 
+%
+which gives as
+%
+\begin{equation}
+  \dot{\tau}_1 = - \frac{ \langle \hat{\bm{q}}_0^\dagger, \mathcal{F}_2^0 \rangle }{ \langle \hat{\bm{q}}_0^\dagger, B \hat{\bm{q}}_0 \rangle}
+\end{equation}
+%
+where $\hat{\bm{q}}_1^\dagger$ indicates the adjoint mode and $\langle \bm{a},\bm{b} \rangle$ the inner product.
+%
+At this point we can solve for $\delta \bm{q}_0$ as
+%
+\begin{equation}
+  \begin{aligned}
+  B \frac{\partial \delta \bm{q}_0}{\partial \tau} - \mathcal{L}(\bm{u}_0,Re_c) \delta \bm{q}_0 = & - \epsilon \mathcal{F}_2^0 - \epsilon \dot{\tau}_1 B \frac{\partial \bm{q}_0}{\partial \tau} \\
+  \langle \hat{\bm{q}}_0^\dagger, B \delta \bm{q}_0 \rangle = 0
+  \end{aligned}
+\end{equation}
+%
+the second condition is introduced to select one solution among the inifinite possible ones. At this point we solve for $\bm{q}_0^\epsilon  = \delta \bm{q}_0/\epsilon$.
+
+Having done this, we can then move to the equaiton for the perturbation. The approach is the same, we replace $\bm{q}_0$ with $\bm{q}_0 + \delta \bm{q}_0$ and $\bm{q}_1$ with $\bm{q}_1 + \delta \bm{q}_1$. Also, we use the Floquet assumption. Recall thus that
+%
+\begin{equation}
+  \begin{gathered}
+  \frac{\partial \bm{u}_1}{\partial t} = \frac{\partial}{\partial t} \left( \hat{\bm{u}}_1(\tau) e^{\sigma \tau} \right) = 
+  \frac{\partial \hat{\bm{u}}_1}{\partial \tau} \frac{\text{d} \tau}{\text{d} t} e^{\sigma \tau} +
+  \hat{\bm{u}}_1 \sigma \frac{\text{d} \tau}{\text{d} t} e^{\sigma \tau} = \\
+  \frac{\partial \hat{\bm{u}}_1}{\partial \tau} \left( 1 + \epsilon \dot{\tau}_1 + \text{h.o.t.} \right) e^{\sigma \tau} +
+  \hat{\bm{u}}_1 \sigma ( 1 + \epsilon \dot{\tau}_1 + \text{h.o.t.} ) e^{\sigma \tau} = \\
+  \left( \frac{\partial \hat{\bm{u}}_1}{\partial \tau} + \frac{\partial \hat{\bm{u}}_1}{\partial \tau} \epsilon \dot{\tau}_1 + \hat{\bm{u}}_1 \sigma + \hat{\bm{u}}_1 \sigma \epsilon \dot{\tau}_1 \right) e^{\sigma \tau}
+  \end{gathered}
+\end{equation}
+We now follow the same procedure as above, and by removing all higher order terms we obtain
+%
+\begin{equation}
+  \begin{gathered}
+  B \frac{\partial \delta \hat{\bm{q}}_1}{\partial \tau} +
+  \epsilon \dot{\tau}_1 B \frac{ \hat{\bm{q}}_1 }{\partial \tau} +
+  \delta \sigma B \hat{\bm{q}}_1 +
+  \sigma B \delta \hat{\bm{q}}_1 + 
+  \sigma \epsilon \dot{\tau}_1 B \hat{\bm{q}}_1 +
+  \mathcal{L}(\bm{u}_0,Re_c) \delta \hat{\bm{q}}_1 = \\
+  - \epsilon \begin{pmatrix} \bm{\nabla}^2 \hat{\bm{u}}_1 - \hat{\bm{u}}_1 \cdot \bm{\nabla} \bm{u}_0^\epsilon -
+                                                            \bm{u}_0^\epsilon \cdot \bm{\nabla} \hat{\bm{u}}_1 \\ 0 \end{pmatrix}
+  \end{gathered}
+\end{equation}
+%
+We now want to isolate $\delta \sigma$. Therefore to remove $\delta \hat{\bm{q}}_1$ we project this equation along the adoint direction $\hat{\bm{q}}_1^\dagger$ to otbain
+%
+\begin{equation}
+  \begin{gathered}
+  \delta \sigma \langle \hat{\bm{q}}_1^\dagger, B \hat{\bm{q}}_1 \rangle +
+  \epsilon \langle \hat{\bm{q}}_1^\dagger, \dot{\tau}_1 B \frac{\partial \hat{\bm{q}} }{\partial \tau} \rangle +
+  \epsilon \langle \hat{\bm{q}}_1^\dagger, \sigma \dot{\tau}_1 B \hat{\bm{q}}_1 \rangle =  \\
+  - \epsilon \langle \hat{\bm{q}}_1^\dagger, \mathcal{F}_{2,a}^1 \rangle -
+  - \epsilon \langle \hat{\bm{q}}_1^\dagger, \mathcal{F}_{2,b}^1 \rangle
+  \end{gathered}
+\end{equation}
+%
+where 
+%
+\begin{equation}
+  \mathcal{F}_2^1 = \mathcal{F}_{2,a}^2 + \mathcal{F}_{2,b}^2 
+  = \begin{pmatrix} \bm{\nabla}^2 \hat{\bm{u}}_1 \\ 0 \end{pmatrix} +
+    \begin{pmatrix} \hat{\bm{u}}_1 \cdot \bm{\nabla} \bm{u}_0^\epsilon + \bm{u}_0^\epsilon \cdot \bm{\nabla} \hat{\bm{u}}_1 \\0 \end{pmatrix}
+\end{equation}
+%
+therefore we do have
+%
+\begin{equation}
+  \delta \sigma = - \epsilon \frac{ \langle \hat{\bm{q}}_1^\dagger, \mathcal{F}_2^1  + \mathcal{G}_2^1 \rangle }
+                                  { \langle \hat{\bm{q}}_1^\dagger, B \hat{\bm{q}}_1 \rangle }
+\end{equation}
+%
+where 
+%
+\begin{equation}
+  \mathcal{G} = \begin{pmatrix} \dot{\tau}_1 \frac{\partial \hat{\bm{u}}_1}{\partial \tau} + \sigma \dot{\tau}_1 \hat{\bm{u}}_1 \\ 0 \end{pmatrix}.
+\end{equation}
+%
+At this point we can write
+%
+\begin{equation}
+  \frac{\partial \sigma}{\partial Re} = 
+  \frac{\partial \sigma}{\partial \epsilon} \frac{\partial \epsilon}{\partial Re} = 
+  \frac{1}{Re^2} \frac{\partial \sigma}{\partial \epsilon} = 
+  - \frac{1}{Re} \left( \frac{ \langle \hat{\bm{q}}_1^\dagger, \mathcal{F}_2^1  + \mathcal{G}_2^1 \rangle }
+                                  { \langle \hat{\bm{q}}_1^\dagger, B \hat{\bm{q}}_1 \rangle } \right)
+\end{equation}
+%
+The idea is therefore to plots at different phases the integrand funciton inside the inner porduct at the numerator, to highlight which region and which term is mostly responsible for a variation of the global eigenvalues after a small variaiton of the Reynolds number.
