@@ -1,5 +1,6 @@
 \section{Elongated bodies}
 
+\iffalse
 \begin{itemize}
   \item Figura con $T$ in funzione di $Re$ per $\AR=5.5, 6, 7, 9$. Serve poi aggiungerne altri? Nel caso dobbiamo calcolare il flusso base XX STO CALCOLANDO XX.
   \item Spiegazione con il fatto che qua abbiamo due flussi base diversi. Facciamo vedere il flusso base per $\AR=5.5$ e $\AR=7$ in due determinate fasi (?) Serve far vedere questo?.  
@@ -10,6 +11,7 @@
   \item Figure con il budget dell'enstrofia. XX DA CALCOLARE XX
   \item Simulazioni non lineari
 \end{itemize}
+\fi
 
 We now turn to longer bodies, using the oblique and horizontal $n = 2$ branches as representative cases for aspect ratios in the range $5 \le \AR \le 7$. Additionally, the case $\AR = 9$ is considered as representative of the oblique $n = 3$ branch. For $n \ge 2$, the secondary instability leads to a three-dimensional flow. Depending on the flow configuration, this instability is driven either by the classical mode A of the wake, or by mode QS, which is associated with the interaction of leading-edge vortices simultaneously accommodated along the cylinder sides.
 
@@ -17,11 +19,43 @@ We now turn to longer bodies, using the oblique and horizontal $n = 2$ branches 
 
 As discussed in \S\ref{} and shown in figure~\ref{} for $Re = 400$, the shedding frequency, when non-dimensionalised using $L$ and $U_\infty$, collapses to the value $0.55n$ for certain aspect ratios, where $n$ denotes the number of LE vortices simultaneously accommodated along the lateral surfaces of the cylinder. In this regime, the global shedding frequency is governed by the LE vortex shedding, while the wake dynamics are primarily driven by the passage of these vortices over the TE corners. Conversely, for other aspect ratios, the dynamics are dominated by TE vortex shedding. In these cases, the flow resembles that past elongated bodies with smooth leading edges, as previously reported by \cite{chiarini-quadrio-auteri-2022}. Representative instantaneous visualisations are shown in figure~\ref{} XX ADD FIGURE XX.
 
-This behaviour is further illustrated in figure \ref{}, which shows the variation of the shedding period with Reynolds number for $5 \le \AR \le 7$ and $\AR = 9$. Different flow regimes are distinguished by colour: blue and red correspond to the $n = 2$ and $n = 3$ regimes dominated by TE vortex shedding, while green identifies the $n = 2$ regime governed by LE vortex shedding. As expected, within the considered $Re$ range, the Strouhal number based on $L$, $St_L$, increases approximately linearly with $\AR$ for $5 \le \AR \le 5.75$ (corresponding to the oblique $n = 2$ branch), and then collapses to a nearly constant value close to 1.1 for $6 \le \AR \le 7$ (the horizontal $n = 2$ branch).
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/long/T_Re.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/long/St_Re.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/long/T_Re_b.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/long/St_Re_b.eps}
+  \caption{xx}
+  \label{fig:T_St_Re_long}
+\end{figure}
+
+This behaviour is further illustrated in figure \ref{fig:T_St_Re_long}, which shows the variation of the shedding period with Reynolds number for $5 \le \AR \le 7$ and $\AR = 9$. Different flow regimes are distinguished by colour: blue and red correspond to the $n = 2$ and $n = 3$ regimes dominated by TE vortex shedding, while green identifies the $n = 2$ regime governed by LE vortex shedding. As expected, within the considered $Re$ range, the Strouhal number based on $L$, $St_L$, increases approximately linearly with $\AR$ for $5 \le \AR \le 5.75$ (corresponding to the oblique $n = 2$ branch), and then collapses to a nearly constant value close to 1.1 for $6 \le \AR \le 7$ (the horizontal $n = 2$ branch).
 
 Across all aspect ratios examined, the shedding period exhibits only a weak dependence on $Re$, though this sensitivity increases slightly with $\AR$. Notably, the period $T$ shows a non-monotonic dependence on $\AR$: it decreases at lower $Re$, but increases with $\AR$ at higher $Re$.
 
 \subsection{The unstable modes}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/multipliers_AR5p25.eps}  
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/multipliers_AR5p5.eps}  
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/multipliers_AR5p75.eps} 
+  \includegraphics[width=0.49\textwidth]{./fig/AR7s/multipliers_AR6.eps}  
+  \includegraphics[width=0.49\textwidth]{./fig/AR7s/multipliers_AR7.eps}
+  \includegraphics[width=0.49\textwidth]{./fig/AR9s/multipliers.eps}
+  \caption{xx}
+  \label{fig:multipliers_long}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/Floqetmode_beta_2_Re550_AR5p5_A.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/Floqetmode_beta_4p75_Re550_AR5p5_Ap.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5s/Floqetmode_beta_2_Re550_AR5p5_QS.png}   
+  \includegraphics[width=0.49\textwidth]{./fig/AR9s/Floquet_AR9_Re450_beta2_modeQS.png}
+  \caption{Three-dimensional reconstruction of the unstable modes for elongated bodies.}
+  \label{fig:modes_long}
+\end{figure}
 
 Figure \ref{} presents the leading Floquet multipliers for $5.25 \le \AR \le 9$ at various Reynolds numbers, identifying the onset of three-dimensional instabilities in the flow. The corresponding spatial structures of the associated unstable modes are shown in Figure \ref{}. The bifurcation scenario varies with $\AR$, reflecting changes in the topology of the base flow. As discussed below, two distinct wake modes become unstable at aspect ratios where the base flow is dominated by TE vortex shedding. These modes are not observed when the flow is instead governed by LE vortices. However, across all $\AR$ values considered, the $QS$ mode---associated with LE vortex dynamics---is found to become unstable. The sequence and nature of the bifurcations are therefore strongly dependent on $\AR$.
 
@@ -33,11 +67,23 @@ The presence of the QS mode reveals a fundamental difference in the bifurcation 
 XX AD DEFFECT OF $\AR$ on $Re_{c}$
 
 For aspect ratios where the base-flow dynamics are governed by TE vortex shedding---specifically, $5 \le \AR \le 5.75$ and $\AR = 9$---two additional unstable modes are identified, both arising exclusively from wake dynamics. The first corresponds to a branch of real, positive Floquet multipliers centered around $\beta \approx 2$ and is consistent with mode A, a classical wake instability typically observed in shorter bodies. As shown in figure~\ref{}, this mode is spatially confined to the wake and exhibits the same spatio-temporal symmetries as previously reported (see \S\ref{}).
+%
+An additional  instability branch, also composed of real, positive Floquet multipliers, arises being centered around $\beta \approx 3.5$-$4$ and is observed at $\AR = 5.5$ and $5.75$. This mode, denoted as mode $A'$, shares the same spatio-temporal symmetries as mode A but is characterised by a shorter spanwise wavelength. Like mode A, it is confined to the wake, with negligible support along the lateral surfaces of the cylinder, further indicating a wake-driven origin. Mode $A'$ is not observed for $\AR = 5.25$ or $\AR = 9$, and likely becomes unstable only at higher Reynolds numbers. As with mode A, its presence is contingent on the presence of natural TE shedding; when LE vortex dynamics dominate the base flow, mode $A'$ is suppressed.
+
+\subsection{The physical mechanism of mode $A$}
 
 Within the Reynolds number range considered, mode A remains stable for $5 \le \AR \le 5.25$, becomes unstable for $5.5 \le \AR \le 5.75$, and is marginally stable at $\AR = 9$. Notably, for $\AR = 5.5$ and $5.75$, mode A is the first to destabilise and is responsible for initiating the transition to three-dimensionality. In this range, and increase of $\AR$ destabilises mode $A$. This is confirmed by nonlinear 3D simulations, as discussed later.
 
 For rectangular cylinders, mode A reappears intermittently as $\AR$ increases. Its presence is closely linked to the phasing of the vortex shedding: when natural TE shedding is permitted by the base flow, mode A emerges and governs the three-dimensional transition. Conversely, when TE shedding is suppressed by the passage of LE vortices, the mechanism sustaining mode A is inhibited, and the transition is instead driven by mode QS.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/sens_1-200-1p25_5p5-500-2_modeA_75.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/sens_1-200-1p25_5p5-500-2_modeA_100.png}
+  \caption{Structural sensitivity for mode A at two different instants within the shedding period. Comparison between $\AR=5.5$ at $Re=500$ and $\beta=2$ and $\AR=1$ at $Re=200$ and $\beta=1.25$. For $\AR=5.5$ the base flow is governed by the TE vortex shedding. Though, the characteristic lengths of the wake vortex are rather different the topology of the structural sensitivity resembles in both cases at the two phases. This further suggests that in both cases the two unstable modes coincide.}
+  \label{fig:sens_modeA}
+\end{figure}
+%
 To further demonstrate that the same mode $A$ emerges for different $\AR$s when TE vortex shedding is permitted, we plot in figure \ref{} the norm of the instantaneous structural sensitivity $I$ of mode $A$ for three representative cases: $\AR=1$, $Re=200$, $\beta=1.25$; $\AR=5.5$, $Re=500$, $\beta=2$; and $\AR=9$, $Re=xx$, $\beta=xx$. For each configuration, two distinct phases of the unsteady flow are considered. Across all cases, the spatial structure of the sensitivity field remains essentially unchanged and closely resembles that reported in \cite{} for the canonical flow past a circular cylinder. The main variations arise due to differences in the size and topology of the base-flow streamlines.
 %
 The regions of significant sensitivity are consistently located in the area separating the clockwise and counter-clockwise vorticity layers originating from the lower and upper shear layers, respectively. In some cases, the sensitivity region extends toward the TE corners, where flow separation occurs. Notably, the structural sensitivity remains negligible along the lateral sides of the body, reinforcing the interpretation that this mode represents a global instability of the wake. This further confirms that, for elongated bodies, the LE vortices do not play a direct role in triggering the instability.
@@ -48,20 +94,101 @@ In this context, \cite{giannetti-2015} applied the Lifshitz–Hameiri theory alo
 %
 In light of these findings, the present results---showing that mode $A$ arises only when TE vortex shedding occurs in conjunction with specific wake dynamics---may offer valuable clues toward a deeper understanding of the transition process, with implications even for the more extensively studied flow past a circular cylinder.
 
-To conclude this section, we mention that an additional  instability branch, also composed of real, positive Floquet multipliers, arises being centered around $\beta \approx 3.5$-$4$ and is observed at $\AR = 5.5$ and $5.75$. This mode, denoted as mode $A'$, shares the same spatio-temporal symmetries as mode A but is characterised by a shorter spanwise wavelength. Like mode A, it is confined to the wake, with negligible support along the lateral surfaces of the cylinder, further indicating a wake-driven origin. Mode $A'$ is not observed for $\AR = 5.25$ or $\AR = 9$, and likely becomes unstable only at higher Reynolds numbers. As with mode A, its presence is contingent on the presence of natural TE shedding; when LE vortex dynamics dominate the base flow, mode $A'$ is suppressed.
-
-\subsection{Effect of the Reynolds number}
-
-Can we compute $\partial \lambda/\partial Re$ and $\partial \omega/\partial Re$? Similarly to what I have done with Edouard
-It should be sufficient to compute the first coefficient of the WNL expansion. Try to derive this.
+\textcolor{red}{XX Do we add also information regarding the orbits? XX}
 
 
 \subsection{On the amplification mechanism}
 
-Here we characterise the amplification mechanism by looking at the budget equations of modes $A$ and $QS$.
+We now examine the contributions of various physical mechanisms to the exponential growth of the $A$ and $QP$ modes in the linear regime, i.e. at the critical Reynolds number, $Re = Re_c$. Our analysis begins with the perturbation energy equation for the velocity field $\bm{u}_1$ \citep[][]{}. We form the scalar product of equation~\eqref{} with the complex conjugate $\bm{u}_1^*$ and add it to the complex conjugate of the same equation multiplied by $\bm{u}_1$. After some manipulation, and invoking the incompressibility constraint, we obtain an equation for the time evolution of the quantity $\bm{u}_1 \cdot \bm{u}_1^*$, averaged over one shedding period, i.e.
+\begin{equation}
+  \begin{gathered}
+  \frac{2 \Re(\sigma)}{T} \int_{t_0}^{t_0+T} \hat{u}_i \hat{u}_i^* \text{d}t = 
+ \underbrace{-\frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{u}_j \hat{u}_i^* + \hat{u}_j^* \hat{u}_i \right) \frac{\partial U_i}{\partial x_j} \text{d} t}_{\mathcal{P}^e} +\\
+ \underbrace{-\frac{1}{T} \int_{t_0}^{t_0+T} U_j \frac{\partial \hat{u}_i \hat{u}_i^*}{\partial x_j} \text{d} t }_{\mathcal{A}^e} + 
+ \underbrace{-\frac{1}{T} \int_{t_0}^{t_0+T} \frac{\partial}{\partial x_i} \left( \hat{p} \hat{u}_i^* + \hat{p}^* \hat{u}_i \right) \text{d}t }_{\mathcal{T}_p^e}+ \\
+\underbrace{ +\frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left[ \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{u}_i^* \hat{u}_i }{\partial x_j} \right) \right] \text{d}t }_{\mathcal{D}^e }
+ - \underbrace{ \frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left( 2 \frac{\partial \hat{u}_i}{\partial x_j} \frac{\partial \hat{u}_i^*}{\partial x_j} + 2 \beta^2 \hat{u}_i^* \hat{u}_i \right) \text{d} t. }_{\mathcal{E}^e}
+ \end{gathered}
+\end{equation}
+%
+On the right-hand side, the terms appear in the following order: the production term $\mathcal{P}^e$, representing the exchange of energy between the base flow and the perturbation field; the viscous diffusion term $\mathcal{D}^e$; the pressure transport term $\mathcal{T}_p^e$; the advection by the base flow $\mathcal{A}^e$; and the viscous dissipation term $\mathcal{E}^e$. While all terms contribute to the overall energy budget, their relative importance varies depending on the flow region.
 
-XX Do we add also information regarding the orbits? XX
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/Prod_Re450_Re550_beta2.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/Mtrsp_Re450_Re550_beta2.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/Prod1_Re450_Re550_beta2.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/Prod2_Re450_Re550_beta2.png}
+  \caption{Energy budget for $\AR=5.5$ and mode $A$ (top) and mode $QS$ (bottom). For mode $A$: $Re=450$ and $\beta=2$. For mode $QS$: $Re=550$ and $\beta=2$.}
+  \label{fig:ener_budget}
+\end{figure}
 
+
+Figure~\ref{} presents the energy balance for modes $A$ and $QS$ for an aspect ratio $\AR = 5.5$ and spanwise wavenumber $\beta = 2$. In both cases, the Reynolds number is set close to its critical value, with $Re = 450$ for mode $A$ and $Re = 550$ for mode $QS$, such that the temporal growth rate satisfies $\sigma_r \approx 0$. Under these conditions, the Reynolds–Orr equation simplifies to
+\begin{equation*}
+ \int_{D} \mathcal{P} \text{d}\Omega = \int_{D} \mathcal{E}^e \text{d}\Omega \qquad \text{with} \qquad
+ \int_{D} \mathcal{A}^e + \mathcal{T}_p^e + \mathcal{D}^e \text{d}\Omega = 0.
+\end{equation*}. 
+%
+Our primary focus is on the spatial distributions of the production term $\mathcal{P}^e$ and the advection term $\mathcal{A}^e$, in order to identify the regions of the flow where mode amplification is driven by energy production and/or advection.
+
+Consistent with the distinct spatial structures of the two modes, the terms in the energy budget are nonzero in different regions of the domain. For mode $A$, all mechanisms are concentrated downstream of the body, within the wake, whereas for mode $QS$, significant activity is also observed along the lateral sides of the cylinder. For mode $A$, the production term $\mathcal{P}^e$ is positive along the streamlines that bound the mean recirculating region in the wake—precisely where the base-flow velocity gradients are largest. The alternating regions of $\mathcal{P}^e > 0$ and $\mathcal{P}^e < 0$ in the wake reflect the unsteady flapping of the wake, indicating bidirectional energy transfer between the base flow and the perturbation field.
+%
+In the case of mode $QS$, the most intense production occurs along the lateral surfaces of the body. As with mode $A$, $\mathcal{P}^e$ peaks along the streamlines that define the lateral recirculating regions. However, we also observe positive values of $\mathcal{P}^e$ in the near wake, indicating that the base flow moves energy to the perturbations in this region as well.
+%
+The advection term $\mathcal{A}^e$ exhibits a contrasting behavior. It acts as a sink ($\mathcal{A}^e < 0$), thereby stabilizing the flow along the separating shear layers where the base flow velocity $U > 0$: in the near wake for mode $A$, and along the lateral sides of the cylinder for mode $QS$. In contrast, $\mathcal{A}^e$ becomes a source ($\mathcal{A}^e > 0$) and contributes to destabilization within the recirculating regions, where $U < 0$. This is consistent with the interpretation that, within these recirculating zones, the base flow transports perturbations upstream, allowing them to persist and amplify more effectively than in regions where they are simply advected downstream.
+
+To provide further insight, the bottom panels of figure~\ref{} show the individual contributions to the production term associated with the streamwise and transverse components of the base flow, $U$ and $V$, respectively; that is, $\mathcal{P}_{uu}^e$ and $\mathcal{P}_{vv}^e$.
+%
+\begin{equation}
+  \mathcal{P}_{uu}^e = - \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{u}_j \hat{u}^* + \hat{u}_j^* \hat{u} \right) \frac{\partial U}{\partial x_j} \text{d} t \qquad \text{and} \qquad
+\mathcal{P}_{vv}^e = - \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{u}_j \hat{v}^* + \hat{u}_j^* \hat{v} \right) \frac{\partial V}{\partial x_j} \text{d} t.
+\end{equation}
+%
+For both modes, the components of the production term, $\mathcal{P}_{uu}^e$ and $\mathcal{P}_{vv}^e$, exhibit distinct spatial distributions. For mode $A$, both components contribute to the overall positive production ($\mathcal{P}^e > 0$) in the near wake: $\mathcal{P}_{vv}^e$ dominates near the base of the cylinder, while $\mathcal{P}_{uu}^e$ is primarily responsible for the production along the separating shear layers. Further downstream in the wake, regions of positive $\mathcal{P}_{uu}^e$ correlate with negative $\mathcal{P}_{vv}^e$, and vice versa,this alternating pattern reflects the velocity field induced by the shedding wake vortices.
+%
+In the case of mode $QS$, the positive $\mathcal{P}^e$ observed along the lateral sides of the cylinder is entirely due to the $\mathcal{P}_{uu}^e$ component. In contrast, the positive production region just downstream of the trailing edge arises from $\mathcal{P}_{vv}^e$.
+
+\iffalse
+We close this section by looking at the enstrophy budget. Both modes $A$ and $QS$, indeed, are responsible for the flow three-dimensionalisation and, threfore, they are resposible for the generation of (streamwise) vorticity in the flow. As for the energy, we start from the governing equation for the perturbation and derive the budget for the enstrophy defied as $\hat{\omega}_i \hat{\omega}_i^*$. Specifically, the enstrophy equation is obtained starting from the equation governing the vorticity pertubation $\hat{\omega}_i$ multiplied by $\hat{\omega}_i^*$ and summing the result to the conjugate of the same equation multiplied for $\hat{\omega}_i$. The results is:
+%
+\begin{equation}
+  \begin{gathered}
+  \frac{2 \Re{\sigma}}{T} \int_{t_0}^{t_0+T} \hat{\omega}_i \hat{\omega}_i^* \text{d}t =  
+  \underbrace{
+  - \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{\omega}_i^* \hat{u}_j + \hat{\omega}_i u_j^* \right) \frac{\partial \Omega_i}{\partial x_j} \text{d}t
+  + \frac{1}{T} \int_{t_0}^{t_0+T}    i \beta \Omega_3 \left( \hat{u}_i \hat{\omega}_{i}^* - \hat{u}_i^* \hat{\omega}_i \right)  \text{d} t}_{\mathcal{P}^\omega} \\
+  \underbrace{  - \frac{1}{T} \int_{t_0}^{t_0+T} U_j \frac{\partial \hat{\omega}_i \hat{\omega}_i^* }{\partial x_j} \text{d} t }_{\mathcal{A}^\omega}
+  \underbrace{
+  + \frac{1}{T} \int_{t_0}^{t_0+T} \left( \hat{\omega}_i^* \hat{\omega}_j + \hat{\omega}_i \hat{\omega}_j^* \right) \frac{\partial U_i}{\partial x_j} \text{d} t }_{\mathcal{V}^\omega} + \\
+  + 
+  \underbrace{\frac{1}{T} \int_{t_0}^{t_0+T}    \frac{1}{Re} \frac{\partial}{\partial x_j} \left( \frac{\partial \hat{\omega}_i \hat{\omega}_i^*}{\partial x_j} \right) \text{d} t }_{\mathcal{D}^{\omega}} -
+ \underbrace{ \frac{1}{T} \int_{t_0}^{t_0+T} \frac{1}{Re} \left( 2 \frac{\partial \hat{\omega}_i}{\partial x_j} \frac{\partial \hat{\omega}_i^*}{\partial x_j} + 2 \beta^2 \hat{\omega}_i \hat{\omega}_i^* \right) \text{d} t }_{\mathcal{E}^\omega}.
+  \end{gathered}
+\end{equation}
+%
+Like the energy equations the terms of this equations describe the physical mechanism that are responsible for the exponential growth of the enstrophy in the linear regime for $Re \approx Re_c$. At the right-hand side, we recognise the production $\mathcal{P}^\omega$, advection $\mathcal{A}^\omega$, viscous diffusion $\mathcal{D}^\omega$ and dissipation $\mathcal{E}^\omega$ terms. Here the pressure transport is not present due to the action of the the curl operator to obtain the equaiton for $\hat{\omega}_i$. The additional $\mathcal{V}$ term comes from the vortex stretching term, which differentiates enstrophy from energy. It describes the production of enstrophy due to the interaction of vorticity $\omega_i$ and the stretching vecotr $\omega_i \partial U_i/\partial x_j$.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/Prod_Re450_Re550_beta2_enst.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p5/Vst_Re450_Re550_beta2_enst.png}
+  \caption{Enstrophy budget for $\AR=5.5$ and mode $A$ (top) and mode $QS$ (bottom). For mode $A$: $Re=450$ and $\beta=2$. For mode $QS$: $Re=550$ and $\beta=2$.}
+  \label{fig:enst_budget}
+\end{figure}
+
+Figure \ref{fig:enst_budget} shows separately $\mathcal{P}^\omega$ and $\mathcal{V}^\omega$ for the two modes. We observe that $\mathcal{P}^\omega$ is mostly positive for both modes, being maximum along the shear layers delimiting the average recirculating regions where the base-flow velocity gradients are maxima. The vortex stretching $\mathcal{V}$ term, instead, acts as a sink or a source depending on the flow region.
+\fi
+
+\subsection{The competing $A$ and $QS$ modes}
+
+\textcolor{red}{XX Add non linear simulations for $\AR=5.5$ for $Re=450,475,500,525,550$ con spettri, visualizzazioni. Se serve proviamo a vedere anche i POD modes}
+
+
+
+
+
+\iffalse
 XX FIN QUI XX
 
 Figure \ref{} shows the unstable branches of Floquet multipliers for $5.25 \le \AR \le 5.75$ ($n=2$ oblique brach), $\AR=6,7$ ($n=2$ horizontal branch) and $\AR=9$ ($n=3$ oblique branch). The scanario changes with $\AR$ with different modes becoming unstable, in agreement with the change of the base flow dynamics. The case with $\AR=5$ has been discussed in \cite{chiarini-quadrio-auteri-2022d}.
@@ -194,4 +321,5 @@ XX PER $\AR=5.5$ per $Re \in (450,400)$ sembra che ci sia di nuovo effetto della
   \includegraphics[width=0.49\textwidth]{./fig/AR5p5/sens_1-200-1p25_5p5-500-2_modeA_100.png}
   \caption{Structural sensitivity for mode A at two different instants within the shedding period. Comparison between $\AR=5.5$ at $Re=500$ and $\beta=2$ and $\AR=1$ at $Re=200$ and $\beta=1.25$. For $\AR=5.5$ the base flow is governed by the TE vortex shedding. Though, the characteristic lengths of the wake vortex are rather different the topology of the structural sensitivity resembles in both cases at the two phases. This further suggests that in both cases the two unstable modes coincide.}
   \label{fig:sens_modeA}
-\end{figure}  
+\end{figure} 
+\fi
