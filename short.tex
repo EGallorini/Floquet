@@ -1,8 +1,7 @@
 \section{Short bodies}
 \label{sec:short}
 
-
-We begin by examining short bodies with aspect ratios in the range $1 \le \AR <3$, to assess how a modest increase in $\AR$ alters the bifurcation structure and the sequence in which flow modes become unstable, relative to the well-studied $\AR=1$ case. This analysis complements the work of \cite{choi-yang-2014}, who investigated the onset of secondary instabilities for bodies ranging from a normal flat plate ($\AR \rightarrow 0$) to a square cylinder ($\AR=1$).
+We begin by examining short bodies with aspect ratios in the range $1 \le \AR <3$, to assess how a modest increase in $\AR$ alters the bifurcation structure and the sequence in which flow modes become unstable, relative to the well-studied $\AR=1$ case. This analysis complements the work of \cite{choi-yang-2014}, who investigated the onset of secondary instabilities for bodies ranging from a flat plate normal to the flow ($\AR \rightarrow 0$) to a square cylinder ($\AR=1$).
 
 \subsection{The base flow}
 
@@ -42,7 +41,7 @@ When holding $Re$ fixed and varying $\AR$, figure~\ref{fig:T_Re_small}(a) shows 
   \label{fig:Av_Re140_Re230}
 \end{figure} 
 
-The varying trends in the shedding period $T$ with Reynolds number across aspect ratios reflect changes in the base-flow topology and in the underlying vortex shedding mechanisms. These are illustrated in figures~\ref{fig:snap_Re140_Re230} and \ref{fig:Av_Re140_Re230}, which show instantaneous and time-averaged flow fields for $Re=14$ and $Re=230$, across different $\AR$.
+The varying trends in the shedding period $T$ with Reynolds number across aspect ratios reflect changes in the base-flow topology and in the underlying vortex shedding mechanisms. These are illustrated in figures~\ref{fig:snap_Re140_Re230} and \ref{fig:Av_Re140_Re230}, which show instantaneous and time-averaged flow fields for $Re=140$ and $Re=230$, across different $\AR$.
 %
 For shorter bodies ($\AR \lessapprox 1$), the flow separates at the LE corners and only rarely reattaches along the lateral sides, regardless of $Re$. In this regime, vortex shedding is primarily governed by the dynamics of the LE shear layer, which actively participates in the formation of the wake vortex. As shown in figure \ref{fig:snap_Re140_Re230}, the LE shear layer delineates the boundary of the vortex as it is shed downstream.
 %
@@ -148,7 +147,7 @@ The frequency of the leading eigenmode predicts fairly well the Strouhal number 
   \includegraphics[width=0.49\textwidth]{./fig/AR1p25/neutralb.eps}  
   \includegraphics[width=0.49\textwidth]{./fig/AR1p5/neutralb.eps}    
   \includegraphics[width=0.49\textwidth]{./fig/AR1p75/neutralb.eps}       
-  \caption{Top: multipliers for $\AR=1$, $\AR=1.25$ and $\AR=1.5$ at $Re=200$; the red line refers to mode $A$, the grey line to mode $C$, the green line to mode $B$ and the light blue line refers to mode $B'$. Mode $B'$ has the same spatio-temporal symmetry of mode $B$, but its characteristic wavelength is much smaller, being similar to that of mode $A$. This mode resembles that found for elongated bodies with elliptic leading edge by \cite{ryan-etal-2005}. XX ADD $\AR=2$ e $\AR=2.5$ XX}
+  \caption{Multipliers for $\AR=1$ (top left), $\AR=1.25$ (top right), $\AR=1.5$ (bottom left) and $\AR=1.75$ (bottom right) for different $Re$. The dark red line refers to mode $A$, the light blue line to mode $C$, the light red to mode $B$, the dark blue lines to mode $QP$, the light blue line refers to mode $B'$, and pink lines mode $C$. Mode $B'$ has the same spatio-temporal symmetry of mode $B$, but its characteristic wavelength is much smaller, being similar to that of mode $A$. This mode resembles that found for elongated bodies with elliptic leading edge by \cite{ryan-etal-2005}. XX ADD $\AR=2$ e $\AR=2.5$ XX}
   \label{fig:mult_AR1_AR1p75}
 \end{figure}
 %
@@ -225,4 +224,24 @@ For this intermediate $\AR$, additional multipliers cross the unit circle as the
 
 XX 3D Simulations for $\AR=1.25, 2, 2.5$ at different $Re$. Show the phase space plots and spectra to characterise the competition between the modes. If needed we can do POD to separate the modes XX
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.24\textwidth]{./fig/nnl/ClCdAR1.5RE190.png}
+  \includegraphics[width=0.24\textwidth]{./fig/nnl/ClCdAR1.5RE210.png}
+  \includegraphics[width=0.24\textwidth]{./fig/nnl/ClCdAR1.5RE230.png}
+  \includegraphics[width=0.24\textwidth]{./fig/nnl/ClCdAR1.5RE250.png}
+  %\includegraphics[width=0.49\textwidth]{./fig/AR1p25/mu_beta_Re250.eps}
+  \caption{Cl vs Cd for $\AR=1.5$ at different $Re$.}
+  \label{fig:ClCd}
+\end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.24\textwidth]{./fig/nnl/psdAR1.5RE190.png}
+  \includegraphics[width=0.24\textwidth]{./fig/nnl/psdAR1.5RE210.png}
+  \includegraphics[width=0.24\textwidth]{./fig/nnl/psdAR1.5RE230.png}
+  \includegraphics[width=0.24\textwidth]{./fig/nnl/psdAR1.5RE250.png}
+  %\includegraphics[width=0.49\textwidth]{./fig/AR1p25/mu_beta_Re250.eps}
+  \caption{Psd for $\AR=1.5$ at different $Re$.}
+  \label{fig:ClCd}
+\end{figure}
