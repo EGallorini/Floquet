@@ -222,6 +222,46 @@ Figure \ref{fig:mult-AR1p25} shows the dependence of the Floquet multipliers on 
 
 For this intermediate $\AR$, additional multipliers cross the unit circle as the Reynolds number increases beyond $Re \gtrapprox 230$. At $Re \approx 230$, a pair of complex-conjugate multipliers with negative real parts and non-zero imaginary parts cross the unit circle, indicating the onset of a new quasi-periodic instability---labelled as mode $QP'$ in figure \ref{fig:modes}(e). Further increasing the Reynolds number to $Re \approx 240$, we observe the emergence of another instability: a real Floquet multiplier with positive real part crosses the unit circle. This mode is synchronous and shares the same symmetry as modes $B$ and $B'$, but has a significantly shorter wavelength, corresponding to $\beta \approx 0.5$, see mode $B''$ in figure \ref{fig:modes}(f). Since these represent higher-order bifurcations of the base flow, their detailed characterisation lies beyond the scope of the present work.
 
+
+\textcolor{blue}{
+For $\AR=2$ we observe that at low $Re$ only mode $A$ becomes unstable. Then, similarly to what observed for smaller $\AR$s, this mode stabilises at larger $Re$. For these $Re$ the flow is again two-dimensional. This is further confirmed by the non linear simulations. The flow then becomes again unstable to three-dimensional perturbations at larger $Re$.
+}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.32\textwidth]{./fig/AR2p5/u_Re625_beta4.png}
+  \includegraphics[width=0.32\textwidth]{./fig/AR2p5/v_Re625_beta4.png}
+  \includegraphics[width=0.32\textwidth]{./fig/AR2p5/w_Re625_beta4.png} 
+  \caption{Unstable modes for $\AR=2.5$, $Re=625$ and $\beta=4$. From left to right the panels are for $\Re(\hat{u})$, $\Re(\hat{v})$ and $\Im(\hat{w})$. Top panels are for the most unstable mode, the bottom panels are for the less unstable one.}
+  \label{fig:AR2p5modes}   
+\end{figure}
+\textcolor{blue}{
+For $\AR=2.5$ the scenario is slightly different. In this case, indeed, the Floquet modes associated with mode $A$ approach the unit circle in the complex plane, but they do not cross it. This means that for all $Re$s the real multiplier $\mu$ associated with this mode has modulus always smaller than $1$. For this $\AR$ the flow becomes three-dimensional only at larger $Re$. The Floquet stability analysis predicts that two real multipliers cross the unit circle in short succession for $600 \le Re \le 625$. These multipliers are associated with synchronous modes.
+The most unstable mode is shown in figure \ref{fig:AR2p5modes} and has the following symmetries
+\begin{equation}
+  \begin{aligned}
+    u(x,y,t) = &+ u(x,-y,t+T/2) \\
+    v(x,y,t) = &- v(x,-y,t+T/2) \\
+    w(x,y,t) = &+ w(x,-y,t+T/2) 
+  \end{aligned}
+\end{equation}
+}
+
+\textcolor{blue}{
+The second unstable mode is instead shown in figure \ref{fig:AR2p5modes} and has the following symmetries
+\begin{equation}
+  \begin{aligned}
+    u(x,y,t) = & -u(x,-y,t+T/2) \\
+    v(x,y,t) = & +v(x,-y,t+T/2) \\
+    w(x,y,t) = & -w(x,-y,t+T/2)
+  \end{aligned}
+\end{equation}
+}
+
+\textcolor{blue}{
+Unlike the unstable modes detected for smaller $\AR$s, here we observe that these modes extend also along the lateral sides of the body, suggesting that in somehow the dynamics of the LE vortices plays a certain role.}
+
+\textcolor{red}{We have to verify whether the same two modes becomes unstable for $\AR=2$. Then, for these modes it would be interesting to look at the structural sensitivity}
+
 \subsection{Non linear simulations}
 
 XX 3D Simulations for $\AR=1.25, 2, 2.5$ at different $Re$. Show the phase space plots and spectra to characterise the competition between the modes. If needed we can do POD to separate the modes XX
