@@ -1,4 +1,5 @@
 \section{Elongated bodies}
+\label{sec:elongated}
 
 \iffalse
 \begin{itemize}
@@ -13,11 +14,15 @@
 \end{itemize}
 \fi
 
-We now turn to longer bodies, using the oblique and horizontal $n = 2$ branches as representative cases for aspect ratios in the range $5 \le \AR \le 7$. Additionally, the case $\AR = 9$ is considered as representative of the oblique $n = 3$ branch. For $n \ge 2$, the secondary instability leads to a three-dimensional flow. Depending on the flow configuration, this instability is driven either by the classical mode A of the wake, or by mode QS, which is associated with the interaction of leading-edge vortices simultaneously accommodated along the cylinder sides.
+We now consider longer bodies with aspect ratios in the range $5 \le \AR \le 7$, representing the oblique and horizontal $n=2$ branches (see figure \ref{fig:StLAR}), and include $\AR=9$ as representative of the oblique $n=3$ branch. For $n \ge 2$, the secondary instability invariably induces a 3D flow, independent of $\AR$. Depending on the configuration, this instability is driven either by the classical wake mode A observed in wakes behind shorter bodies, or by the QS mode, which originates from the interaction of LE vortex pairs \citep{chiarini-quadrio-auteri-2022}.
 
 \subsection{The base flow}
 
-As discussed in \S\ref{} and shown in figure~\ref{} for $Re = 400$, the shedding frequency, when non-dimensionalised using $L$ and $U_\infty$, collapses to the value $0.55n$ for certain aspect ratios, where $n$ denotes the number of LE vortices simultaneously accommodated along the lateral surfaces of the cylinder. In this regime, the global shedding frequency is governed by the LE vortex shedding, while the wake dynamics are primarily driven by the passage of these vortices over the TE corners. Conversely, for other aspect ratios, the dynamics are dominated by TE vortex shedding. In these cases, the flow resembles that past elongated bodies with smooth leading edges, as previously reported by \cite{chiarini-quadrio-auteri-2022}. Representative instantaneous visualisations are shown in figure~\ref{} XX ADD FIGURE XX.
+As noted in \S\ref{sec:intro}, the dynamics of the periodic limit cycle (base flow) vary with $\AR$. For $5 \lesssim \AR \lesssim 6$, the flow is dominated by LE vortex shedding, with the corresponding Strouhal number $St_L$ increasing nearly linearly with $\AR$. This regime corresponds to the $n=2$ LE-dominated branch shown in figure~\ref{fig:StLAR}. Conversely, for $6 \lesssim \AR \lesssim 8$, the flow is dominated by TE vortex shedding, and $St_L$ remains approximately constant with $\AR$, representing the $n=2$ TE-dominated branch in the same figure.
+
+The interaction between LE and TE vortices in the $n=2$ LE-dominated regime closely resembles the behaviour observed for the $n=1$ case (see figure~\ref{fig:snap_ar4_ar4p5}(a,b)). For completeness, figure~\ref{} presents representative instantaneous visualisations of the $n=2$ LE-dominated regime for $\AR = 5.25$ at $Re = 450$ as a representative case.\textcolor{red}{XX ADD FIGURE XX} This behaviour is analogous to the $n=3$ LE-dominated regime observed at $\AR = 9$. A comprehensive characterisation of these regimes is provided in \cite{chiarini-quadrio-auteri-2022}.
+
+In this regime, the wake dynamics behind the TE closely resemble those of a streamlined elongated cylinder, without LE separation \citep{chiarini-quadrio-auteri-2022}. The overall vortex shedding process is primarily governed by TE vortex shedding. The LE vortices do not significantly affect the TE shedding; rather, upon reaching the TE corner, they merge into the newly forming recirculation region at the base of the cylinder before the subsequent TE vortex is shed from the same side.
 
 \begin{figure}
   \centering
@@ -29,9 +34,11 @@ As discussed in \S\ref{} and shown in figure~\ref{} for $Re = 400$, the shedding
   \label{fig:T_St_Re_long}
 \end{figure}
 
-This behaviour is further illustrated in figure \ref{fig:T_St_Re_long}, which shows the variation of the shedding period with Reynolds number for $5 \le \AR \le 7$ and $\AR = 9$. Different flow regimes are distinguished by colour: blue and red correspond to the $n = 2$ and $n = 3$ regimes dominated by TE vortex shedding, while green identifies the $n = 2$ regime governed by LE vortex shedding. As expected, within the considered $Re$ range, the Strouhal number based on $L$, $St_L$, increases approximately linearly with $\AR$ for $5 \le \AR \le 5.75$ (corresponding to the oblique $n = 2$ branch), and then collapses to a nearly constant value close to 1.1 for $6 \le \AR \le 7$ (the horizontal $n = 2$ branch).
-
+This behaviour is further illustrated in figure \ref{fig:T_St_Re_long}, which shows the variation of the shedding period with Reynolds number for $5 \le \AR \le 7$ and $\AR = 9$. Different flow regimes are distinguished by colour: blue and red correspond to the $n = 2$ and $n = 3$ regimes dominated by TE vortex shedding, while green identifies the $n = 2$ regime governed by LE vortex shedding. As expected, within the considered $Re$ range, the Strouhal number $St_L$, increases approximately linearly with $\AR$ for $5 \le \AR \le 5.75$ (corresponding to the oblique $n = 2$ branch), and then collapses to a nearly constant value close to 1.1 for $6 \le \AR \le 7$ (the horizontal $n = 2$ branch).
+%
 Across all aspect ratios examined, the shedding period exhibits only a weak dependence on $Re$, though this sensitivity increases slightly with $\AR$. Notably, the period $T$ shows a non-monotonic dependence on $\AR$: it decreases at lower $Re$, but increases with $\AR$ at higher $Re$.
+
+\textcolor{red}{XX FIN QUI XX}
 
 \subsection{The unstable modes}
 
