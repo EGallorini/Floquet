@@ -1,18 +1,7 @@
 \section{Elongated bodies}
 \label{sec:elongated}
 
-\iffalse
-\begin{itemize}
-  \item Figura con $T$ in funzione di $Re$ per $\AR=5.5, 6, 7, 9$. Serve poi aggiungerne altri? Nel caso dobbiamo calcolare il flusso base XX STO CALCOLANDO XX.
-  \item Spiegazione con il fatto che qua abbiamo due flussi base diversi. Facciamo vedere il flusso base per $\AR=5.5$ e $\AR=7$ in due determinate fasi (?) Serve far vedere questo?.  
-  \item Figure con i moltiplicatori per $\AR=5.5, 6, 7, 9$
-  \item Figura con i modi per $\AR=5.5$, sia ricostruzione 3D che 2D
-  \item Focus sul modo A, con sensitività per diversi $\AR$ (1, 5.5, 9). E spiegazione del fatto che il modo quindi di ripresenta ogni qual volta lo shedding lo permette
-  \item Figure con il budget dell'energia.
-  \item Figure con il budget dell'enstrofia. XX DA CALCOLARE XX
-  \item Simulazioni non lineari
-\end{itemize}
-\fi
+\textcolor{red}{XX CONTROLLA CHE A $RE=550$ IL FLUSSO BASE 2D SIA INSTABILE. GUARDA QUELLO CHE AVEVAMO FATTO PER $\AR=5$ XX}
 
 We now consider longer bodies with aspect ratios in the range $5 \le \AR \le 7$, representing the oblique and horizontal $n=2$ branches (see figure \ref{fig:StLAR}), and include $\AR=9$ as representative of the oblique $n=3$ branch. For $n \ge 2$, the secondary instability invariably induces a 3D flow, independent of $\AR$. Depending on the configuration, this instability is driven either by the classical wake mode A observed in wakes behind shorter bodies, or by the QS mode, which originates from the interaction of LE vortex pairs \citep{chiarini-quadrio-auteri-2022}.
 
@@ -203,8 +192,37 @@ Figure \ref{fig:enst_budget} shows separately $\mathcal{P}^\omega$ and $\mathcal
 \textcolor{red}{XX Add non linear simulations for $\AR=5.5$ for $Re=450,475,500,525,550$ con spettri, visualizzazioni. Se serve proviamo a vedere anche i POD modes}
 
 
+\begin{figure}
+  \centering
+  \includegraphics[trim={0 250 0 200},clip,width=0.49\textwidth]{./fig/AR5p5/omegax_Re450_2D.png}
+  \includegraphics[trim={10 0 10 0},clip,width=0.49\textwidth]{./fig/AR5p5/omegax_Re450_3D.png} 
+  \includegraphics[trim={0 250 0 200},clip,width=0.49\textwidth]{./fig/AR5p5/omegax_Re500_2D.png}
+  \includegraphics[trim={10 0 10 0},clip,width=0.49\textwidth]{./fig/AR5p5/omegax_Re500_3D.png} 
+  \includegraphics[trim={0 250 0 200},clip,width=0.49\textwidth]{./fig/AR5p5/omegax_Re550_2D.png}
+  \includegraphics[trim={10 0 10 0},clip,width=0.49\textwidth]{./fig/AR5p5/omegax_Re550_3D.png}  
+  \caption{Visualisation from direct numerical simulations for $\AR=5.5$. From top to bottom the Reynolds number is $Re=450,500$ and $550$. Left: lateral view. Right: three-dimensional view. The red/blue surfaces denote $\omega_x = \pm 0.25$.}
+  \label{fig:viewdns-ar5p5}       
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_cd_Re450.eps}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cd_f_Re450.eps} 
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_f_Re450.eps}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_cd_Re500.eps}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cd_f_Re500.eps} 
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_f_Re500.eps}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_cd_Re550.eps}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cd_f_Re550.eps} 
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_f_Re550.eps} 
+  \caption{\textcolor{red}{XX Update when simulations have converged. Replace the $Cd-f$ spectrum with $w-f$ spectrum to show that a new frequency arises for $Re \ge 500$. Change the force diagram with the velocity diagram XX}}
+  \label{fig:clcd-ar5p5}   
+\end{figure}
+   
+
 \subsection{Non linear simulations}
 
+\iffalse
 \begin{figure}
   \centering
   \includegraphics[width=0.24\textwidth]{./fig/nnl/psdAR7RE700.png}
@@ -244,6 +262,7 @@ Figure \ref{fig:enst_budget} shows separately $\mathcal{P}^\omega$ and $\mathcal
   \caption{Psd for $\AR=5.5$ at different $Re$.}
   \label{fig:ClCd}
 \end{figure}
+\fi
 
 \iffalse
 XX FIN QUI XX
