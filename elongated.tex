@@ -20,9 +20,19 @@ We now consider longer bodies with aspect ratios in the range $5 \le \AR \le 7$,
 
 As noted in \S\ref{sec:intro}, the dynamics of the periodic limit cycle (base flow) vary with $\AR$. For $5 \lesssim \AR \lesssim 6$, the flow is dominated by LE vortex shedding, with the corresponding Strouhal number $St_L$ increasing nearly linearly with $\AR$. This regime corresponds to the $n=2$ LE-dominated branch shown in figure~\ref{fig:StLAR}. Conversely, for $6 \lesssim \AR \lesssim 8$, the flow is dominated by TE vortex shedding, and $St_L$ remains approximately constant with $\AR$, representing the $n=2$ TE-dominated branch in the same figure.
 
-The interaction between LE and TE vortices in the $n=2$ LE-dominated regime closely resembles the behaviour observed for the $n=1$ case (see figure~\ref{fig:snap_ar4_ar4p5}(a,b)). For completeness, figure~\ref{} presents representative instantaneous visualisations of the $n=2$ LE-dominated regime for $\AR = 5.25$ at $Re = 450$ as a representative case.\textcolor{red}{XX ADD FIGURE XX} This behaviour is analogous to the $n=3$ LE-dominated regime observed at $\AR = 9$. A comprehensive characterisation of these regimes is provided in \cite{chiarini-quadrio-auteri-2022}.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.49\textwidth]{./fig/AR5p75/vort_bf_Re550_100.png}
+  \includegraphics[width=0.49\textwidth]{./fig/AR7s/vort_bf_Re500_100.png}
+  \caption{Instantaneous visualisations of the 2D base-flow for $\AR=5.75$ at $Re=550$ (left) and $\AR=7$ at $Re=500$ (right). The blue-to-red colour is for spanwise vorticity in the $-5 \le \Omega_z \le 5$ range. For $\AR=5.5$ the flow is dominated by the TE vortex shedding dynamics. When a LE crosses the TE, it merges with the new generating TE vortex from the same side. For $\AR=7$ the flow is domianted by the LE vortex shedding due to the different phase of the LE and TE vortex shedding. When a LE vortex crosses the TE, a new TE vortex is shed from the opposite side.}
+  \label{fig:bf_elongated}
+\end{figure}
 
-In this regime, the wake dynamics behind the TE closely resemble those of a streamlined elongated cylinder, without LE separation \citep{chiarini-quadrio-auteri-2022}. The overall vortex shedding process is primarily governed by TE vortex shedding. The LE vortices do not significantly affect the TE shedding; rather, upon reaching the TE corner, they merge into the newly forming recirculation region at the base of the cylinder before the subsequent TE vortex is shed from the same side.
+The interaction between the LE and TE vortices in the $n=2$ LE-dominated regime closely resembles the behaviour observed in the $n=1$ case (see figure~\ref{fig:snap_ar4_ar4p5}a,b). This similarity is illustrated in figure~\ref{fig:bf_elongated}a, which presents a representative case at $\AR = 5.75$ and $Re = 550$.
+
+For completeness, we now briefly discuss the $n=2$ and $n=3$ TE-dominated regimes. Figure~\ref{fig:bf_elongated}b shows a representative instantaneous visualisation of the $n=2$ LE-dominated regime at $\AR = 7$ and $Re = 500$. The observed behaviour is analogous to that in the $n=3$ LE-dominated regime at $\AR = 9$. A detailed characterisation of these regimes can be found in \citet{chiarini-quadrio-auteri-2022}.
+%
+In these TE-dominated regimes, the wake dynamics near the trailing edge closely resemble those of a streamlined elongated cylinder, with no observable separation from the leading edge \citep{chiarini-quadrio-auteri-2022}. The vortex shedding process is primarily governed by the TE dynamics, with LE vortices playing a negligible role. Upon reaching the TE corner, indeed, LE vortices merge into the developing recirculation region at the base of the cylinder, without significantly perturbing the formation or shedding of the subsequent TE vortex. Figure~\ref{fig:bf_elongated} clearly illustrates the merging of the positively signed LE and TE vortices near the lower corner of the trailing edge.
 
 \begin{figure}
   \centering
