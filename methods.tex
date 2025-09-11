@@ -2,34 +2,40 @@
 \label{sec:methods}
 
 \subsection{Flow configuration}
-The incompressible flow past rectangular cylinders with aspect ratio $\AR=L/D$, where $L$ and $D$ indicate their length and thickness, is considered. A Cartesian coordinate system centred at the LE of the cylinders is used. The $x$ direction is aligned with the free-stream flow direction, and $y$ denotes the cross-stream direction. When present, $z$ is the spanwise direction. The cylinders are placed in a uniform flow with velocity $\bm{U}=U_\infty\hat{\bm{e}}_x$. The Reynolds number depends on the incoming flow and on the cylinder thickness, and is defined as $Re= U_\infty D /\nu$, where $\nu$ is the kinematic viscosity. The flow is governed by the incompressible Navier--Stokes equations, i.e.
+We consider the incompressible flow past two-dimensional rectangular cylinders with aspect ratio $\AR = L/D$, where $L$ and $D$ denote the cylinder length (streamwise extent) and thickness (cross-stream extent), respectively. A Cartesian coordinate system is adopted, with its origin located at the LE of the cylinder. The $x$-axis is aligned with the free-stream direction, the $y$-axis is the cross-stream direction, and, when present, the $z$-axis denotes the spanwise direction.
+
+The cylinders are immersed in a uniform free-stream with velocity $\boldsymbol{U} = U_\infty , \hat{\boldsymbol{e}}x$. The Reynolds number is based on the cylinder thickness and the free-stream velocity, and is defined as $Re = U\infty D / \nu$, where $\nu$ is the kinematic viscosity of the fluid.
+
+The flow is governed by the incompressible Navier–Stokes equations, namely:
 %
 
 \begin{equation}
 \begin{aligned}
 \frac{\partial U}{\partial t} + \bm{U} \cdot \bm{\nabla}\bm{U} + \bm{\nabla} P - \frac{1}{Re} \nabla^2 \bm{U} & = \bm{0} \\
-\bm{\nabla} \cdot \bm{U} & = 0
+\bm{\nabla} \cdot \bm{U} & = 0.
 \end{aligned}
 \label{eq:NSequations}
 \end{equation}
 %
-where $\bm{U}$ is the velocity vector with components $\bm{U}=(U,V,W)$ and $P$ is the reduced pressure. No-slip and no-penetration boundary conditions are imposed at the cylinder side, while undisturbed velocity is enforced at the inlet and at the farfield. At the outlet convective boundary conditions
+Here, $\boldsymbol{U} = (U, V, W)$ is the velocity vector, and $P$ denotes the reduced pressure. No-slip and no-penetration boundary conditions are imposed on the surface of the cylinder. At the inlet and far-field boundaries, a uniform free-stream velocity is prescribed. At the outlet, convective boundary conditions are applied to minimize reflections and ensure smooth outflow, i.e.
 % 
 \begin{equation*}
-P \bm{n} - \frac{1}{Re} \bm{\nabla} \bm{U} \cdot \bm{n} = \bm{0}
+P \bm{n} - \frac{1}{Re} \bm{\nabla} \bm{U} \cdot \bm{n} = \bm{0}.
 \end{equation*}
 %
-are used. Periodic boundary conditions are used in the spanwise direction to account for homogeneity.
+Periodic boundary conditions are used in the spanwise direction to account for homogeneity.
 
 \subsection{Floquet analysis}
 
-Floquet theory is used to study the linear stability of 2D time-periodic base flows to three-dimensional perturbations. The flow field $\{\bm{U},P\}$ is written as the sum of the a 2D periodic base flow $\{\bm{U}_b,P_b\}$ and an unsteady 3D perturbation of small amplitude $\epsilon$:
+Floquet theory is employed to analyse the linear stability of two-dimensional, time-periodic base flows with respect to three-dimensional perturbations. The flow field ${\boldsymbol{U}, P}$ is decomposed into a two-dimensional, time-periodic base flow ${\boldsymbol{U}_b, P_b}$ and a small-amplitude, unsteady three-dimensional perturbation of order $\epsilon$:
+%
 \begin{equation}
 \{\bm{U},P\}(x,y,z,t) = \{\bm{U}_b,P_b\}(x,y,t) + \epsilon \int_{-\infty}^{\infty} \{\bm{u},p\}(x,y,\beta,t) \text{e}^{i \beta z} \text{d} \beta;
 \end{equation}
-here $i$ is the imaginary unit, $\bm{u}$ and $p$ indicate the Fourier transform of the velocity and pressure perturbations in the homogeneous $z$ direction and $\beta$ is the corresponding wavenumber.
+%
+here, $i$ denotes the imaginary unit, while $\boldsymbol{u}$ and $p$ represent the Fourier transforms of the velocity and pressure perturbations in the homogeneous spanwise ($z$) direction. The parameter $\beta$ is the corresponding spanwise wavenumber.
 
-Introducing this decomposition in \ref{eq:NSequations} the governing equations for the base flow are obtained at order $\epsilon^0$, that are the two-dimensional incompressible Navier--Stokes equations, while the eigenproblem describing the evolution equation for the perturbations are obtained at order $\epsilon^1$. They are the linearised Navier--Stokes equations (LNSEs) that for each $\beta$ read:
+Substituting this decomposition into the Navier–Stokes equations (\ref{eq:NSequations}), the governing equations for the base flow are obtained at order $\mathcal{O}(\epsilon^0)$, yielding the two-dimensional incompressible Navier–Stokes equations. At order $\mathcal{O}(\epsilon^1)$, the evolution equations for the perturbations are recovered, resulting in a linear eigenvalue problem. These are the linearised Navier–Stokes equations (LNSEs), which for each spanwise wavenumber $\beta$ take the form:
 %
 \begin{equation}
 \begin{aligned}
@@ -39,38 +45,45 @@ Introducing this decomposition in \ref{eq:NSequations} the governing equations f
 \label{eq:LNSEs}
 \end{equation}
 %
-where $\bm{\nabla}_\beta \equiv (\partial / \partial x,\partial / \partial y, i\beta)$ is the Fourier-transformed gradient operator and $\mathcal{L}_\beta$ is the Fourier-transformed linearised Navier--Stokes operator:
+where $\boldsymbol{\nabla}\beta \equiv \left( \partial / \partial x, , \partial / \partial y, i\beta \right)$ denotes the gradient operator in the Fourier-transformed spanwise direction, and $\mathcal{L}\beta$ represents the corresponding linearised Navier–Stokes operator in Fourier space:
 %
 \begin{equation}
-\mathcal{L}_\beta\{\bm{U}_b,Re\}\bm{u}=\bm{U}_b \cdot \bm{\nabla}_\beta \bm{u} + \bm{u} \cdot \bm{\nabla}_\beta \bm{U}_b - \frac{1}{Re} \nabla^2_\beta \bm{u},
+\mathcal{L}_\beta\{\bm{U}_b,Re\}\bm{u}=\bm{U}_b \cdot \bm{\nabla}_\beta \bm{u} + \bm{u} \cdot \bm{\nabla}_\beta \bm{U}_b - \frac{1}{Re} \nabla^2_\beta \bm{u}.
 \end{equation}
 %
-where $\nabla^2_\beta \equiv \nabla_\beta \cdot \nabla_\beta$ is the Fourier-transformed Laplacian operator. Following the Floquet theory we further decompose the perturbation field into:
+Here, $\nabla^2_\beta \equiv \nabla_\beta \cdot \nabla_\beta$ is the Fourier-transformed Laplacian operator. In accordance with Floquet theory, the perturbation field is further decomposed as:
 %
 \begin{equation}
-\{\bm{u},p\}(x,y,\beta,t) = \{\hat{\bm{u}},\hat{p}\}(x,y,\beta,t) \text{e}^{\sigma t}
+\{\bm{u},p\}(x,y,\beta,t) = \{\hat{\bm{u}},\hat{p}\}(x,y,\beta,t) \text{e}^{\sigma t}.
+\label{eq:ansatz}
 \end{equation}
 %
-where $\sigma$ is the Floquet exponent and $\{ \hat{\bm{u}},\hat{p} \}$ is the associated Floquet mode, that has the same periodicity as the base flow. The stability of the system is determined by the sign of the real part $\Re(\sigma)$ of the Floquet exponent, or equivalently, by the modulus of the Floquet multiplier $\mu = e^{\sigma T}$. If all $\Re(\sigma)<0$, or $|\mu<1|$, the system is stable and the perturbations decay. If one exponent exist with $\Re(\sigma)>0$, or $|\mu>1|$ the perturbation grows exponentially; if $\beta \neq 0$ the flow becomes three-dimensional.
+Here, $\sigma$ is the Floquet exponent, and ${\hat{\boldsymbol{u}}, \hat{p}}$ denotes the corresponding Floquet mode, which shares the same temporal periodicity as the base flow. The stability of the system is determined by the sign of the real part of the Floquet exponent, $\Re(\sigma)$, or equivalently, by the modulus of the Floquet multiplier $\mu = e^{\sigma T}$, where $T$ is the period of the base flow. The system is linearly stable if all Floquet exponents satisfy $\Re(\sigma) < 0$, or equivalently if $|\mu| < 1$, in which case perturbations decay over time. Conversely, if at least one exponent satisfies $\Re(\sigma) > 0$ (i.e. $|\mu| > 1$), the corresponding perturbation grows exponentially. If the associated spanwise wavenumber is nonzero ($\beta \neq 0$), this instability leads to a three-dimensional transition of the flow.
 
 \subsection{Computational details}
 
-In the present work we use two distinct numerical methods. The stability analysis is carried out using a numerical code based on finite elements and implemented in the non-commercial software FreeFem++ \citep{hecht-2012}; see \cite{chiarini-quadrio-auteri-2022d} and \cite{chiarini-nastro-2025} for details. The 3D fully non linear simulations are instead carried out with an in-house solver based on finite differences, which has been already used to study the flow past 2D and 3D bluff bodies in both the laminar and turbulent regimes \citep{chiarini-quadrio-auteri-2022d,chiarini-boujo-2024,chiarini-etal-2022}.
+Two distinct numerical approaches are employed in this study. The linear stability analysis is performed using a finite element code developed within the non-commercial software FreeFem++ \citep{hecht-2012}; further details can be found in \citet{chiarini-quadrio-auteri-2022d} and \citet{chiarini-nastro-2025}. The fully nonlinear three-dimensional simulations are conducted using an in-house finite-difference solver, which has been previously applied to investigate flows past two- and three-dimensional bluff bodies in both laminar and turbulent regimes \citep{chiarini-quadrio-auteri-2022d,chiarini-boujo-2024,chiarini-etal-2022}.
 
-The 2D time-periodic base flows $\{\bm{U}_b,P_b\}$ are evaluated by integrating in time the two-dimensional discretised version of the Navier--Stokes equations \ref{eq:NSequations}. The time integration employs an explicit thir-order, low-storage Runge--Kutta method for the non-linear term, combined with an implicity second-order Crank--Nicolson scheme for the linear terms \cite{rai-moin-1991}. The non-commercial, finite-element software FreeFem++ is employed to discretise the equations. Triangular quadratic elements and linear elements are used for the velocity vector and the pressure to satisfy the LBB condition \citep{brezzi-1974}. The BoostConv algorithm \citep{citro-etal-2017} accelerates the convergence of the simulations to the periodic limit cycle; for all cases the base flow is verified to satisfy the required spatio-temporal symmetries 
+The 2D time-periodic base flows ${\boldsymbol{U}_b, P_b}$ are computed by time-integrating the discretised form of the incompressible Navier–Stokes equations (\ref{eq:NSequations}). Time integration is performed using a third-order, low-storage Runge--Kutta scheme for the nonlinear terms, coupled with a second-order implicit Crank--Nicolson scheme for the linear terms \citep{rai-moin-1991}. Spatial discretisation is carried out with the non-commercial finite-element software FreeFem++ \citep{hecht-2012}, using quadratic triangular elements for the velocity field and linear elements for the pressure, thereby satisfying the Ladyzhenskaya-Babuška-Brezzi (LBB) condition \citep{brezzi-1974}.
+%
+To accelerate convergence to the periodic limit cycle, the BoostConv algorithm \citep{citro-etal-2017} is employed. In all cases, the resulting base flows are verified to satisfy the required spatio-temporal symmetries 
+%
 \begin{equation}
 \{U_b,V_b,P_b\}(x,y,z,t) = \{U_b,-V_b,P_b\}(x,-y,z,t+T/2)
 \end{equation}
-up to a threshold of $10^{-10}$. The computational domain extends for $-25 D\le x \le 60 D$ in the stremwise direction and for $-40 D \le y \le 40 D $ in the cross-stream direction, leading to $L_x=85D$ and $L_y=80D$. A symmetric grid with respect to the $x$ axis is used to avoid introducing spurious asymmetries in the flow. The number of triangles slightly changes with $\AR$, from a minimum of $8 \times 10^4$ to a maximum of $18 \times 10^4$, and are distributed in order to properly refine the area close to the cylinders and the wake region.
+%
+up to a threshold of $10^{-10}$. The computational domain extends from $-25D$ to $60D$ in the streamwise ($x$) direction and from $-40D$ to $40D$ in the cross-stream ($y$) direction, resulting in domain dimensions of $L_x = 85D$ and $L_y = 80D$. A grid symmetric about the $x$-axis is employed to prevent the introduction of spurious asymmetries in the flow. The mesh size varies slightly with the aspect ratio $\AR$, ranging from approximately $8 \times 10^4$ to $1.8 \times 10^5$ triangular elements. The mesh is refined near the cylinder surface and within the wake region to accurately capture the flow dynamics.
 
-The numerical method used for the Floquet analysis resembles that used by other authors \citep[see for example][]{barkley-henderson-1996}. The Floquet multipliers $\mu_\beta$ and the Floquet modes $\hat{\bm{u}}_\beta(t_0)$ at time $t_0$ of the operator $\mathcal{L}_\beta$ are the eigenvalues and eigenvectors of the linearised Poincarè map $\mathcal{P}_\beta$ that links the velocity perturbation $\bm{u}_\beta(t_0)$ with its evolution after one period, i.e.
+The numerical approach employed for the Floquet analysis follows established methods used by previous studies \citep[e.g.,][]{barkley-henderson-1996}. The Floquet multipliers $\mu_\beta$ and associated Floquet modes $\hat{\boldsymbol{u}}\beta(t_0)$ at a reference time $t_0$ correspond to the eigenvalues and eigenvectors of the linearised Poincaré map $\mathcal{P}\beta$. This map relates the velocity perturbation $\boldsymbol{u}_\beta(t_0)$ to its state after one period $T$, i.e.,
 %
 \begin{equation}
 \bm{u}_\beta(t_0+T) = \mathcal{P}_\beta \bm{u}_k(t_0).
 \end{equation}
 %
-The eigenvalues of $\mathcal{P}_\beta$ with larger modulus and the associated eigenvectors have been computed with the Arnoldi method \citep{saad-2011}. The action of $\mathcal{P}_\beta$ on the initial perturbation $\bm{u}_\beta(t_0)$ is obtained integrating in time the LNSEs (equation \ref{eq:LNSEs}) from $t_0$ to $t_0+T$, using the same numerical scheme used for the computation of the base flow. The Gram-Schimdt algorithm is used for the eigenvectors orthogonalisation and all the computed modes are normalised using their total kinetic energy. During the integration of the LNSEs, the base flow is evaluated at each time step by the Fourier interpolation of 100 instantaneous fields stores equispaced in time over one period T.
+The eigenvalues of $\mathcal{P}\beta$ with the largest moduli and their corresponding eigenvectors are computed using the Arnoldi method \citep{saad-2011}. The action of the Poincaré map $\mathcal{P}\beta$ on an initial perturbation $\boldsymbol{u}_\beta(t_0)$ is obtained by integrating the linearised Navier--Stokes equations (equation \ref{eq:LNSEs}) over one period, from $t_0$ to $t_0 + T$, employing the same numerical scheme used for the base flow computation. Orthogonalisation of eigenvectors is performed via the Gram–Schmidt algorithm, and all computed modes are normalised with respect to their total kinetic energy. During the integration of the linearised equations, the base flow is evaluated at each time step through Fourier interpolation of 100 instantaneous snapshots, evenly spaced over one period $T$.
 
-The 3D Direct Numerical Simulations have been carried out using a numerical code introduced by \cite{luchini-2013}. It integrates in time the three-dimensional Navier--Stokes equations written in primitive variables on a staggered grid using finite-differences in the three directions. The governing equations are advanced in time using a fractional time-stepping method with a third-order Runge-Kutta scheme. The Poisson equation for the pressure is solved using an iterative SOR algorithm. The presence of the cylinder is dealt with a second-order implicit immersed-boundary method \citep{luchini-etal-2025}. For these simulations the computational domain has size $L_x=XXD$, $L_y=XXD$ and $L_z=2\pi D$. The number of points slightly changes with $\AR$, being $(N_x,N_y,N_z) = (XX,XX,XX)$ for $\AR \in (1,3)$, $(N_x,N_y,N_z)=(XX,XX,XX)$ for $\AR =4.5$ and$(N_x,N_y,N_z)=(1040,570,200)$ for $\AR=5.5 $ and $\AR=7$ for a total of about 120 millions points. Their distribution is homogeneous in the spanwise direction, whereas a geometric progression is used the streamwise and vertical directions to properly refine the grid near the cylinders' corners and in the wake region. For all cases the cell size in correspondence of the corners is $\Delta x = \Delta y \approx 0.005D$. All the simulations are advanced in time using a variable timestep to enforce that the Courant–Friedrichs–Lewy number is below unity. 
+The 3D Direct Numerical Simulations are performed using a numerical code originally developed by \cite{luchini-2013}. The code integrates the incompressible Navier--Stokes equations in primitive variables on a staggered grid, employing finite-difference schemes in all three spatial directions. Time advancement is achieved through a fractional step method combined with a third-order Runge–Kutta scheme. The Poisson equation for pressure is solved using an iterative Successive Over-Relaxation (SOR) algorithm. The presence of the cylinder is modelled via a second-order implicit immersed boundary method \citep{luchini-etal-2025}.
+%
+The computational domain dimensions are $L_x = XXD$, $L_y = XXD$, and $L_z = 2\pi D$. The grid resolution varies slightly with the aspect ratio $\AR$, with $(N_x, N_y, N_z) = (XX, XX, XX)$ for $\AR \in (1,3)$, $(N_x, N_y, N_z) = (XX, XX, XX)$ for $\AR = 4.5$, and $(N_x, N_y, N_z) = (1040, 570, 200)$ for $\AR = 5.5$ and $7$, corresponding to a total of approximately 120 million grid points. The grid is uniformly spaced in the spanwise ($z$) direction, while a geometric progression is used in the streamwise ($x$) and vertical ($y$) directions to provide enhanced resolution near the cylinder corners and in the wake region. For all cases, the grid spacing at the corners is $\Delta x = \Delta y \approx 0.005D$. Simulations employ a variable time step to ensure the Courant–Friedrichs–Lewy (CFL) number remains below unity throughout the integration. 
 
-Hereinafter, if not otherwise indicated, all variables are in dimensionless form with $D$ as length scale, $U_\infty$ as velocity scale and $D/U_\infty$ as time scale.
+Hereinafter, unless otherwise specified, all variables are expressed in dimensionless form using the cylinder thickness $D$ as the characteristic length scale, the free-stream velocity $U_\infty$ as the velocity scale, and the convective time scale $D/U_\infty$.
