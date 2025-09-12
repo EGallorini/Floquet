@@ -187,10 +187,7 @@ Like the energy equations the terms of this equations describe the physical mech
 Figure \ref{fig:enst_budget} shows separately $\mathcal{P}^\omega$ and $\mathcal{V}^\omega$ for the two modes. We observe that $\mathcal{P}^\omega$ is mostly positive for both modes, being maximum along the shear layers delimiting the average recirculating regions where the base-flow velocity gradients are maxima. The vortex stretching $\mathcal{V}$ term, instead, acts as a sink or a source depending on the flow region.
 \fi
 
-\subsection{The competing $A$ and $QS$ modes}
-
-\textcolor{red}{XX Add non linear simulations for $\AR=5.5$ for $Re=450,475,500,525,550$ con spettri, visualizzazioni. Se serve proviamo a vedere anche i POD modes}
-
+\subsection{The non linear simulations}
 
 \begin{figure}
   \centering
@@ -206,18 +203,28 @@ Figure \ref{fig:enst_budget} shows separately $\mathcal{P}^\omega$ and $\mathcal
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_cd_Re450.eps}
-  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cd_f_Re450.eps} 
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/u-v-w_Re450.eps}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/w_f_Re450.eps} 
   \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_f_Re450.eps}
-  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_cd_Re500.eps}
-  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cd_f_Re500.eps} 
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/u-v-w_Re500.eps}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/w_f_Re500.eps} 
   \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_f_Re500.eps}
-  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_cd_Re550.eps}
-  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cd_f_Re550.eps} 
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/u-v-w_Re550.eps}
+  \includegraphics[width=0.32\textwidth]{./fig/AR5p5/w_f_Re550.eps} 
   \includegraphics[width=0.32\textwidth]{./fig/AR5p5/cl_f_Re550.eps} 
-  \caption{\textcolor{red}{XX Update when simulations have converged. Replace the $Cd-f$ spectrum with $w-f$ spectrum to show that a new frequency arises for $Re \ge 500$. Change the force diagram with the velocity diagram XX}}
+  \caption{Frequency content of the DNS simulations for $\AR=5.5$ and different $Re$. From top to bottom the panels are for $Re=450,500$ and $550$. Left: $u-v-w$ diagrams evaluated at $(x,y,z) = (6.7,\pi,0.5)$. Centre: Spectrum of $w$ evaluated at the same point. Right: Spectrum of the lift coefficient. \textcolor{red}{XX Update when simulations have converged XX}}
   \label{fig:clcd-ar5p5}   
 \end{figure}
+
+To further investigate the nonlinear interaction between modes $A$ and $QS$, we perform three-dimensional direct numerical simulations. The aspect ratio is fixed at $\AR = 5.5$, and the Reynolds number is varied in the range $450 \le Re \le 550$, encompassing the critical thresholds of both mode $A$ ($Re_c \lessapprox 450$) and mode $QS$ ($Re_c \lessapprox 500$). As in the case of shorter bodies, all simulations are initialised from a 2D potential flow. Instantaneous flow visualisations are shown in figure~\ref{fig:viewdns-ar5p5}, while figure~\ref{fig:clcd-ar5p5} presents quantitative information on the flow time scales and the nature of the corresponding attractors.
+
+The nonlinear simulations confirm the sequence of bifurcations predicted by linear stability analysis. At $Re=450$, the flow is 3D and periodic, with the attractor tracing a closed loop in phase space. The period of oscillation is $T \approx 5.45$, matching that of the 2D base flow and indicating the occurrence of a synchronous bifurcation. At this Reynolds number, the 3D structures remain confined within the wake, consistent with the emergence of mode $A$. This is corroborated by the observed flow symmetries and the spanwise wavelength, which are in good agreement with those associated with mode $A$, see figure \ref{fig:modes_long}. In particular, figure~\ref{fig:clcd-ar5p5} reveals a dominant spanwise wavelength $\lambda_z \approx \pi$, corresponding to a wavenumber $\beta = 2$, which is close to the most amplified value $\beta_\text{max}$ for mode $A$ (see figure~\ref{fig:multipliers_long}).
+
+As the Reynolds number is increased beyond $Re \ge 500$, the flow undergoes a Neimark-Sacker bifurcation and loses temporal periodicity. At these Reynolds numbers, figure~\ref{fig:viewdns-ar5p5} shows that the 3D flow structures extend along the sides of the body, highlighting the two LE vortices, while preserving the characteristic spanwise length scale $\lambda_z \approx \pi$. This behaviour is consistent with the growth of the $QS$ mode (see figure~\ref{fig:modes_long}) and is further supported by the data presented in figure~\ref{fig:clcd-ar5p}. At $Re = 500$, the attractor forms a torus in phase space, indicative of the presence of two incommensurate frequencies, $f_1 = 0.184$ and $f_2 = 0.095$ (central panel), whose ratio is close to, but not exactly, $2$. This is consistent with the quasi-subharmonic nature of the bifurcation. The frequency associated with the unstable $QS$ mode appears in the power spectra of all three velocity components recorded at various spatial locations. However, it is absent from the lift and drag coefficient signals. This is due to the three-dimensional flow repeating every two shedding cycles with a spanwise phase shift of $\pi$; as the integration over the cylinder's lateral surface is invariant under such a shift, the contribution of this mode cancels out; see \cite{chiarini-quadrio-auteri-2022d} for further details.
+
+Upon further increase of the Reynolds number, additional frequencies emerge in the spectra, and the flow progressively loses temporal coherence. At $Re = 550$, for example, the spectrum of the spanwise velocity component $w$ becomes broadband. Nevertheless, the flow retains a dominant spanwise wavelength of approximately $\lambda_z \approx \pi$ up to at least $Re = 550$.
+
+We now investigate how the relevance of mode $A$ and $QS$ changes with $Re$, by using a POD
    
 
 \subsection{Non linear simulations}
